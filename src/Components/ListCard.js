@@ -12,7 +12,7 @@ function ListCard(props) {
 
 const SDListCard = styled.div`
   width: 30%;
-  height: 50%;
+  height: 60%;
   background-color: white;
   position: relative;
   cursor: pointer;
@@ -32,7 +32,7 @@ const SDListCard = styled.div`
 
 const SDCardIcons = styled.i`
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 10%;
   border-radius: 50%;
   padding: 10px;
@@ -40,7 +40,7 @@ const SDCardIcons = styled.i`
 
 const SDCardHeading = styled.h3`
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 10%;
 `;
 

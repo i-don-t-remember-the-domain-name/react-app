@@ -7,6 +7,8 @@ import './App.scss';
 import Navbar from './Components/Navbar';
 import SearchBanner from './Components/SearchBanner';
 import ListsBoard from './Components/ListsBoard';
+import Introduction from './Components/Introduction';
+import Footer from './Components/Footer';
 
 //Default export
 export default class App extends Component {
@@ -20,6 +22,8 @@ export default class App extends Component {
         <Navbar />
         <SearchBanner />
         <ListsBoard />
+        <Introduction />
+        <Footer />
       </div>
     );
   }
