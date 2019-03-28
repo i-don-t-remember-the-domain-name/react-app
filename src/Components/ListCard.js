@@ -12,7 +12,7 @@ function ListCard(props) {
 
 const SDListCard = styled.div`
   width: 30%;
-  height: 60%;
+  height: 50%;
   background-color: white;
   position: relative;
   cursor: pointer;
@@ -42,6 +42,7 @@ const SDCardHeading = styled.h3`
   position: absolute;
   bottom: 15%;
   left: 10%;
+  font-weight: 400;
 `;
 
 export default ListCard;

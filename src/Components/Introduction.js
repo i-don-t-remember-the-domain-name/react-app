@@ -21,8 +21,7 @@ function Introduction() {
 const SDIntroContainer = styled.div`
   box-sizing: border-box;
   width: 100vw;
-  height: 40vh;
-  padding: 5% 5%;
+  padding: 10%;
   display: flex;
   justify-content: space-between;
 `;
