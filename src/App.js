@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 //Styling
 import './App.scss';
 
 //Import Components
 import Navbar from './Components/Navbar';
-import SearchBanner from './Components/SearchBanner';
-import ListsBoard from './Components/ListsBoard';
-import Introduction from './Components/Introduction';
+import MainLandingPage from './Components/MainLandingPage';
+import HackerList from './Components/HackerList';
 import Footer from './Components/Footer';
 
 //Default export
@@ -20,9 +20,8 @@ export default class App extends Component {
     return (
       <div className="app-container">
         <Navbar />
-        <SearchBanner />
-        <ListsBoard />
-        <Introduction />
+        <Route exact path="/" render={pr => <MainLandingPage {...pr} />} />
+        <Route exact path="/list1" render={pr => <HackerList {...pr} />} />
         <Footer />
       </div>
     );
