@@ -16,7 +16,7 @@ function Navbar() {
 
 const SDNavbar = styled.div`
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: flex-end;
   top: 0;
