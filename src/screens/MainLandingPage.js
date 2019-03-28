@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SearchBanner from './SearchBanner';
-import ListsBoard from './ListsBoard';
-import Introduction from './Introduction';
+import SearchBanner from '../Components/SearchBanner';
+import ListsBoard from '../Components/ListsBoard';
+import Introduction from '../Components/Introduction';
 
 export default function MainLandingPage() {
   return (
