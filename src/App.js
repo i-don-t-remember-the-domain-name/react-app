@@ -4,8 +4,9 @@ import React, { Component } from 'react';
 import './App.scss';
 
 //Import Components
-import MainHeading from './Components/MainHeading';
-import Search from './Components/Search';
+import Navbar from './Components/Navbar';
+import SearchBanner from './Components/SearchBanner';
+import ListsBoard from './Components/ListsBoard';
 
 //Default export
 export default class App extends Component {
@@ -16,8 +17,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <MainHeading />
-        <Search />
+        <Navbar />
+        <SearchBanner />
+        <ListsBoard />
       </div>
     );
   }
