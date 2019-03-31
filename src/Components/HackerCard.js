@@ -3,14 +3,37 @@ import styled from 'styled-components';
 import { Progress } from 'semantic-ui-react';
 
 export default class HackerCard extends React.Component {
+  /* 
+  QUANTITY SALTY COMMENTS:
+    commentor: 'tptacek',
+    rank_lifetime_QTY_salty_comments: 1.0, <= used for if statement
+    count_saltiness_salty: 11353.0,
+  */
+
+  /* 
+  OVERALL SALTINESS:
+    commentor: 'pg_is_a_butt',
+    rank_overall_total_saltiness: 1.0,
+    total_saltiness_overall: -88.5228763614,
+  */
+
+  /* 
+  TOP 100 COMMENTERS:
+    commentor: 'tptacek',
+    rank_lifetime_QTY_salty_comments: 1.0,
+    count_saltiness_salty: 11353.0,
+  */
+
   render() {
     return (
       <SDHackerCard>
-        {this.props.data.total_saltiness_overall && <SDRowRank>{this.props.data.rank_saltiest_trolls}</SDRowRank>}
-        {this.props.data.rank_lifetime_QTY_salty_comments && <SDRowRank>{this.props.data.rank_lifetime_QTY_salty_comments}</SDRowRank>}
+        {/*Rank - OVERALL SALTINESS */} {this.props.data.total_saltiness_overall && <SDRowRank>{this.props.data.rank_saltiest_trolls}</SDRowRank>}
+        {/*Rank - QUANTITY SALTY COMMENTS & TOP 100 COMMENTERS */} {this.props.data.rank_lifetime_QTY_salty_comments && <SDRowRank>{this.props.data.rank_lifetime_QTY_salty_comments}</SDRowRank>}
+        {/*Commentor - ALL */}
         <SDRowCommentor>{this.props.data.commentor}</SDRowCommentor>
-        <SDRowComments>123 Comments</SDRowComments>
-        {this.props.data.count_saltiness_salty && <SDRowSaltiness>{this.props.data.count_saltiness_salty.toLocaleString()} salty comments</SDRowSaltiness>}
+        {/*Number of commetns - OVERALL SALTINESS (PLACEHOLDER)*/}
+        {this.props.data.total_saltiness_overall && <SDRowComments>123 Comments</SDRowComments>}
+        {this.props.data.count_saltiness_salty && <SDRowSaltyComments>{this.props.data.count_saltiness_salty.toLocaleString()} salty comments</SDRowSaltyComments>}
         {this.props.data.total_saltiness_overall && (
           <SDRowChart>
             <Progress id="SDProgressChart" percent={Math.abs(this.props.data.total_saltiness_overall.toFixed(2))} error />
@@ -21,6 +44,11 @@ export default class HackerCard extends React.Component {
     );
   }
 }
+
+/*commentor: 'pg_is_a_butt',
+    rank_overall_total_saltiness: 1.0,
+    total_saltiness_overall: -88.5228763614,
+    top_salty_comment: [ */
 
 const SDHackerCard = styled.div`
   width: 100%;
@@ -46,6 +74,10 @@ const SDRowComments = styled.div`
 
 const SDRowSaltiness = styled.div`
   width: 5%;
+`;
+
+const SDRowSaltyComments = styled.div`
+  width: 20%;
 `;
 
 const SDRowChart = styled.div`

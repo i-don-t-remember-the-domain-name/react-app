@@ -9,7 +9,7 @@ function ListsBoard() {
     <SDListsBoard>
       <ListCard content={'Top 100 Saltiest Trolls on HackerNews'} color={'blue'} linkDestination={'top-100-saltiest-trolls'} />
       <ListCard content={'Who brought the most saltiness to HN'} color={'orange'} linkDestination={'top-100-quantity-of-added-salt'} />
-      <ListCard content={'Who brought the most saltiness to HN'} color={'green'} linkDestination={'top-100-quantity-of-added-salt'} />
+      <ListCard content={'Most salty users'} color={'green'} linkDestination={'most-salty-users'} />
     </SDListsBoard>
   );
 }
