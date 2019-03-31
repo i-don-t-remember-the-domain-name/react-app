@@ -6,10 +6,14 @@ import saltShaker from '../img/salt-shaker.png';
 function Navbar() {
   return (
     <SDNavbar>
-      <SDLogoImg>
-        <img src={saltShaker} alt="salt shaker" />
-      </SDLogoImg>
-      <div>Hacker Salt</div>
+      <SDNavItems>
+        <SDLogoImg>
+          <img src={saltShaker} alt="salt shaker" />
+        </SDLogoImg>
+        <div>
+          <a href="/">Hacker Salt</a>
+        </div>
+      </SDNavItems>
     </SDNavbar>
   );
 }
@@ -26,9 +30,18 @@ const SDNavbar = styled.div`
   padding-bottom: 10px;
 `;
 
+const SDNavItems = styled.div`
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  cursor: pointer;
+`;
+
 const SDLogoImg = styled.div`
   height: 40%;
-  padding: 10px 10px 0 30px;
+  padding-right: 5px;
   img {
     height: 100%;
   }

@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function ListCard(props) {
   return (
     <SDListCard>
-      <SDCardIcons className={`${props.color} fas fa-stream`} />
-      <SDCardHeading>{props.content}</SDCardHeading>
+      <Link to={`/${props.linkDestination}`} style={{ textDecoration: 'none' }}>
+        <SDCardIcons className={`${props.color} fas fa-stream`} />
+        <SDCardHeading>{props.content}</SDCardHeading>
+      </Link>
     </SDListCard>
   );
 }

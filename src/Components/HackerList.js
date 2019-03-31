@@ -7,11 +7,10 @@ export default class HackerList extends React.Component {
   render() {
     return (
       <SDHackerList>
-        <h3>Saltiest guys in the game</h3>
-        <HackerCard />
-        <HackerCard />
-        <HackerCard />
-        <HackerCard />
+        <h3>{this.props.heading}</h3>
+        {this.props.data.map((data, index) => (
+          <HackerCard key={data.commentor} data={data} index={index} />
+        ))}
       </SDHackerList>
     );
   }
@@ -21,7 +20,7 @@ const SDHackerList = styled.div`
   box-sizing: border-box;
   width: 100vw;
   min-height: 40vh;
-  padding: 10%;
+  padding: 5% 20%;
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
