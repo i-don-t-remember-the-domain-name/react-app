@@ -26,7 +26,7 @@ const SDInputSearchBar = styled.input`
   border: none;
 
   ::placeholder {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `;
 

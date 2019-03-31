@@ -22,10 +22,10 @@ const SDNavbar = styled.div`
   box-sizing: border-box;
   position: absolute;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   top: 0;
   left: 0;
-  height: 70px;
+  height: 60px;
   width: 100vw;
   padding-bottom: 10px;
 `;
@@ -35,13 +35,16 @@ const SDNavItems = styled.div`
   height: 100%;
   align-items: flex-end;
   font-size: 1.2rem;
-  padding-left: 20px;
+  padding-left: 10px;
   cursor: pointer;
+  a {
+    padding: 0;
+  }
 `;
 
 const SDLogoImg = styled.div`
-  height: 40%;
-  padding-right: 5px;
+  height: 45%;
+  padding: 0 5px;
   img {
     height: 100%;
   }

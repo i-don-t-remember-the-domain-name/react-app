@@ -45,7 +45,10 @@ const SDCardHeading = styled.h3`
   position: absolute;
   bottom: 15%;
   left: 10%;
+  padding-right: 10%;
+  line-height: 1.4;
   font-weight: 400;
+  font-size: 1.2rem;
 `;
 
 export default ListCard;

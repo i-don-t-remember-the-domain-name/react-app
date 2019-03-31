@@ -9,7 +9,7 @@ export default class HackerList extends React.Component {
       <SDHackerList>
         <h3>{this.props.heading}</h3>
         {this.props.data.map((data, index) => (
-          <HackerCard key={data.commentor} data={data} index={index} />
+          <HackerCard key={data.commentor} data={data} index={index} heading={this.props.heading} />
         ))}
       </SDHackerList>
     );
