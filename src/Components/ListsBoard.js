@@ -7,9 +7,9 @@ import ListCard from './ListCard';
 function ListsBoard() {
   return (
     <SDListsBoard>
-      <ListCard content={'List of Saltiest Hackers in 2018'} color={'blue'} />
-      <ListCard content={'Who brought the most saltiness to HN'} color={'orange'} />
-      <ListCard content={'Who brought the most saltiness to HN'} color={'green'} />
+      <ListCard content={'Top 100 Saltiest Trolls on HackerNews'} color={'blue'} linkDestination={'top-100-quantity-of-added-salt'} />
+      <ListCard content={'Who brought the most saltiness to HN'} color={'orange'} linkDestination={'top-100-quantity-of-added-salt'} />
+      <ListCard content={'Who brought the most saltiness to HN'} color={'green'} linkDestination={'top-100-quantity-of-added-salt'} />
     </SDListsBoard>
   );
 }
