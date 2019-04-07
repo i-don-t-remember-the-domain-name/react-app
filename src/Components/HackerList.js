@@ -18,9 +18,9 @@ export default class HackerList extends React.Component {
 
 const SDHackerList = styled.div`
   box-sizing: border-box;
-  width: 100vw;
+  width: 70vw
   min-height: 40vh;
-  padding: 5% 20%;
+  padding: 2%;
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;

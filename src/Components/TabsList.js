@@ -2,11 +2,18 @@ import React from 'react';
 import { Tab } from 'semantic-ui-react';
 import styled from 'styled-components';
 
+import AMT_Salt_Contributed from '../data/top100_AMT_Salt_Contributed';
+import Overall_Saltiest from '../data/top100_Overall_Saltiest';
+import QTY_Salty_Comments from '../data/top100_QTY_Salty_Comments';
+import Saltiest_Trolls from '../data/top100_Saltiest_Trolls';
+
+import HackerList from './HackerList';
+
 const panes = [
-  { menuItem: 'Top 100 Salt Contributed', render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane> },
-  { menuItem: 'Top 100 Overall Saltiest', render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane> },
-  { menuItem: 'Top 100 Saltiest Trolls', render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane> },
-  { menuItem: 'Top 100 Salty Comments', render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane> }
+  { menuItem: 'Top 100 Salt Contributed', render: () => <HackerList heading={'Top 100 Salt Contributed'} data={AMT_Salt_Contributed} /> },
+  { menuItem: 'Top 100 Overall Saltiest', render: () => <HackerList heading={'Top 100 Overall Saltiest'} data={Overall_Saltiest} /> },
+  { menuItem: 'Top 100 Saltiest Trolls', render: () => <HackerList heading={'Top 100 Saltiest Trolls'} data={QTY_Salty_Comments} /> },
+  { menuItem: 'Top 100 Salty Comments', render: () => <HackerList heading={'Top 100 Salty Comments'} data={Saltiest_Trolls} /> }
 ];
 
 const TabsList = () => (
@@ -25,7 +32,7 @@ const SDTabsEnvContainer = styled.div`
 `;
 
 const SDTabsContainer = styled.div`
-  width: 50%;
+  width: 70%;
   .tab-container {
     width: 100%;
   }
@@ -35,7 +42,7 @@ const SDTabsContainer = styled.div`
     padding-bottom: 30px;
   }
   .ui.menu .active.item {
-    background-color: blue;
+    background-color: #f8f9fa;
   }
 `;
 
