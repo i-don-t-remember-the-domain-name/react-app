@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HackerRow from './HackerRow';
-import HackerTopRow from './HackerTopRow';
-import ExplanationSection from './ExplanationSection';
+import HackerRow from './HackerTopListsComponents/HackerRow';
+import HackerTopRow from './HackerTopListsComponents/HackerTopRow';
+import ExplanationSection from './HackerTopListsComponents/ExplanationSection';
 
 export default class HackerList extends React.Component {
   render() {
