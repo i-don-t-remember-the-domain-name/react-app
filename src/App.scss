@@ -39,6 +39,9 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    color: darkgray;
+  }
 }
 
 input:focus,

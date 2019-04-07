@@ -1,8 +1,8 @@
-export const top100QuantitySaltyComments = [
+const theMostSaltiestComments = [
   {
     commentor: 'tptacek',
-    rank_lifetime_QTY_salty_comments: 1.0,
-    count_saltiness_salty: 11353.0,
+    rank_lt_qty_sc: 1.0,
+    cnt_slt_s: 11353.0,
     top_salty_comment: [
       {
         commentor: 'tptacek',
@@ -26,8 +26,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jacquesm',
-    rank_lifetime_QTY_salty_comments: 2.0,
-    count_saltiness_salty: 6057.0,
+    rank_lt_qty_sc: 2.0,
+    cnt_slt_s: 6057.0,
     top_salty_comment: [
       {
         commentor: 'jacquesm',
@@ -51,8 +51,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'DanBC',
-    rank_lifetime_QTY_salty_comments: 3.0,
-    count_saltiness_salty: 5915.0,
+    rank_lt_qty_sc: 3.0,
+    cnt_slt_s: 5915.0,
     top_salty_comment: [
       {
         commentor: 'DanBC',
@@ -76,8 +76,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'dragonwriter',
-    rank_lifetime_QTY_salty_comments: 4.0,
-    count_saltiness_salty: 5809.0,
+    rank_lt_qty_sc: 4.0,
+    cnt_slt_s: 5809.0,
     top_salty_comment: [
       {
         commentor: 'dragonwriter',
@@ -101,8 +101,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'mikeash',
-    rank_lifetime_QTY_salty_comments: 5.0,
-    count_saltiness_salty: 5139.0,
+    rank_lt_qty_sc: 5.0,
+    cnt_slt_s: 5139.0,
     top_salty_comment: [
       {
         commentor: 'mikeash',
@@ -126,8 +126,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'dang',
-    rank_lifetime_QTY_salty_comments: 6.0,
-    count_saltiness_salty: 4943.0,
+    rank_lt_qty_sc: 6.0,
+    cnt_slt_s: 4943.0,
     top_salty_comment: [
       {
         commentor: 'dang',
@@ -151,8 +151,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'coldtea',
-    rank_lifetime_QTY_salty_comments: 7.0,
-    count_saltiness_salty: 4826.0,
+    rank_lt_qty_sc: 7.0,
+    cnt_slt_s: 4826.0,
     top_salty_comment: [
       {
         commentor: 'coldtea',
@@ -177,8 +177,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'icebraining',
-    rank_lifetime_QTY_salty_comments: 8.0,
-    count_saltiness_salty: 4461.0,
+    rank_lt_qty_sc: 8.0,
+    cnt_slt_s: 4461.0,
     top_salty_comment: [
       {
         commentor: 'icebraining',
@@ -203,8 +203,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'TeMPOraL',
-    rank_lifetime_QTY_salty_comments: 9.0,
-    count_saltiness_salty: 4132.0,
+    rank_lt_qty_sc: 9.0,
+    cnt_slt_s: 4132.0,
     top_salty_comment: [
       {
         commentor: 'TeMPOraL',
@@ -229,8 +229,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'rayiner',
-    rank_lifetime_QTY_salty_comments: 10.0,
-    count_saltiness_salty: 4064.0,
+    rank_lt_qty_sc: 10.0,
+    cnt_slt_s: 4064.0,
     top_salty_comment: [
       {
         commentor: 'rayiner',
@@ -254,8 +254,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'pjmlp',
-    rank_lifetime_QTY_salty_comments: 11.0,
-    count_saltiness_salty: 3850.0,
+    rank_lt_qty_sc: 11.0,
+    cnt_slt_s: 3850.0,
     top_salty_comment: [
       {
         commentor: 'pjmlp',
@@ -279,8 +279,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'Retric',
-    rank_lifetime_QTY_salty_comments: 12.0,
-    count_saltiness_salty: 3440.0,
+    rank_lt_qty_sc: 12.0,
+    cnt_slt_s: 3440.0,
     top_salty_comment: [
       {
         commentor: 'Retric',
@@ -304,8 +304,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jrockway',
-    rank_lifetime_QTY_salty_comments: 13.0,
-    count_saltiness_salty: 3208.0,
+    rank_lt_qty_sc: 13.0,
+    cnt_slt_s: 3208.0,
     top_salty_comment: [
       {
         commentor: 'jrockway',
@@ -329,8 +329,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'anigbrowl',
-    rank_lifetime_QTY_salty_comments: 14.0,
-    count_saltiness_salty: 3205.0,
+    rank_lt_qty_sc: 14.0,
+    cnt_slt_s: 3205.0,
     top_salty_comment: [
       {
         commentor: 'anigbrowl',
@@ -354,8 +354,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'sp332',
-    rank_lifetime_QTY_salty_comments: 15.0,
-    count_saltiness_salty: 3188.0,
+    rank_lt_qty_sc: 15.0,
+    cnt_slt_s: 3188.0,
     top_salty_comment: [
       {
         commentor: 'sp332',
@@ -380,8 +380,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'pjc50',
-    rank_lifetime_QTY_salty_comments: 16.0,
-    count_saltiness_salty: 3082.0,
+    rank_lt_qty_sc: 16.0,
+    cnt_slt_s: 3082.0,
     top_salty_comment: [
       {
         commentor: 'pjc50',
@@ -405,8 +405,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'yummyfajitas',
-    rank_lifetime_QTY_salty_comments: 17.0,
-    count_saltiness_salty: 3023.0,
+    rank_lt_qty_sc: 17.0,
+    cnt_slt_s: 3023.0,
     top_salty_comment: [
       {
         commentor: 'yummyfajitas',
@@ -431,8 +431,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'JoeAltmaier',
-    rank_lifetime_QTY_salty_comments: 18.0,
-    count_saltiness_salty: 2945.0,
+    rank_lt_qty_sc: 18.0,
+    cnt_slt_s: 2945.0,
     top_salty_comment: [
       {
         commentor: 'JoeAltmaier',
@@ -457,8 +457,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'stcredzero',
-    rank_lifetime_QTY_salty_comments: 19.0,
-    count_saltiness_salty: 2837.0,
+    rank_lt_qty_sc: 19.0,
+    cnt_slt_s: 2837.0,
     top_salty_comment: [
       {
         commentor: 'stcredzero',
@@ -482,8 +482,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'maxerickson',
-    rank_lifetime_QTY_salty_comments: 20.0,
-    count_saltiness_salty: 2808.0,
+    rank_lt_qty_sc: 20.0,
+    cnt_slt_s: 2808.0,
     top_salty_comment: [
       {
         commentor: 'maxerickson',
@@ -508,8 +508,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'masklinn',
-    rank_lifetime_QTY_salty_comments: 21.0,
-    count_saltiness_salty: 2796.0,
+    rank_lt_qty_sc: 21.0,
+    cnt_slt_s: 2796.0,
     top_salty_comment: [
       {
         commentor: 'masklinn',
@@ -533,8 +533,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'gaius',
-    rank_lifetime_QTY_salty_comments: 22.0,
-    count_saltiness_salty: 2752.0,
+    rank_lt_qty_sc: 22.0,
+    cnt_slt_s: 2752.0,
     top_salty_comment: [
       {
         commentor: 'gaius',
@@ -558,8 +558,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'rbanffy',
-    rank_lifetime_QTY_salty_comments: 23.0,
-    count_saltiness_salty: 2702.0,
+    rank_lt_qty_sc: 23.0,
+    cnt_slt_s: 2702.0,
     top_salty_comment: [
       {
         commentor: 'rbanffy',
@@ -583,8 +583,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'toomuchtodo',
-    rank_lifetime_QTY_salty_comments: 24.0,
-    count_saltiness_salty: 2639.0,
+    rank_lt_qty_sc: 24.0,
+    cnt_slt_s: 2639.0,
     top_salty_comment: [
       {
         commentor: 'toomuchtodo',
@@ -608,8 +608,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'Animats',
-    rank_lifetime_QTY_salty_comments: 25.0,
-    count_saltiness_salty: 2632.0,
+    rank_lt_qty_sc: 25.0,
+    cnt_slt_s: 2632.0,
     top_salty_comment: [
       {
         commentor: 'Animats',
@@ -633,8 +633,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'vacri',
-    rank_lifetime_QTY_salty_comments: 26.0,
-    count_saltiness_salty: 2537.0,
+    rank_lt_qty_sc: 26.0,
+    cnt_slt_s: 2537.0,
     top_salty_comment: [
       {
         commentor: 'vacri',
@@ -659,8 +659,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'ars',
-    rank_lifetime_QTY_salty_comments: 27.0,
-    count_saltiness_salty: 2506.0,
+    rank_lt_qty_sc: 27.0,
+    cnt_slt_s: 2506.0,
     top_salty_comment: [
       {
         commentor: 'ars',
@@ -684,8 +684,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'pbhjpbhj',
-    rank_lifetime_QTY_salty_comments: 28.0,
-    count_saltiness_salty: 2494.0,
+    rank_lt_qty_sc: 28.0,
+    cnt_slt_s: 2494.0,
     top_salty_comment: [
       {
         commentor: 'pbhjpbhj',
@@ -709,8 +709,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'StavrosK',
-    rank_lifetime_QTY_salty_comments: 29.0,
-    count_saltiness_salty: 2479.0,
+    rank_lt_qty_sc: 29.0,
+    cnt_slt_s: 2479.0,
     top_salty_comment: [
       {
         commentor: 'StavrosK',
@@ -734,8 +734,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'eru',
-    rank_lifetime_QTY_salty_comments: 30.0,
-    count_saltiness_salty: 2459.0,
+    rank_lt_qty_sc: 30.0,
+    cnt_slt_s: 2459.0,
     top_salty_comment: [
       {
         commentor: 'eru',
@@ -759,8 +759,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'Dylan16807',
-    rank_lifetime_QTY_salty_comments: 31.0,
-    count_saltiness_salty: 2417.0,
+    rank_lt_qty_sc: 31.0,
+    cnt_slt_s: 2417.0,
     top_salty_comment: [
       {
         commentor: 'Dylan16807',
@@ -784,8 +784,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'protomyth',
-    rank_lifetime_QTY_salty_comments: 32.0,
-    count_saltiness_salty: 2414.0,
+    rank_lt_qty_sc: 32.0,
+    cnt_slt_s: 2414.0,
     top_salty_comment: [
       {
         commentor: 'protomyth',
@@ -809,8 +809,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'wmf',
-    rank_lifetime_QTY_salty_comments: 33.0,
-    count_saltiness_salty: 2358.0,
+    rank_lt_qty_sc: 33.0,
+    cnt_slt_s: 2358.0,
     top_salty_comment: [
       {
         commentor: 'wmf',
@@ -834,8 +834,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'sliverstorm',
-    rank_lifetime_QTY_salty_comments: 34.0,
-    count_saltiness_salty: 2346.0,
+    rank_lt_qty_sc: 34.0,
+    cnt_slt_s: 2346.0,
     top_salty_comment: [
       {
         commentor: 'sliverstorm',
@@ -859,8 +859,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'brudgers',
-    rank_lifetime_QTY_salty_comments: 35.0,
-    count_saltiness_salty: 2341.0,
+    rank_lt_qty_sc: 35.0,
+    cnt_slt_s: 2341.0,
     top_salty_comment: [
       {
         commentor: 'brudgers',
@@ -884,8 +884,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'Tichy',
-    rank_lifetime_QTY_salty_comments: 36.0,
-    count_saltiness_salty: 2334.0,
+    rank_lt_qty_sc: 36.0,
+    cnt_slt_s: 2334.0,
     top_salty_comment: [
       {
         commentor: 'Tichy',
@@ -909,8 +909,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'pyre',
-    rank_lifetime_QTY_salty_comments: 37.0,
-    count_saltiness_salty: 2333.0,
+    rank_lt_qty_sc: 37.0,
+    cnt_slt_s: 2333.0,
     top_salty_comment: [
       {
         commentor: 'pyre',
@@ -934,8 +934,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jerf',
-    rank_lifetime_QTY_salty_comments: 38.0,
-    count_saltiness_salty: 2327.0,
+    rank_lt_qty_sc: 38.0,
+    cnt_slt_s: 2327.0,
     top_salty_comment: [
       {
         commentor: 'jerf',
@@ -959,8 +959,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'ams6110',
-    rank_lifetime_QTY_salty_comments: 39.0,
-    count_saltiness_salty: 2302.0,
+    rank_lt_qty_sc: 39.0,
+    cnt_slt_s: 2302.0,
     top_salty_comment: [
       {
         commentor: 'ams6110',
@@ -984,8 +984,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'pavel_lishin',
-    rank_lifetime_QTY_salty_comments: 40.0,
-    count_saltiness_salty: 2300.0,
+    rank_lt_qty_sc: 40.0,
+    cnt_slt_s: 2300.0,
     top_salty_comment: [
       {
         commentor: 'pavel_lishin',
@@ -1010,8 +1010,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'dredmorbius',
-    rank_lifetime_QTY_salty_comments: 41.0,
-    count_saltiness_salty: 2297.0,
+    rank_lt_qty_sc: 41.0,
+    cnt_slt_s: 2297.0,
     top_salty_comment: [
       {
         commentor: 'dredmorbius',
@@ -1035,8 +1035,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'lmm',
-    rank_lifetime_QTY_salty_comments: 42.0,
-    count_saltiness_salty: 2268.0,
+    rank_lt_qty_sc: 42.0,
+    cnt_slt_s: 2268.0,
     top_salty_comment: [
       {
         commentor: 'lmm',
@@ -1060,8 +1060,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'agumonkey',
-    rank_lifetime_QTY_salty_comments: 43.0,
-    count_saltiness_salty: 2140.0,
+    rank_lt_qty_sc: 43.0,
+    cnt_slt_s: 2140.0,
     top_salty_comment: [
       {
         commentor: 'agumonkey',
@@ -1085,8 +1085,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'Spooky23',
-    rank_lifetime_QTY_salty_comments: 44.0,
-    count_saltiness_salty: 2128.0,
+    rank_lt_qty_sc: 44.0,
+    cnt_slt_s: 2128.0,
     top_salty_comment: [
       {
         commentor: 'Spooky23',
@@ -1110,8 +1110,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'pg',
-    rank_lifetime_QTY_salty_comments: 45.0,
-    count_saltiness_salty: 2075.0,
+    rank_lt_qty_sc: 45.0,
+    cnt_slt_s: 2075.0,
     top_salty_comment: [
       {
         commentor: 'pg',
@@ -1135,8 +1135,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jessaustin',
-    rank_lifetime_QTY_salty_comments: 46.0,
-    count_saltiness_salty: 2061.0,
+    rank_lt_qty_sc: 46.0,
+    cnt_slt_s: 2061.0,
     top_salty_comment: [
       {
         commentor: 'jessaustin',
@@ -1160,8 +1160,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'davidw',
-    rank_lifetime_QTY_salty_comments: 47.0,
-    count_saltiness_salty: 2052.0,
+    rank_lt_qty_sc: 47.0,
+    cnt_slt_s: 2052.0,
     top_salty_comment: [
       {
         commentor: 'davidw',
@@ -1185,8 +1185,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'seanmcdirmid',
-    rank_lifetime_QTY_salty_comments: 48.0,
-    count_saltiness_salty: 2022.0,
+    rank_lt_qty_sc: 48.0,
+    cnt_slt_s: 2022.0,
     top_salty_comment: [
       {
         commentor: 'seanmcdirmid',
@@ -1210,8 +1210,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'rhizome',
-    rank_lifetime_QTY_salty_comments: 49.0,
-    count_saltiness_salty: 2020.0,
+    rank_lt_qty_sc: 49.0,
+    cnt_slt_s: 2020.0,
     top_salty_comment: [
       {
         commentor: 'rhizome',
@@ -1235,8 +1235,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'philwelch',
-    rank_lifetime_QTY_salty_comments: 50.0,
-    count_saltiness_salty: 1955.0,
+    rank_lt_qty_sc: 50.0,
+    cnt_slt_s: 1955.0,
     top_salty_comment: [
       {
         commentor: 'philwelch',
@@ -1260,8 +1260,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'baddox',
-    rank_lifetime_QTY_salty_comments: 51.0,
-    count_saltiness_salty: 1955.0,
+    rank_lt_qty_sc: 51.0,
+    cnt_slt_s: 1955.0,
     top_salty_comment: [
       {
         commentor: 'baddox',
@@ -1285,8 +1285,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'hga',
-    rank_lifetime_QTY_salty_comments: 52.0,
-    count_saltiness_salty: 1930.0,
+    rank_lt_qty_sc: 52.0,
+    cnt_slt_s: 1930.0,
     top_salty_comment: [
       {
         commentor: 'hga',
@@ -1310,8 +1310,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'ceejayoz',
-    rank_lifetime_QTY_salty_comments: 53.0,
-    count_saltiness_salty: 1906.0,
+    rank_lt_qty_sc: 53.0,
+    cnt_slt_s: 1906.0,
     top_salty_comment: [
       {
         commentor: 'ceejayoz',
@@ -1335,8 +1335,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'ChuckMcM',
-    rank_lifetime_QTY_salty_comments: 54.0,
-    count_saltiness_salty: 1902.0,
+    rank_lt_qty_sc: 54.0,
+    cnt_slt_s: 1902.0,
     top_salty_comment: [
       {
         commentor: 'ChuckMcM',
@@ -1360,8 +1360,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'Karunamon',
-    rank_lifetime_QTY_salty_comments: 55.0,
-    count_saltiness_salty: 1897.0,
+    rank_lt_qty_sc: 55.0,
+    cnt_slt_s: 1897.0,
     top_salty_comment: [
       {
         commentor: 'Karunamon',
@@ -1385,8 +1385,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'amelius',
-    rank_lifetime_QTY_salty_comments: 56.0,
-    count_saltiness_salty: 1883.0,
+    rank_lt_qty_sc: 56.0,
+    cnt_slt_s: 1883.0,
     top_salty_comment: [
       {
         commentor: 'amelius',
@@ -1410,8 +1410,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'steveklabnik',
-    rank_lifetime_QTY_salty_comments: 57.0,
-    count_saltiness_salty: 1847.0,
+    rank_lt_qty_sc: 57.0,
+    cnt_slt_s: 1847.0,
     top_salty_comment: [
       {
         commentor: 'steveklabnik',
@@ -1435,8 +1435,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'raverbashing',
-    rank_lifetime_QTY_salty_comments: 58.0,
-    count_saltiness_salty: 1844.0,
+    rank_lt_qty_sc: 58.0,
+    cnt_slt_s: 1844.0,
     top_salty_comment: [
       {
         commentor: 'raverbashing',
@@ -1460,8 +1460,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'rdl',
-    rank_lifetime_QTY_salty_comments: 59.0,
-    count_saltiness_salty: 1828.0,
+    rank_lt_qty_sc: 59.0,
+    cnt_slt_s: 1828.0,
     top_salty_comment: [
       {
         commentor: 'rdl',
@@ -1485,8 +1485,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'InclinedPlane',
-    rank_lifetime_QTY_salty_comments: 60.0,
-    count_saltiness_salty: 1825.0,
+    rank_lt_qty_sc: 60.0,
+    cnt_slt_s: 1825.0,
     top_salty_comment: [
       {
         commentor: 'InclinedPlane',
@@ -1510,8 +1510,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'tomjen3',
-    rank_lifetime_QTY_salty_comments: 61.0,
-    count_saltiness_salty: 1801.0,
+    rank_lt_qty_sc: 61.0,
+    cnt_slt_s: 1801.0,
     top_salty_comment: [
       {
         commentor: 'tomjen3',
@@ -1535,8 +1535,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'JumpCrisscross',
-    rank_lifetime_QTY_salty_comments: 62.0,
-    count_saltiness_salty: 1790.0,
+    rank_lt_qty_sc: 62.0,
+    cnt_slt_s: 1790.0,
     top_salty_comment: [
       {
         commentor: 'JumpCrisscross',
@@ -1560,8 +1560,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'eli',
-    rank_lifetime_QTY_salty_comments: 63.0,
-    count_saltiness_salty: 1785.0,
+    rank_lt_qty_sc: 63.0,
+    cnt_slt_s: 1785.0,
     top_salty_comment: [
       {
         commentor: 'eli',
@@ -1586,8 +1586,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'kazinator',
-    rank_lifetime_QTY_salty_comments: 64.0,
-    count_saltiness_salty: 1781.0,
+    rank_lt_qty_sc: 64.0,
+    cnt_slt_s: 1781.0,
     top_salty_comment: [
       {
         commentor: 'kazinator',
@@ -1612,8 +1612,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'emodendroket',
-    rank_lifetime_QTY_salty_comments: 65.0,
-    count_saltiness_salty: 1778.0,
+    rank_lt_qty_sc: 65.0,
+    cnt_slt_s: 1778.0,
     top_salty_comment: [
       {
         commentor: 'emodendroket',
@@ -1637,8 +1637,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'detaro',
-    rank_lifetime_QTY_salty_comments: 66.0,
-    count_saltiness_salty: 1744.0,
+    rank_lt_qty_sc: 66.0,
+    cnt_slt_s: 1744.0,
     top_salty_comment: [
       {
         commentor: 'detaro',
@@ -1662,8 +1662,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'TazeTSchnitzel',
-    rank_lifetime_QTY_salty_comments: 67.0,
-    count_saltiness_salty: 1735.0,
+    rank_lt_qty_sc: 67.0,
+    cnt_slt_s: 1735.0,
     top_salty_comment: [
       {
         commentor: 'TazeTSchnitzel',
@@ -1687,8 +1687,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'nitrogen',
-    rank_lifetime_QTY_salty_comments: 68.0,
-    count_saltiness_salty: 1730.0,
+    rank_lt_qty_sc: 68.0,
+    cnt_slt_s: 1730.0,
     top_salty_comment: [
       {
         commentor: 'nitrogen',
@@ -1712,8 +1712,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'MichaelGG',
-    rank_lifetime_QTY_salty_comments: 69.0,
-    count_saltiness_salty: 1726.0,
+    rank_lt_qty_sc: 69.0,
+    cnt_slt_s: 1726.0,
     top_salty_comment: [
       {
         commentor: 'MichaelGG',
@@ -1738,8 +1738,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'adventured',
-    rank_lifetime_QTY_salty_comments: 70.0,
-    count_saltiness_salty: 1703.0,
+    rank_lt_qty_sc: 70.0,
+    cnt_slt_s: 1703.0,
     top_salty_comment: [
       {
         commentor: 'adventured',
@@ -1763,8 +1763,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'vidarh',
-    rank_lifetime_QTY_salty_comments: 71.0,
-    count_saltiness_salty: 1703.0,
+    rank_lt_qty_sc: 71.0,
+    cnt_slt_s: 1703.0,
     top_salty_comment: [
       {
         commentor: 'vidarh',
@@ -1788,8 +1788,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'greenyoda',
-    rank_lifetime_QTY_salty_comments: 72.0,
-    count_saltiness_salty: 1681.0,
+    rank_lt_qty_sc: 72.0,
+    cnt_slt_s: 1681.0,
     top_salty_comment: [
       {
         commentor: 'greenyoda',
@@ -1813,8 +1813,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'dllthomas',
-    rank_lifetime_QTY_salty_comments: 73.0,
-    count_saltiness_salty: 1678.0,
+    rank_lt_qty_sc: 73.0,
+    cnt_slt_s: 1678.0,
     top_salty_comment: [
       {
         commentor: 'dllthomas',
@@ -1838,8 +1838,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'untog',
-    rank_lifetime_QTY_salty_comments: 74.0,
-    count_saltiness_salty: 1676.0,
+    rank_lt_qty_sc: 74.0,
+    cnt_slt_s: 1676.0,
     top_salty_comment: [
       {
         commentor: 'untog',
@@ -1863,8 +1863,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'freehunter',
-    rank_lifetime_QTY_salty_comments: 75.0,
-    count_saltiness_salty: 1672.0,
+    rank_lt_qty_sc: 75.0,
+    cnt_slt_s: 1672.0,
     top_salty_comment: [
       {
         commentor: 'freehunter',
@@ -1888,8 +1888,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'chris_wot',
-    rank_lifetime_QTY_salty_comments: 76.0,
-    count_saltiness_salty: 1671.0,
+    rank_lt_qty_sc: 76.0,
+    cnt_slt_s: 1671.0,
     top_salty_comment: [
       {
         commentor: 'chris_wot',
@@ -1913,8 +1913,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'nostrademons',
-    rank_lifetime_QTY_salty_comments: 77.0,
-    count_saltiness_salty: 1668.0,
+    rank_lt_qty_sc: 77.0,
+    cnt_slt_s: 1668.0,
     top_salty_comment: [
       {
         commentor: 'nostrademons',
@@ -1938,8 +1938,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'patio11',
-    rank_lifetime_QTY_salty_comments: 78.0,
-    count_saltiness_salty: 1654.0,
+    rank_lt_qty_sc: 78.0,
+    cnt_slt_s: 1654.0,
     top_salty_comment: [
       {
         commentor: 'patio11',
@@ -1963,8 +1963,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'arethuza',
-    rank_lifetime_QTY_salty_comments: 79.0,
-    count_saltiness_salty: 1649.0,
+    rank_lt_qty_sc: 79.0,
+    cnt_slt_s: 1649.0,
     top_salty_comment: [
       {
         commentor: 'arethuza',
@@ -1988,8 +1988,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'mtgx',
-    rank_lifetime_QTY_salty_comments: 80.0,
-    count_saltiness_salty: 1647.0,
+    rank_lt_qty_sc: 80.0,
+    cnt_slt_s: 1647.0,
     top_salty_comment: [
       {
         commentor: 'mtgx',
@@ -2013,8 +2013,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'derefr',
-    rank_lifetime_QTY_salty_comments: 81.0,
-    count_saltiness_salty: 1620.0,
+    rank_lt_qty_sc: 81.0,
+    cnt_slt_s: 1620.0,
     top_salty_comment: [
       {
         commentor: 'derefr',
@@ -2038,8 +2038,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'rdtsc',
-    rank_lifetime_QTY_salty_comments: 82.0,
-    count_saltiness_salty: 1619.0,
+    rank_lt_qty_sc: 82.0,
+    cnt_slt_s: 1619.0,
     top_salty_comment: [
       {
         commentor: 'rdtsc',
@@ -2063,8 +2063,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'userbinator',
-    rank_lifetime_QTY_salty_comments: 83.0,
-    count_saltiness_salty: 1615.0,
+    rank_lt_qty_sc: 83.0,
+    cnt_slt_s: 1615.0,
     top_salty_comment: [
       {
         commentor: 'userbinator',
@@ -2088,8 +2088,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'tedunangst',
-    rank_lifetime_QTY_salty_comments: 84.0,
-    count_saltiness_salty: 1614.0,
+    rank_lt_qty_sc: 84.0,
+    cnt_slt_s: 1614.0,
     top_salty_comment: [
       {
         commentor: 'tedunangst',
@@ -2113,8 +2113,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'krapp',
-    rank_lifetime_QTY_salty_comments: 85.0,
-    count_saltiness_salty: 1593.0,
+    rank_lt_qty_sc: 85.0,
+    cnt_slt_s: 1593.0,
     top_salty_comment: [
       {
         commentor: 'krapp',
@@ -2129,7 +2129,7 @@ export const top100QuantitySaltyComments = [
         parent_type: 'story',
         parent_author: 'cadalac',
         parent_title: 'What languages fix',
-        cleaned_comment: 'Javascript : html is boring.',
+        cleaned_comment: 'Javascript: html is boring.',
         comment_rank: 28.0,
         comment_id: 6969220,
         parent_id: 6968775
@@ -2138,8 +2138,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: '_delirium',
-    rank_lifetime_QTY_salty_comments: 86.0,
-    count_saltiness_salty: 1587.0,
+    rank_lt_qty_sc: 86.0,
+    cnt_slt_s: 1587.0,
     top_salty_comment: [
       {
         commentor: '_delirium',
@@ -2163,8 +2163,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'AnimalMuppet',
-    rank_lifetime_QTY_salty_comments: 87.0,
-    count_saltiness_salty: 1586.0,
+    rank_lt_qty_sc: 87.0,
+    cnt_slt_s: 1586.0,
     top_salty_comment: [
       {
         commentor: 'AnimalMuppet',
@@ -2188,8 +2188,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'mirimir',
-    rank_lifetime_QTY_salty_comments: 88.0,
-    count_saltiness_salty: 1581.0,
+    rank_lt_qty_sc: 88.0,
+    cnt_slt_s: 1581.0,
     top_salty_comment: [
       {
         commentor: 'mirimir',
@@ -2213,8 +2213,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'tzs',
-    rank_lifetime_QTY_salty_comments: 89.0,
-    count_saltiness_salty: 1571.0,
+    rank_lt_qty_sc: 89.0,
+    cnt_slt_s: 1571.0,
     top_salty_comment: [
       {
         commentor: 'tzs',
@@ -2238,8 +2238,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'astrodust',
-    rank_lifetime_QTY_salty_comments: 90.0,
-    count_saltiness_salty: 1562.0,
+    rank_lt_qty_sc: 90.0,
+    cnt_slt_s: 1562.0,
     top_salty_comment: [
       {
         commentor: 'astrodust',
@@ -2263,8 +2263,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'api',
-    rank_lifetime_QTY_salty_comments: 91.0,
-    count_saltiness_salty: 1558.0,
+    rank_lt_qty_sc: 91.0,
+    cnt_slt_s: 1558.0,
     top_salty_comment: [
       {
         commentor: 'api',
@@ -2288,8 +2288,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jlgreco',
-    rank_lifetime_QTY_salty_comments: 92.0,
-    count_saltiness_salty: 1558.0,
+    rank_lt_qty_sc: 92.0,
+    cnt_slt_s: 1558.0,
     top_salty_comment: [
       {
         commentor: 'jlgreco',
@@ -2313,8 +2313,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'scott_s',
-    rank_lifetime_QTY_salty_comments: 93.0,
-    count_saltiness_salty: 1556.0,
+    rank_lt_qty_sc: 93.0,
+    cnt_slt_s: 1556.0,
     top_salty_comment: [
       {
         commentor: 'scott_s',
@@ -2338,8 +2338,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'chc',
-    rank_lifetime_QTY_salty_comments: 94.0,
-    count_saltiness_salty: 1532.0,
+    rank_lt_qty_sc: 94.0,
+    cnt_slt_s: 1532.0,
     top_salty_comment: [
       {
         commentor: 'chc',
@@ -2363,8 +2363,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jonknee',
-    rank_lifetime_QTY_salty_comments: 95.0,
-    count_saltiness_salty: 1515.0,
+    rank_lt_qty_sc: 95.0,
+    cnt_slt_s: 1515.0,
     top_salty_comment: [
       {
         commentor: 'jonknee',
@@ -2388,8 +2388,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'rmc',
-    rank_lifetime_QTY_salty_comments: 96.0,
-    count_saltiness_salty: 1515.0,
+    rank_lt_qty_sc: 96.0,
+    cnt_slt_s: 1515.0,
     top_salty_comment: [
       {
         commentor: 'rmc',
@@ -2413,8 +2413,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'walshemj',
-    rank_lifetime_QTY_salty_comments: 97.0,
-    count_saltiness_salty: 1514.0,
+    rank_lt_qty_sc: 97.0,
+    cnt_slt_s: 1514.0,
     top_salty_comment: [
       {
         commentor: 'walshemj',
@@ -2438,8 +2438,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'maxxxxx',
-    rank_lifetime_QTY_salty_comments: 98.0,
-    count_saltiness_salty: 1513.0,
+    rank_lt_qty_sc: 98.0,
+    cnt_slt_s: 1513.0,
     top_salty_comment: [
       {
         commentor: 'maxxxxx',
@@ -2463,8 +2463,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'viraptor',
-    rank_lifetime_QTY_salty_comments: 99.0,
-    count_saltiness_salty: 1503.0,
+    rank_lt_qty_sc: 99.0,
+    cnt_slt_s: 1503.0,
     top_salty_comment: [
       {
         commentor: 'viraptor',
@@ -2488,8 +2488,8 @@ export const top100QuantitySaltyComments = [
   },
   {
     commentor: 'jacques_chester',
-    rank_lifetime_QTY_salty_comments: 100.0,
-    count_saltiness_salty: 1497.0,
+    rank_lt_qty_sc: 100.0,
+    cnt_slt_s: 1497.0,
     top_salty_comment: [
       {
         commentor: 'jacques_chester',
@@ -2512,3 +2512,5 @@ export const top100QuantitySaltyComments = [
     ]
   }
 ];
+
+export default theMostSaltiestComments;

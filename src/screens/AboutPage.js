@@ -1,12 +1,11 @@
 import React from 'react';
-
-import SearchBanner from '../Components/Searchbar/SearchBanner';
+import Introduction from '../Components/Introduction';
 import TabsList from '../Components/TabsList';
 
-export default function MainLandingPage() {
+export default function AboutPage(props) {
   return (
     <div>
-      <SearchBanner />
+      <Introduction />
       <TabsList />
     </div>
   );

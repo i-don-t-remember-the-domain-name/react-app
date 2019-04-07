@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import scale from '../img/scale.png';
+import scale from '../../img/scale.png';
 
 class SearchBar extends React.Component {
   render() {
