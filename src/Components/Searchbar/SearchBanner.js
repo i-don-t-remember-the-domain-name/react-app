@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 import SearchBar from './SearchBar';
 
-function SearchBanner() {
+function SearchBanner(props) {
   return (
     <SDSearchBanner>
       <h1>Find saltiest users on HackerNews</h1>
       <SDSearchBarFull>
-        <SearchBar />
+        <SearchBar searchHacker={props.searchHacker} />
       </SDSearchBarFull>
     </SDSearchBanner>
   );

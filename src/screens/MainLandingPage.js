@@ -4,11 +4,11 @@ import SearchBanner from '../Components/Searchbar/SearchBanner';
 import TabsList from '../Components/HackerTopLists/TabsList';
 import Navbar from '../Components/Navbar/Navbar';
 
-export default function MainLandingPage() {
+export default function MainLandingPage(props) {
   return (
     <div>
       <Navbar />
-      <SearchBanner />
+      <SearchBanner searchHacker={props.searchHacker} />
       <TabsList />
     </div>
   );

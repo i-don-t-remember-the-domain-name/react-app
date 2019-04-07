@@ -3,6 +3,8 @@ dotenv.config();
 const express = require('express');
 const path = require('path');
 const app = express();
+const helmet = require('helmet');
+const cors = require('cors');
 const firebase = require('firebase');
 const config = {
   apiKey: process.env.APIKEY,
@@ -20,6 +22,9 @@ const pathToBuildFolder = path.join(__dirname, 'build');
 const pathToIndexHtml = path.join(pathToBuildFolder, 'index.html');
 
 app.use(express.static(pathToBuildFolder));
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.sendFile(pathToIndexHtml);
@@ -56,13 +61,5 @@ app.get('/api/finduser/:username', async function(req, res) {
   }
   console.log('Get Request');
 });
-
-// db.collection('users')
-//   .get()
-//   .then(querySnapshot => {
-//     querySnapshot.forEach(doc => {
-//       console.log(`${doc.id} => ${doc.data()}`);
-//     });
-//   });
 
 app.listen(process.env.PORT || 3000);
