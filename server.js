@@ -11,4 +11,12 @@ app.get('/', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
+app.get('/user', (req, res) => {
+  res.sendFile(pathToIndexHtml);
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(pathToIndexHtml);
+});
+
 app.listen(process.env.PORT || 3000);
