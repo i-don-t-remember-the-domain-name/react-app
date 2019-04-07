@@ -40,11 +40,14 @@ const SDTabsContainer = styled.div`
 
   .ui.menu {
     box-shadow: none;
+    border: none;
+    justify-content: space-between;
   }
   .ui.menu .item {
-    width: 25%;
+    width: 24%;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #f8f9fa;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     &:nth-of-type(1) {
@@ -96,6 +99,16 @@ const SDTabsContainer = styled.div`
       background-color: #ff5d3e1a;
       color: #ff5d3e;
     }
+  }
+  .ui.menu .item:before {
+    display: none;
+  }
+
+  .ui.pointing.menu .item:after {
+    display: none;
+  }
+  .ui.menu:after {
+    display: none;
   }
 `;
 

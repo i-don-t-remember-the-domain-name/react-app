@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export default function ExplanationSection(props) {
   const style = {
-    color: props.color,
-    'background-color': `${props.color}1A`
+    color: props.color
+    // 'background-color': `${props.color}1A`
   };
   return (
     <SDExplanationCard style={style}>
