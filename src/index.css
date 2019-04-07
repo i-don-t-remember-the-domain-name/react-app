@@ -1,17 +1,12 @@
 @font-face {
-  font-family: 'Sofia Pro Black';
+  font-family: 'Sofia Pro';
   font-weight: 600;
-  src: url('../public/font/Sofia\ Pro\ Semi\ Bold.otf');
-}
-
-@font-face {
-  font-family: 'Sofia Pro Black';
-  font-weight: 700;
-  src: url('../public/font/Sofia\ Pro\ Semi\ Bold.otf');
+  src: url('../public/font/Sofia\ Pro\ Regular.otf');
 }
 
 @font-face {
   font-family: 'Sofia Pro';
+  font-weight: 500;
   src: url('../public/font/Sofia\ Pro\ Regular.otf');
 }
 
