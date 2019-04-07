@@ -3,14 +3,12 @@ import styled from 'styled-components';
 
 import scale from '../../img/scale.png';
 
-class SearchBar extends React.Component {
-  render() {
-    return (
-      <SDFormSearchBar>
-        <SDInputSearchBar placeholder="Search" />
-      </SDFormSearchBar>
-    );
-  }
+function SearchBar(props) {
+  return (
+    <SDFormSearchBar>
+      <SDInputSearchBar placeholder="Search" />
+    </SDFormSearchBar>
+  );
 }
 
 const SDInputSearchBar = styled.input`
