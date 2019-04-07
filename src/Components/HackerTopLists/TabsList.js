@@ -13,7 +13,7 @@ const panes = [
   { menuItem: 'Top 100 Salt Contributed', render: () => <HackerList heading={'Top 100 Salt Contributed'} color={'#4c6cec'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} /> },
   { menuItem: 'Top 100 Overall Saltiest', render: () => <HackerList heading={'Top 100 Overall Saltiest'} color={'#f59f00'} metric={'sum_slt_oall'} data={Overall_Saltiest} /> },
   { menuItem: 'Top 100 Saltiest Trolls', render: () => <HackerList heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} /> },
-  { menuItem: 'Top 100 Salty Comments', render: () => <HackerList heading={'Top 100 Salty Comments'} color={'#ba72d9'} metric={'sum_slt_s'} data={Saltiest_Trolls} /> }
+  { menuItem: 'Top 100 Salty Comments', render: () => <HackerList heading={'Top 100 Salty Comments'} color={'#FF5D3E'} metric={'sum_slt_s'} data={Saltiest_Trolls} /> }
 ];
 
 const TabsList = () => (
@@ -57,7 +57,7 @@ const SDTabsContainer = styled.div`
       color: #74b816;
     }
     &:nth-of-type(4) {
-      color: #ba72d9;
+      color: #ff5d3e;
     }
   }
 
@@ -75,8 +75,8 @@ const SDTabsContainer = styled.div`
       color: #74b816;
     }
     &:nth-of-type(4) {
-      background-color: #ba72d91a;
-      color: #ba72d9;
+      background-color: #ff5d3e1a;
+      color: #ff5d3e;
     }
   }
   .ui.menu .active.item {
@@ -93,8 +93,8 @@ const SDTabsContainer = styled.div`
       color: #74b816;
     }
     &:nth-of-type(4) {
-      background-color: #ba72d91a;
-      color: #ba72d9;
+      background-color: #ff5d3e1a;
+      color: #ff5d3e;
     }
   }
 `;
