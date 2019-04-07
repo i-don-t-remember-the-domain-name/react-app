@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 import scale from '../../img/scale.png';
 
+const usernameRef = useRef();
+
 function SearchBar(props) {
   return (
-    <SDFormSearchBar>
-      <SDInputSearchBar placeholder="Search" />
+    <SDFormSearchBar
+      onSubmit={e => {
+        e.preventDefault();
+        props.searchHacker(usernameRef.current.value);
+      }}>
+      <SDInputSearchBar placeholder="Search" ref={usernameRef} />
     </SDFormSearchBar>
   );
 }

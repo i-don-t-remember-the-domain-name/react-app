@@ -91,7 +91,8 @@ const SDLogoImg = styled.div`
 `;
 
 const SDNavSearchBar = styled.div`
-  height: 50%;
+  padding-top: 10px;
+  height: 80%;
   width: 40%;
 `;
 

@@ -5,15 +5,15 @@ import styled from 'styled-components';
 import AMT_Salt_Contributed from '../../data/top100_AMT_Salt_Contributed';
 import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
-import Saltiest_Trolls from '../../data/top100_Saltiest_Trolls';
+// import Saltiest_Trolls from '../../data/top100_Saltiest_Trolls';
 
 import HackerList from './HackerList';
 
 const panes = [
-  { menuItem: 'Top 100 Salt Contributed', render: () => <HackerList heading={'Top 100 Salt Contributed'} color={'#4c6cec'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} /> },
   { menuItem: 'Top 100 Overall Saltiest', render: () => <HackerList heading={'Top 100 Overall Saltiest'} color={'#f59f00'} metric={'sum_slt_oall'} data={Overall_Saltiest} /> },
-  { menuItem: 'Top 100 Saltiest Trolls', render: () => <HackerList heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} /> },
-  { menuItem: 'Top 100 Salty Comments', render: () => <HackerList heading={'Top 100 Salty Comments'} color={'#FF5D3E'} metric={'sum_slt_s'} data={Saltiest_Trolls} /> }
+  { menuItem: 'Top 100 Salt Contributed', render: () => <HackerList heading={'Top 100 Salt Contributed'} color={'#4c6cec'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} /> },
+  { menuItem: 'Top 100 Saltiest Trolls', render: () => <HackerList heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} /> }
+  // { menuItem: 'Top 100 Salty Comments', render: () => <HackerList heading={'Top 100 Salty Comments'} color={'#FF5D3E'} metric={'sum_slt_s'} data={Saltiest_Trolls} /> }
 ];
 
 const TabsList = () => (
@@ -44,11 +44,11 @@ const SDTabsContainer = styled.div`
     justify-content: space-between;
   }
   .ui.menu .item {
-    width: 24%;
+    width: 32%;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f8f9fa;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     &:nth-of-type(1) {
       color: #4c6cec;

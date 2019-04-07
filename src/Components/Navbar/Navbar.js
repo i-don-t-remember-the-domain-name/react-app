@@ -61,7 +61,7 @@ const SDNavItem = styled.div`
   height: 100%;
   align-items: center;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-left: 30px;
   cursor: pointer;
   a {
