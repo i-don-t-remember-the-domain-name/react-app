@@ -1,15 +1,15 @@
 import React from 'react';
 
-import SearchBanner from '../Components/SearchBanner';
-import ListsBoard from '../Components/ListsBoard';
-import Introduction from '../Components/Introduction';
+import SearchBanner from '../Components/Searchbar/SearchBanner';
+import TabsList from '../Components/HackerTopLists/TabsList';
+import Navbar from '../Components/Navbar/Navbar';
 
 export default function MainLandingPage() {
   return (
     <div>
+      <Navbar />
       <SearchBanner />
-      <ListsBoard />
-      <Introduction />
+      <TabsList />
     </div>
   );
 }

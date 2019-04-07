@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HackerCard from './HackerCard';
+import HackerRow from './HackerTopListsComponents/HackerRow';
+import HackerTopRow from './HackerTopListsComponents/HackerTopRow';
+import ExplanationSection from './HackerTopListsComponents/ExplanationSection';
 
 export default class HackerList extends React.Component {
   render() {
     return (
       <SDHackerList>
-        <h3>{this.props.heading}</h3>
+        <ExplanationSection color={this.props.color} />
+        <HackerTopRow metric={this.props.metric} color={this.props.color} />
         {this.props.data.map((data, index) => (
-          <HackerCard key={data.commentor} data={data} index={index} />
+          <HackerRow key={data.commentor} data={data} index={index} heading={this.props.heading} />
         ))}
       </SDHackerList>
     );
@@ -18,9 +21,9 @@ export default class HackerList extends React.Component {
 
 const SDHackerList = styled.div`
   box-sizing: border-box;
-  width: 100vw;
+  width: 70vw;
   min-height: 40vh;
-  padding: 5% 20%;
+  padding: 2%;
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
