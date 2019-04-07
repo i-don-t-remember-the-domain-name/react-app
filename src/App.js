@@ -19,7 +19,7 @@ export default function App() {
   const searchHacker = username => {
     setHacker(null);
     axios
-      .get(`https://hacker-salt.herokuapp.com/api/finduser/${username}`)
+      .get(`/api/finduser/${username}`)
       .then(res => {
         setHacker(res.data);
         console.log(res.data);

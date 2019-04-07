@@ -7,7 +7,11 @@ const usernameRef = useRef();
 
 function SearchBar(props) {
   return (
-    <SDFormSearchBar onSubmit={() => props.searchHacker(usernameRef.current.value)}>
+    <SDFormSearchBar
+      onSubmit={e => {
+        e.preventDefault();
+        props.searchHacker(usernameRef.current.value);
+      }}>
       <SDInputSearchBar placeholder="Search" ref={usernameRef} />
     </SDFormSearchBar>
   );
