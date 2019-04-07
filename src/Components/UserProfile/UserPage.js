@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import UserPageTabs from './UserPageTabs';
+import UserPageCommentList from './UserPageCommentList';
 
 export default function UserPage(props) {
   return (
@@ -9,12 +10,8 @@ export default function UserPage(props) {
       <SDUserPageContainer>
         <SDUserPageHeading>{props.commentor_data.commentor}</SDUserPageHeading>
         <UserPageTabs commentor_data={props.commentor_data} />
-        <div>
-          <SDUserPageHeading>Salties comments</SDUserPageHeading>
-          <div>
-            <div />
-          </div>
-        </div>
+        <SDUserPageHeading>Salties comments</SDUserPageHeading>
+        <UserPageCommentList commentor_data={props.commentor_data.top_cmnts_s} />
       </SDUserPageContainer>
     </SDUserPageEnvContainer>
   );

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default class HackerCard extends React.Component {
+export default class HackerRow extends React.Component {
   render() {
     const rankKey = Object.keys(this.props.data).find(key => key.startsWith('rank'));
 
     return (
-      <SDHackerCard>
+      <SDHackerRow>
         <SDRowRank>{this.props.data[rankKey]}</SDRowRank>
         <SDRowCommentor>{this.props.data.commentor}</SDRowCommentor>
         {/* 4 specific metrics below */}
@@ -16,12 +16,12 @@ export default class HackerCard extends React.Component {
         {/* 4 specific metrics above */}
 
         <SDRowSaltiestComment>{this.props.data.top_salty_comment[0].cleaned_comment}</SDRowSaltiestComment>
-      </SDHackerCard>
+      </SDHackerRow>
     );
   }
 }
 
-const SDHackerCard = styled.div`
+const SDHackerRow = styled.div`
   width: 100%;
   min-height: 50px;
   height: auto;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import UserPageTab from './UserPageTab';
 
 export default function UserPageTabs(props) {
-  let date = new Date(props.commentor_data.time_cmnt_fst * 1000).toUTCString();
+  let date = new Date(props.commentor_data.time_cmnt_fst * 1000).toISOString().substring(0, 10);
 
   function numberWithCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
