@@ -27,7 +27,7 @@ function Introduction() {
 const SDIntroContainer = styled.div`
   box-sizing: border-box;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   padding: 10%;
   align-items: center;
 

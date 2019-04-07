@@ -25,24 +25,22 @@ const SDTopRowHackerCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
 `;
 
 const SDTopRowRank = styled.div`
   width: 5%;
-  font-weight: 600;
 `;
 
 const SDTopRowCommentor = styled.div`
   min-width: 10%;
-  font-weight: 600;
 `;
 
 const SDTopRowSpecificMetric = styled.div`
   width: 10%;
-  font-weight: 600;
 `;
 
 const SDTopRowSaltiestComment = styled.div`
   width: 70%;
-  font-weight: 600;
 `;

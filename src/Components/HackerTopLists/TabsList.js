@@ -105,7 +105,7 @@ const SDTabsContainer = styled.div`
   }
 
   .ui.pointing.menu .item:after {
-    display: none;
+    border: none;
   }
   .ui.menu:after {
     display: none;

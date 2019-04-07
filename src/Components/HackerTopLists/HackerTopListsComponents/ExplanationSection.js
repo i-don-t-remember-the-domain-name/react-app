@@ -8,7 +8,7 @@ export default function ExplanationSection(props) {
   };
   return (
     <SDExplanationCard style={style}>
-      <h2>How do we count this</h2>
+      <SDExplanationHeading style={style}>How do we count this</SDExplanationHeading>
       <div>
         -317.32 JavaScript was supposed to be Scheme not once but twice. JavaScript was supposed to be Scheme not and the reason we use it instead of a Lisp in the browser is the insane competition
         with Microsoft. Source: interviews in Coders at Work. -317.32 JavaScript was supposed to be Scheme not once but twice , and the reason we use it instead of a Lisp in the browser is the insane
@@ -30,13 +30,13 @@ const SDExplanationCard = styled.div`
   align-items: flex-start;
   justify-content: space-between;
 
-  h2 {
-    font-weight: 600;
-    font-size: 1rem;
-    padding-bottom: 10px;
-  }
-
   div {
     color: black;
   }
+`;
+
+const SDExplanationHeading = styled.div`
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 10px;
 `;

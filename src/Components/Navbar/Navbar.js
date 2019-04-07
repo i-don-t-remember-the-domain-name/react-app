@@ -35,7 +35,7 @@ class Navbar extends React.Component {
         </SDNavItem>
         <SDNavItem>
           <div>
-            <a href="/about">About HackerSalt</a>
+            <a href="/about">About</a>
           </div>
         </SDNavItem>
       </SDNavbar>
@@ -53,13 +53,15 @@ const SDNavbar = styled.div`
   height: 60px;
   width: 100vw;
   background-color: #f8f9fa;
+  z-index: 2;
 `;
 
 const SDNavItem = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
   padding-left: 30px;
   cursor: pointer;
   a {
