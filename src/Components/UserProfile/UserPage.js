@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import UserPageTabs from './UserPageTabs';
-import UserPageCommentList from './UserPageCommentList';
+import UserPageTabs from './UserRank/UserPageTabs';
+import UserPageCommentList from './CommentTable/UserPageCommentList';
 
 export default function UserPage(props) {
   return (
@@ -10,7 +10,7 @@ export default function UserPage(props) {
       <SDUserPageContainer>
         <SDUserPageHeading>{props.commentor_data.commentor}</SDUserPageHeading>
         <UserPageTabs commentor_data={props.commentor_data} />
-        <SDUserPageHeading>Salties comments</SDUserPageHeading>
+        <SDUserPageHeading>{props.commentor_data.commentor}'s salties comments</SDUserPageHeading>
         <UserPageCommentList commentor_data={props.commentor_data.top_cmnts_s} />
       </SDUserPageContainer>
     </SDUserPageEnvContainer>

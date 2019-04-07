@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function UserPageTab(props) {
   const style = {
     color: props.color,
-    'background-color': `${props.color}1A`
+    backgroundColor: `${props.color}1A`
   };
   return (
     <SDUserPageTab style={style}>
