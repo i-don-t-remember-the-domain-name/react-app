@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { withRouter } from 'react-router-dom';
 import UserPageTabs from './UserRank/UserPageTabs';
 import UserPageCommentList from './CommentTable/UserPageCommentList';
 
-export default function UserPage(props) {
+function UserPage(props) {
+  if (props.hacker.commentor !== props.match.params.username) {
+    props.history.push('/');
+    return null;
+  }
   return (
     <SDUserPageEnvContainer>
       <SDUserPageContainer>
-        <SDUserPageHeading>{props.commentor_data.commentor}</SDUserPageHeading>
-        <UserPageTabs commentor_data={props.commentor_data} />
-        <SDUserPageHeading>{props.commentor_data.commentor}'s salties comments</SDUserPageHeading>
-        <UserPageCommentList commentor_data={props.commentor_data.top_cmnts_s} />
+        <SDUserPageHeading>{props.hacker.commentor}</SDUserPageHeading>
+        <UserPageTabs hacker={props.hacker} />
+        <SDUserPageHeading>{props.hacker.commentor}'s salties comments</SDUserPageHeading>
+        {/* <UserPageCommentList commentor_data={props.hacker.top_cmnts_s} /> */}
       </SDUserPageContainer>
     </SDUserPageEnvContainer>
   );
@@ -41,3 +45,5 @@ const SDUserPageHeading = styled.div`
   margin: 0;
   padding: 70px 0 50px 0;
 `;
+
+export default withRouter(UserPage);

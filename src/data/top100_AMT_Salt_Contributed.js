@@ -1902,7 +1902,7 @@ const mostSaltContributed = [
         parent_type: 'story',
         parent_author: 'cadalac',
         parent_title: 'What languages fix',
-        cleaned_comment: 'Javascript: html is boring.',
+        cleaned_comment: 'Javascript : html is boring.',
         comment_rank: 28.0,
         comment_id: 6969220,
         parent_id: 6968775
