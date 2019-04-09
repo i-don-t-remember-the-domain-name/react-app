@@ -21,7 +21,7 @@ function App(props) {
   const searchHacker = username => {
     setLoading(true);
     axios
-      .get(`https://hacker-salt.herokuapp.com/api/finduser/${username}`)
+      .get(`https://hacker-salt.herokuapp.com/api/user/${username}`)
       .then(res => {
         setHacker(res.data);
       })

@@ -30,15 +30,15 @@ app.get('/', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
-app.get('/user', (req, res) => {
-  res.sendFile(pathToIndexHtml);
-});
-
 app.get('/about', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
-app.get('/api/finduser/:username', async function(req, res) {
+app.get('/:user', (req, res) => {
+  res.sendFile(pathToIndexHtml);
+});
+
+app.get('/api/user/:username', async function(req, res) {
   try {
     const users = await db
       .collection('commentor_stats')
