@@ -3,14 +3,17 @@ import styled from 'styled-components';
 
 import scale from '../../img/scale.png';
 
-const usernameRef = useRef();
-
 function SearchBar(props) {
+  const usernameRef = useRef();
+  const clearInput = () => {
+    usernameRef.current.value = '';
+  };
   return (
     <SDFormSearchBar
       onSubmit={e => {
         e.preventDefault();
         props.searchHacker(usernameRef.current.value);
+        clearInput();
       }}>
       <SDInputSearchBar placeholder="Search" ref={usernameRef} />
     </SDFormSearchBar>

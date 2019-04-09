@@ -32,7 +32,7 @@ class Navbar extends React.Component {
         </SDLeftNav>
         <SDMiddleNav>
           <SDNavSearchBar>
-            <Searchbar background={'white'} className="navbar-searchbar" />
+            <Searchbar background={'white'} className="navbar-searchbar" searchHacker={this.props.searchHacker} />
           </SDNavSearchBar>
         </SDMiddleNav>
       </SDNavbar>
