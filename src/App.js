@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, useEffect } from 'react-router-dom';
 
 //Styling
 import './App.scss';
@@ -25,13 +25,12 @@ function App(props) {
       .then(res => {
         setHacker(res.data);
       })
+      .then(() => setLoading(false))
       .then(() => props.history.push(`/${username}`))
       .catch(err => {
         console.log(err);
-      })
-      .then(() => setLoading(false));
+      });
   };
-  console.log(hacker);
 
   return (
     <div className="app-container">

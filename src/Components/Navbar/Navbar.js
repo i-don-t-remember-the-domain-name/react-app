@@ -3,44 +3,26 @@ import styled from 'styled-components';
 
 import saltShaker from '../../img/salt-shaker.png';
 
-class Navbar extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isTop: true
-    };
-  }
-
-  componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== this.state.isTop) {
-        this.setState({ isTop });
-      }
-    });
-  }
-
-  render() {
-    return (
-      <SDNavbar>
-        <SDNavItem>
-          <SDLogoImg>
-            <a href="/">
-              <img src={saltShaker} alt="salt shaker" />
-            </a>
-          </SDLogoImg>
-          <div>
-            <a href="/">HackerSalt</a>
-          </div>
-        </SDNavItem>
-        <SDNavItem>
-          <div>
-            <a href="/about">About</a>
-          </div>
-        </SDNavItem>
-      </SDNavbar>
-    );
-  }
+function Navbar() {
+  return (
+    <SDNavbar>
+      <SDNavItem>
+        <SDLogoImg>
+          <a href="/">
+            <img src={saltShaker} alt="salt shaker" />
+          </a>
+        </SDLogoImg>
+        <div>
+          <a href="/">HackerSalt</a>
+        </div>
+      </SDNavItem>
+      <SDNavItem>
+        <div>
+          <a href="/about">About</a>
+        </div>
+      </SDNavItem>
+    </SDNavbar>
+  );
 }
 
 const SDNavbar = styled.div`

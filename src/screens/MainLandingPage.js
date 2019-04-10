@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import SearchBanner from '../Components/Searchbar/SearchBanner';
 import TabsList from '../Components/HackerTopLists/TabsList';
