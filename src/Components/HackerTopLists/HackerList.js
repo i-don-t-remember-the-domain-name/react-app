@@ -5,18 +5,16 @@ import HackerRow from './HackerTopListsComponents/HackerRow';
 import HackerTopRow from './HackerTopListsComponents/HackerTopRow';
 import ExplanationSection from './HackerTopListsComponents/ExplanationSection';
 
-export default class HackerList extends React.Component {
-  render() {
-    return (
-      <SDHackerList>
-        <ExplanationSection color={this.props.color} />
-        <HackerTopRow metric={this.props.metric} color={this.props.color} />
-        {this.props.data.map((data, index) => (
-          <HackerRow key={data.commentor} data={data} index={index} heading={this.props.heading} />
-        ))}
-      </SDHackerList>
-    );
-  }
+export default function HackerList(props) {
+  return (
+    <SDHackerList>
+      <ExplanationSection color={props.color} />
+      <HackerTopRow metric={props.metric} color={props.color} />
+      {props.data.map((data, index) => (
+        <HackerRow searchHacker={props.searchHacker} key={data.commentor} data={data} index={index} heading={props.heading} color={props.color} />
+      ))}
+    </SDHackerList>
+  );
 }
 
 const SDHackerList = styled.div`

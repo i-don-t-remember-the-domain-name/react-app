@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import SearchBanner from '../Components/Searchbar/SearchBanner';
 import TabsList from '../Components/HackerTopLists/TabsList';
@@ -9,7 +9,7 @@ export default function MainLandingPage(props) {
     <div>
       <Navbar />
       <SearchBanner searchHacker={props.searchHacker} />
-      <TabsList />
+      <TabsList searchHacker={props.searchHacker} />
     </div>
   );
 }

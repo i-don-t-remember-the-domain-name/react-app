@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch, withRouter, useEffect } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 //Styling
 import './App.scss';
