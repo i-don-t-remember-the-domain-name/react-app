@@ -25,7 +25,8 @@ const SDSearchBanner = styled.div`
   text-align: center;
   h1 {
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
+    font-weight: lighter;
+    font-size: 2rem;
   }
 `;
 

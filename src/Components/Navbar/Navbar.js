@@ -3,44 +3,26 @@ import styled from 'styled-components';
 
 import saltShaker from '../../img/salt-shaker.png';
 
-class Navbar extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isTop: true
-    };
-  }
-
-  componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== this.state.isTop) {
-        this.setState({ isTop });
-      }
-    });
-  }
-
-  render() {
-    return (
-      <SDNavbar>
-        <SDNavItem>
-          <SDLogoImg>
-            <a href="/">
-              <img src={saltShaker} alt="salt shaker" />
-            </a>
-          </SDLogoImg>
-          <div>
-            <a href="/">HackerSalt</a>
-          </div>
-        </SDNavItem>
-        <SDNavItem>
-          <div>
-            <a href="/about">About</a>
-          </div>
-        </SDNavItem>
-      </SDNavbar>
-    );
-  }
+function Navbar() {
+  return (
+    <SDNavbar>
+      <SDNavItem>
+        <SDLogoImg>
+          <a href="/">
+            <img src={saltShaker} alt="salt shaker" />
+          </a>
+        </SDLogoImg>
+        <div>
+          <a href="/">HackerSalt</a>
+        </div>
+      </SDNavItem>
+      <SDNavItem>
+        <div>
+          <a href="/about">About</a>
+        </div>
+      </SDNavItem>
+    </SDNavbar>
+  );
 }
 
 const SDNavbar = styled.div`
@@ -61,7 +43,7 @@ const SDNavItem = styled.div`
   height: 100%;
   align-items: center;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: lighter;
   padding-left: 30px;
   cursor: pointer;
   a {
@@ -70,7 +52,7 @@ const SDNavItem = styled.div`
 `;
 
 const SDLogoImg = styled.div`
-  height: 45%;
+  height: 35%;
   padding: 0 5px;
   img {
     height: 100%;

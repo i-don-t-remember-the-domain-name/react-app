@@ -15,7 +15,7 @@ function UserPage(props) {
         <SDUserPageHeading>{props.hacker.commentor}</SDUserPageHeading>
         <UserPageTabs hacker={props.hacker} />
         <SDUserPageHeading>{props.hacker.commentor}'s salties comments</SDUserPageHeading>
-        {/* <UserPageCommentList commentor_data={props.hacker.top_cmnts_s} /> */}
+        <UserPageCommentList comments={props.hacker.top_cmnts_s} />
       </SDUserPageContainer>
     </SDUserPageEnvContainer>
   );

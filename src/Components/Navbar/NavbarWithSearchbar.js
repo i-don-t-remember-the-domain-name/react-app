@@ -74,7 +74,7 @@ const SDNavItem = styled.div`
   height: 100%;
   align-items: center;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: lighter;
   padding-left: 30px;
   cursor: pointer;
   a {
@@ -83,7 +83,7 @@ const SDNavItem = styled.div`
 `;
 
 const SDLogoImg = styled.div`
-  height: 45%;
+  height: 35%;
   padding: 0 5px;
   img {
     height: 100%;

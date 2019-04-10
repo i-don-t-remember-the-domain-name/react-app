@@ -9,20 +9,29 @@ import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 
 import HackerList from './HackerList';
 
-const panes = [
-  { menuItem: 'Top 100 Overall Saltiest', render: () => <HackerList heading={'Top 100 Overall Saltiest'} color={'#f59f00'} metric={'sum_slt_oall'} data={Overall_Saltiest} /> },
-  { menuItem: 'Top 100 Salt Contributed', render: () => <HackerList heading={'Top 100 Salt Contributed'} color={'#4c6cec'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} /> },
-  { menuItem: 'Top 100 Saltiest Trolls', render: () => <HackerList heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} /> }
-  // { menuItem: 'Top 100 Salty Comments', render: () => <HackerList heading={'Top 100 Salty Comments'} color={'#FF5D3E'} metric={'sum_slt_s'} data={Saltiest_Trolls} /> }
-];
-
-const TabsList = () => (
-  <SDTabsEnvContainer>
-    <SDTabsContainer>
-      <Tab className="tab-container" menu={{ pointing: true }} panes={panes} />
-    </SDTabsContainer>
-  </SDTabsEnvContainer>
-);
+function TabsList(props) {
+  const panes = [
+    {
+      menuItem: 'Top 100 Overall Saltiest',
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Overall Saltiest'} color={'#4c6cec'} metric={'sum_slt_oall'} data={Overall_Saltiest} />
+    },
+    {
+      menuItem: 'Top 100 Salt Contributed',
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Salt Contributed'} color={'#f59f00'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} />
+    },
+    {
+      menuItem: 'Top 100 Saltiest Trolls',
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} />
+    }
+  ];
+  return (
+    <SDTabsEnvContainer>
+      <SDTabsContainer>
+        <Tab className="tab-container" menu={{ pointing: true }} panes={panes} />
+      </SDTabsContainer>
+    </SDTabsEnvContainer>
+  );
+}
 
 const SDTabsEnvContainer = styled.div`
   width: 100vw;

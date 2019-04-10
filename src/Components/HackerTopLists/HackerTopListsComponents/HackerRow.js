@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default class HackerRow extends React.Component {
+  arrowStyle = {
+    color: this.props.color
+  };
   render() {
     const rankKey = Object.keys(this.props.data).find(key => key.startsWith('rank'));
 
@@ -16,6 +19,13 @@ export default class HackerRow extends React.Component {
         {/* 4 specific metrics above */}
 
         <SDRowSaltiestComment>{this.props.data.top_salty_comment[0].cleaned_comment}</SDRowSaltiestComment>
+        <SDRowLink
+          onClick={e => {
+            e.preventDefault();
+            this.props.searchHacker(this.props.data.commentor);
+          }}>
+          <i className="fas fa-arrow-right" style={this.arrowStyle} />
+        </SDRowLink>
       </SDHackerRow>
     );
   }
@@ -46,5 +56,10 @@ const SDRowSpecificMetric = styled.div`
 `;
 
 const SDRowSaltiestComment = styled.div`
-  width: 70%;
+  width: 65%;
+`;
+
+const SDRowLink = styled.div`
+  width: 3%;
+  cursor: pointer;
 `;

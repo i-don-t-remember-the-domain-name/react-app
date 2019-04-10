@@ -9,7 +9,7 @@ export default function MainLandingPage(props) {
     <div>
       <Navbar />
       <SearchBanner searchHacker={props.searchHacker} />
-      <TabsList />
+      <TabsList searchHacker={props.searchHacker} />
     </div>
   );
 }
