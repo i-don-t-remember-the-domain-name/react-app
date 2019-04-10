@@ -16,6 +16,7 @@ function SearchBar(props) {
         clearInput();
       }}>
       <SDInputSearchBar placeholder="Search" ref={usernameRef} />
+      <input className="submitButton" type="submit" value="" />
     </SDFormSearchBar>
   );
 }
@@ -25,11 +26,7 @@ const SDInputSearchBar = styled.input`
   width: 100%;
   padding-left: 15px;
   background-color: #f8f9fa;
-  background-image: url(${scale});
-  background-position: center right 10px;
-  background-repeat: no-repeat;
-  background-size: 0.8rem;
-  border-radius: 6px;
+  border-radius: 6px 0 0 6px;
   border: none;
 
   ::placeholder {
@@ -41,6 +38,19 @@ const SDInputSearchBar = styled.input`
 const SDFormSearchBar = styled.form`
   height: 100%;
   width: 100%;
+  display: flex;
+
+  .submitButton {
+    border: none;
+    border-radius: 0 6px 6px 0;
+    width: 35px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    background-image: url(${scale});
+    background-position: center right 15px;
+    background-repeat: no-repeat;
+    background-size: 0.9rem;
+  }
 `;
 
 export default SearchBar;
