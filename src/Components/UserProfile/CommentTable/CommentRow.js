@@ -5,8 +5,8 @@ export default function CommentRow(props) {
   return (
     <div>
       <SDCommentRow>
-        <SDRowSaltiestComment>{props.data.cleaned_comment}</SDRowSaltiestComment>
-        <SDRowSaltiness>{props.data.comment_saltiness.toFixed(2)}</SDRowSaltiness>
+        <SDRowSaltiestComment>{props.comment.cleaned_comment}</SDRowSaltiestComment>
+        <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>
       </SDCommentRow>
     </div>
   );

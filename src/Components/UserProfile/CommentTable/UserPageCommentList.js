@@ -5,12 +5,18 @@ import CommentRow from './CommentRow';
 import CommentTopRow from './CommentTopRow';
 
 export default function UserPageCommentList(props) {
+  const comments = props.comments;
+  const commentsArray = Object.keys(comments).map(key => {
+    return comments[key];
+  });
+  console.log(commentsArray);
+
   return (
     <SDCommentList>
       <CommentTopRow />
-      {props.commentor_data.map(data => {
-        return <CommentRow key={data.comment_id} data={data} />;
-      })}
+      {commentsArray.map(comment => (
+        <CommentRow key={comment.comment_id} comment={comment} />
+      ))}
     </SDCommentList>
   );
 }
