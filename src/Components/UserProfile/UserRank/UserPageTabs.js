@@ -10,8 +10,9 @@ function UserPageTabs(props) {
     return null;
   }
 
-  let date = new Date(props.hacker.time_cmnt_fst.seconds).toISOString().substring(0, 10);
-
+  let miliseconds = props.hacker.time_cmnt_fst.seconds * 1000;
+  let dateInfo = new Date(miliseconds);
+  let date = `${dateInfo.getFullYear()}-${dateInfo.getMonth()}-${dateInfo.getDate()}`;
   function numberWithCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }

@@ -9,7 +9,6 @@ export default function UserPageCommentList(props) {
   const commentsArray = Object.keys(comments).map(key => {
     return comments[key];
   });
-  console.log(commentsArray);
 
   return (
     <SDCommentList>
