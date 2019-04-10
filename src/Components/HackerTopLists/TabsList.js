@@ -13,11 +13,11 @@ function TabsList(props) {
   const panes = [
     {
       menuItem: 'Top 100 Overall Saltiest',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Overall Saltiest'} color={'#f59f00'} metric={'sum_slt_oall'} data={Overall_Saltiest} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Overall Saltiest'} color={'#4c6cec'} metric={'sum_slt_oall'} data={Overall_Saltiest} />
     },
     {
       menuItem: 'Top 100 Salt Contributed',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Salt Contributed'} color={'#4c6cec'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Salt Contributed'} color={'#f59f00'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} />
     },
     {
       menuItem: 'Top 100 Saltiest Trolls',
