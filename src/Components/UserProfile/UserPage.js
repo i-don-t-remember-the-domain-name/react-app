@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 import UserPageTabs from './UserRank/UserPageTabs';
 import UserPageCommentList from './CommentTable/UserPageCommentList';
+import LineChart from '../Chart/LineChart';
+import BarChart from '../Chart/BarChart';
 
 function UserPage(props) {
   if (props.hacker.commentor !== props.match.params.username) {
@@ -14,6 +16,10 @@ function UserPage(props) {
       <SDUserPageContainer>
         <SDUserPageHeading>{props.hacker.commentor}</SDUserPageHeading>
         <UserPageTabs hacker={props.hacker} />
+        <SDUserPageHeading>{props.hacker.commentor}'s saltiness over the time</SDUserPageHeading>
+        <LineChart hacker={props.hacker} />
+        <SDUserPageHeading>{props.hacker.commentor}'s count of salty comments over the time</SDUserPageHeading>
+        <BarChart hacker={props.hacker} />
         <SDUserPageHeading>{props.hacker.commentor}'s salties comments</SDUserPageHeading>
         <UserPageCommentList comments={props.hacker.top_cmnts_s} />
       </SDUserPageContainer>

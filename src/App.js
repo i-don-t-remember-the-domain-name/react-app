@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import axios from 'axios';
 
 //Styling
 import './App.scss';
@@ -11,7 +12,6 @@ import MainLandingPage from './screens/MainLandingPage';
 import AboutPage from './screens/AboutPage';
 import UserProfilePage from './screens/UserProfilePage';
 import Footer from './Components/Footer/Footer';
-import axios from 'axios';
 
 //Default export
 function App(props) {
@@ -31,6 +31,7 @@ function App(props) {
         console.log(err);
       });
   };
+  console.log(hacker);
 
   return (
     <div className="app-container">
