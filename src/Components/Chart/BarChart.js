@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LabelList } from 'recharts';
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/30763kr7/';
@@ -23,8 +23,8 @@ export default class Example extends PureComponent {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="c_h" fill="#74B816" />
-        <Bar dataKey="c_s" fill="#F4A000" />
+        <Bar name="sweet comments count" dataKey="c_h" fill="#74B816" />
+        <Bar name="salty comments count" dataKey="c_s" fill="#F4A000" />
       </BarChart>
     );
   }
