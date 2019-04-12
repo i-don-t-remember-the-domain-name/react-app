@@ -65,13 +65,14 @@ function App(props) {
       .then(() => props.history.push(`/${username}`))
       .catch(err => {
         console.log(err);
+        setLoading(false);
       });
   };
 
   return (
     <div className="app-container">
       <Switch>
-        <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} />} />
+        <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} loading={loading} />} />
         <Route exact path="/about" render={pr => <AboutPage {...pr} />} />
         <Route
           path="/:username"
@@ -88,6 +89,7 @@ function App(props) {
               rankQuantityOfSaltiness={rankQuantityOfSaltiness}
               dateOfFirstComment={dateOfFirstComment}
               saltiestComments={saltiestComments}
+              loading={loading}
             />
           )}
         />

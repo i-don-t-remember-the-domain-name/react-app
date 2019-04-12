@@ -12,7 +12,7 @@ export default function UserProfilePage(props) {
 
   return (
     <div>
-      <NavbarWithSearchbar searchHacker={props.searchHacker} />
+      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} />
       <UserPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}

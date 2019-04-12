@@ -8,7 +8,7 @@ export default function MainLandingPage(props) {
   return (
     <div>
       <Navbar />
-      <SearchBanner searchHacker={props.searchHacker} />
+      <SearchBanner searchHacker={props.searchHacker} loading={props.loading} />
       <TabsList searchHacker={props.searchHacker} />
     </div>
   );

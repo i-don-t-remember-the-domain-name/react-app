@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Loader } from 'semantic-ui-react';
 
 import SearchBar from './SearchBar';
 
@@ -10,6 +11,7 @@ function SearchBanner(props) {
       <SDSearchBarFull>
         <SearchBar searchHacker={props.searchHacker} />
       </SDSearchBarFull>
+      {props.loading && <Loader active inline="centered" size="medium" />}
     </SDSearchBanner>
   );
 }
@@ -32,6 +34,7 @@ const SDSearchBanner = styled.div`
 
 const SDSearchBarFull = styled.div`
   margin-top: 80px;
+  margin-bottom: 20px;
   height: 40px;
   width: 30%;
 `;
