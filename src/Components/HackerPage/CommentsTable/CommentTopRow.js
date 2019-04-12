@@ -7,7 +7,7 @@ export default function CommentTopRow(props) {
     <SDCommentRow>
       <SDRowSaltiestComment>Comments</SDRowSaltiestComment>
       <SDRowSaltiness>Saltiness</SDRowSaltiness>
-      <SDRowLink />
+      <SDRowLink>See on HN</SDRowLink>
     </SDCommentRow>
   );
 }
@@ -27,20 +27,21 @@ const SDCommentRow = styled.div`
 `;
 
 const SDRowSaltiestComment = styled.div`
-  width: 85%;
+  width: 78%;
+  padding-left: 5px;
   font-weight: 600;
 `;
 
 const SDRowSaltiness = styled.div`
-  width: 8%;
+  width: 10%;
   color: #4c6cec;
   font-weight: 600;
   text-align: center;
 `;
 
 const SDRowLink = styled.div`
-  width: 2%;
+  width: 10%;
   color: #4c6cec;
   font-weight: 600;
-  text-align: right;
+  text-align: center;
 `;

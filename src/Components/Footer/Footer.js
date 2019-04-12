@@ -23,4 +23,5 @@ const SDFooter = styled.footer`
   height: 70px;
   width: 100vw;
   padding-bottom: 10px;
+  padding-top: 20px;
 `;

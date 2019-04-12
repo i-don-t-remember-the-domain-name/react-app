@@ -23,7 +23,7 @@ export default function HackerTopListsTabs(props) {
     },
     {
       menuItem: 'Top 100 Saltiest Trolls',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'tot_slt_comm'} data={QTY_Salty_Comments} />
     }
   ];
 

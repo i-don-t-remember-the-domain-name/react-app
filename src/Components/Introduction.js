@@ -6,9 +6,7 @@ export default function Introduction() {
   return (
     <div>
       <SDIntroContainer>
-        <SDIntroHeading>
-          <h2>About HackerSalt</h2>
-        </SDIntroHeading>
+        <SDIntroHeading>About HackerSalt</SDIntroHeading>
         <SDIntroContent>
           HackerSalt lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We're using sentiment analysis to create individual scores of
           commenters' interactions as well as creating a score card for the "saltiness" of the activity overall on HackerNews. You can explore users and trends over time.
@@ -39,6 +37,7 @@ const SDIntroContainer = styled.div`
 const SDIntroHeading = styled.div`
   width: 49.5%;
   padding: 10px;
+  font-size: 2rem;
   &:nth-of-type(2) {
     text-align: right;
   }

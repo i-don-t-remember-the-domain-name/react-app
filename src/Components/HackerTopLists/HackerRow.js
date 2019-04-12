@@ -3,9 +3,6 @@ import styled from 'styled-components';
 
 //Export default component
 export default function HackerRow(props) {
-  const arrowStyle = {
-    color: props.color
-  };
   const rankKey = Object.keys(props.data).find(key => key.startsWith('rank'));
 
   return (
@@ -23,7 +20,7 @@ export default function HackerRow(props) {
           e.preventDefault();
           props.searchHacker(props.data.commentor);
         }}>
-        <i className="fas fa-arrow-right" style={arrowStyle} />
+        <i class="fas fa-user-alt" />
       </SDRowLink>
     </SDHackerRow>
   );
@@ -47,18 +44,19 @@ const SDRowRank = styled.div`
 `;
 
 const SDRowCommentor = styled.div`
-  min-width: 10%;
+  min-width: 12%;
 `;
 
 const SDRowSpecificMetric = styled.div`
-  width: 10%;
+  width: 12%;
 `;
 
 const SDRowSaltiestComment = styled.div`
-  width: 65%;
+  width: 60%;
 `;
 
 const SDRowLink = styled.div`
-  width: 3%;
+  width: 8%;
   cursor: pointer;
+  text-align: center;
 `;

@@ -30,6 +30,7 @@ const SDInputSearchBar = styled.input`
   background-color: #f8f9fa;
   border-radius: 6px 0 0 6px;
   border: none;
+  font-weight: lighter;
 
   ::placeholder {
     font-size: 0.9rem;
