@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Introduction() {
+//Export default component
+export default function Introduction() {
   return (
     <div>
       <SDIntroContainer>
-        <SDIntroHeading>
-          <h2>About HackerSalt</h2>
-        </SDIntroHeading>
+        <SDIntroHeading>About HackerSalt</SDIntroHeading>
         <SDIntroContent>
           HackerSalt lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We're using sentiment analysis to create individual scores of
           commenters' interactions as well as creating a score card for the "saltiness" of the activity overall on HackerNews. You can explore users and trends over time.
@@ -24,13 +23,13 @@ function Introduction() {
   );
 }
 
+//Styled components
 const SDIntroContainer = styled.div`
   box-sizing: border-box;
   width: 100vw;
   height: 90vh;
   padding: 10%;
   align-items: center;
-
   display: flex;
   justify-content: space-between;
 `;
@@ -38,6 +37,7 @@ const SDIntroContainer = styled.div`
 const SDIntroHeading = styled.div`
   width: 49.5%;
   padding: 10px;
+  font-size: 2rem;
   &:nth-of-type(2) {
     text-align: right;
   }
@@ -49,5 +49,3 @@ const SDIntroContent = styled.div`
   text-align: left;
   line-height: 1.7;
 `;
-
-export default Introduction;

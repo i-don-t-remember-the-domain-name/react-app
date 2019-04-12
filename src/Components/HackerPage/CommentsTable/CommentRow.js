@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function CommentRow(props) {
   return (
     <div>
       <SDCommentRow>
-        <SDRowSaltiestComment>{props.comment.cleaned_comment}</SDRowSaltiestComment>
-        <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>
+        {props.comment.cleaned_comment && <SDRowSaltiestComment>{props.comment.cleaned_comment}</SDRowSaltiestComment>}
+        {props.comment.comment_saltiness && <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>}
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
-            <i className="fas fa-arrow-right" />
+            <i class="fas fa-external-link-alt" />
           </a>
         </SDRowLink>
       </SDCommentRow>
@@ -17,6 +18,7 @@ export default function CommentRow(props) {
   );
 }
 
+//Styled components
 const SDCommentRow = styled.div`
   width: 100%;
   min-height: 50px;
@@ -30,19 +32,19 @@ const SDCommentRow = styled.div`
 `;
 
 const SDRowSaltiestComment = styled.div`
-  width: 85%;
+  width: 80%;
 `;
 
 const SDRowSaltiness = styled.div`
-  width: 8%;
+  width: 10%;
   text-align: center;
 `;
 
 const SDRowLink = styled.div`
-  width: 2%;
+  width: 10%;
   text-align: center;
   cursor: pointer;
   .fa-arrow-right {
-    color: #ff5d3e;
+    color: #4c6cec;
   }
 `;

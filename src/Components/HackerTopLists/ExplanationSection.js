@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function ExplanationSection(props) {
   const style = {
     color: props.color
-    // 'background-color': `${props.color}1A`
   };
   return (
     <SDExplanationCard style={style}>
@@ -18,6 +18,7 @@ export default function ExplanationSection(props) {
   );
 }
 
+//Styled components
 const SDExplanationCard = styled.div`
   width: 100%;
   min-height: 50px;

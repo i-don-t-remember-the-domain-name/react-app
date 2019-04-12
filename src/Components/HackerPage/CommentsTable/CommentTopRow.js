@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function CommentTopRow(props) {
   return (
     <SDCommentRow>
       <SDRowSaltiestComment>Comments</SDRowSaltiestComment>
       <SDRowSaltiness>Saltiness</SDRowSaltiness>
-      <SDRowLink />
+      <SDRowLink>See on HN</SDRowLink>
     </SDCommentRow>
   );
 }
 
+//Styled components
 const SDCommentRow = styled.div`
   width: 100%;
   min-height: 50px;
@@ -21,24 +23,25 @@ const SDCommentRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #ff5d3e;
+  color: #4c6cec;
 `;
 
 const SDRowSaltiestComment = styled.div`
-  width: 85%;
+  width: 78%;
+  padding-left: 5px;
   font-weight: 600;
 `;
 
 const SDRowSaltiness = styled.div`
-  width: 8%;
-  color: #ff5d3e;
+  width: 10%;
+  color: #4c6cec;
   font-weight: 600;
   text-align: center;
 `;
 
 const SDRowLink = styled.div`
-  width: 2%;
-  color: #ff5d3e;
+  width: 10%;
+  color: #4c6cec;
   font-weight: 600;
-  text-align: right;
+  text-align: center;
 `;

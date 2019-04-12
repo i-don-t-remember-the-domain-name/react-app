@@ -1,20 +1,15 @@
 import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Bar } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
-  commentsArray = Object.keys(this.props.hacker.monthly_plot).map(key => {
-    return { ...this.props.hacker.monthly_plot[key], key };
-  });
-
   render() {
-    console.log(this.commentsArray);
     return (
       <LineChart
         width={1000}
         height={300}
-        data={this.commentsArray}
+        data={this.props.monthlyPlot}
         margin={{
           top: 5,
           right: 30,

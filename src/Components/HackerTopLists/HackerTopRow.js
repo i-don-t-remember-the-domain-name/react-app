@@ -1,20 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function HackerCardTopRow(props) {
   const style = {
     color: props.color
   };
   return (
     <SDTopRowHackerCard style={style}>
-      <SDTopRowRank>Rank</SDTopRowRank>
-      <SDTopRowCommentor>Username</SDTopRowCommentor>
+      <SDTopRowRank>rank</SDTopRowRank>
+      <SDTopRowCommentor>hacker name</SDTopRowCommentor>
       <SDTopRowSpecificMetric>{props.metric}</SDTopRowSpecificMetric>
-      <SDTopRowSaltiestComment>Saltiest Comment</SDTopRowSaltiestComment>
+      <SDTopRowSaltiestComment>saltiest comment</SDTopRowSaltiestComment>
+      <SDTopRowLink>see full profile</SDTopRowLink>
     </SDTopRowHackerCard>
   );
 }
 
+//Styled components
 const SDTopRowHackerCard = styled.div`
   width: 100%;
   min-height: 50px;
@@ -34,13 +37,20 @@ const SDTopRowRank = styled.div`
 `;
 
 const SDTopRowCommentor = styled.div`
-  min-width: 10%;
+  min-width: 12%;
+  display: flex;
+  justify-content: flex-start;
 `;
 
 const SDTopRowSpecificMetric = styled.div`
-  width: 10%;
+  width: 12%;
 `;
 
 const SDTopRowSaltiestComment = styled.div`
-  width: 70%;
+  width: 60%;
+`;
+
+const SDTopRowLink = styled.div`
+  width: 8%;
+  text-align: center;
 `;

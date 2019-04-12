@@ -1,21 +1,23 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
+//Import images
 import scale from '../../img/scale.png';
 
-function SearchBar(props) {
-  const usernameRef = useRef();
+//Export default component
+export default function SearchBar(props) {
+  const hackerNameRef = useRef();
   const clearInput = () => {
-    usernameRef.current.value = '';
+    hackerNameRef.current.value = '';
   };
   return (
     <SDFormSearchBar
       onSubmit={e => {
         e.preventDefault();
-        props.searchHacker(usernameRef.current.value);
+        props.searchHacker(hackerNameRef.current.value);
         clearInput();
       }}>
-      <SDInputSearchBar placeholder="Search" ref={usernameRef} />
+      <SDInputSearchBar placeholder="Search" ref={hackerNameRef} />
       <input className="submitButton" type="submit" value="" />
     </SDFormSearchBar>
   );
@@ -28,6 +30,7 @@ const SDInputSearchBar = styled.input`
   background-color: #f8f9fa;
   border-radius: 6px 0 0 6px;
   border: none;
+  font-weight: lighter;
 
   ::placeholder {
     font-size: 0.9rem;
@@ -52,5 +55,3 @@ const SDFormSearchBar = styled.form`
     background-size: 0.9rem;
   }
 `;
-
-export default SearchBar;

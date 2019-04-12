@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Footer() {
+//Export default component
+export default function Footer() {
   return (
     <SDFooter>
       <div>
@@ -11,6 +12,7 @@ function Footer() {
   );
 }
 
+//Styled components
 const SDFooter = styled.footer`
   box-sizing: border-box;
   display: flex;
@@ -21,6 +23,5 @@ const SDFooter = styled.footer`
   height: 70px;
   width: 100vw;
   padding-bottom: 10px;
+  padding-top: 20px;
 `;
-
-export default Footer;

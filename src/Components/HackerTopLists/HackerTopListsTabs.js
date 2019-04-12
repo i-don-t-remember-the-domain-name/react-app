@@ -2,14 +2,16 @@ import React from 'react';
 import { Tab } from 'semantic-ui-react';
 import styled from 'styled-components';
 
+//Import data
 import AMT_Salt_Contributed from '../../data/top100_AMT_Salt_Contributed';
 import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
-// import Saltiest_Trolls from '../../data/top100_Saltiest_Trolls';
 
+//Import components
 import HackerList from './HackerList';
 
-function TabsList(props) {
+//Export default component
+export default function HackerTopListsTabs(props) {
   const panes = [
     {
       menuItem: 'Top 100 Overall Saltiest',
@@ -21,9 +23,10 @@ function TabsList(props) {
     },
     {
       menuItem: 'Top 100 Saltiest Trolls',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'total salty comments'} data={QTY_Salty_Comments} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'tot_slt_comm'} data={QTY_Salty_Comments} />
     }
   ];
+
   return (
     <SDTabsEnvContainer>
       <SDTabsContainer>
@@ -33,6 +36,7 @@ function TabsList(props) {
   );
 }
 
+//Styled components
 const SDTabsEnvContainer = styled.div`
   width: 100vw;
   display: flex;
@@ -120,5 +124,3 @@ const SDTabsContainer = styled.div`
     display: none;
   }
 `;
-
-export default TabsList;

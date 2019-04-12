@@ -1,45 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Loader } from 'semantic-ui-react';
 
+//Import images
 import saltShaker from '../../img/salt-shaker.png';
 
+//Import components
 import Searchbar from '../Searchbar/SearchBar';
 
-class Navbar extends React.Component {
-  style = {
-    'background-color': 'white'
-  };
-
-  render() {
-    return (
-      <SDNavbar>
-        <SDLeftNav>
-          <SDNavItem>
-            <SDLogoImg>
-              <a href="/">
-                <img src={saltShaker} alt="salt shaker" />
-              </a>
-            </SDLogoImg>
-            <div>
-              <a href="/">HackerSalt</a>
-            </div>
-          </SDNavItem>
-          <SDNavItem>
-            <div>
-              <a href="/about">About</a>
-            </div>
-          </SDNavItem>
-        </SDLeftNav>
-        <SDMiddleNav>
-          <SDNavSearchBar>
-            <Searchbar background={'white'} className="navbar-searchbar" searchHacker={this.props.searchHacker} />
-          </SDNavSearchBar>
-        </SDMiddleNav>
-      </SDNavbar>
-    );
-  }
+//Export default component
+export default function Navbar(props) {
+  return (
+    <SDNavbar>
+      <SDLeftNav>
+        <SDNavItem>
+          <SDLogoImg>
+            <a href="/">
+              <img src={saltShaker} alt="salt shaker" />
+            </a>
+          </SDLogoImg>
+          <div>
+            <a href="/">HackerSalt</a>
+          </div>
+        </SDNavItem>
+        <SDNavItem>
+          <div>
+            <a href="/about">About</a>
+          </div>
+        </SDNavItem>
+      </SDLeftNav>
+      <SDMiddleNav>
+        <SDNavSearchBar>
+          <Searchbar background={'white'} className="navbar-searchbar" searchHacker={props.searchHacker} />
+        </SDNavSearchBar>
+      </SDMiddleNav>
+      <SDRightNav>{props.loading && <Loader active inline size="small" />}</SDRightNav>
+    </SDNavbar>
+  );
 }
 
+//Styled components
 const SDNavbar = styled.div`
   box-sizing: border-box;
   position: fixed;
@@ -69,6 +69,14 @@ const SDMiddleNav = styled.div`
   height: 100%;
 `;
 
+const SDRightNav = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 18%;
+  height: 100%;
+`;
+
 const SDNavItem = styled.div`
   display: flex;
   height: 100%;
@@ -95,5 +103,3 @@ const SDNavSearchBar = styled.div`
   height: 80%;
   width: 40%;
 `;
-
-export default Navbar;
