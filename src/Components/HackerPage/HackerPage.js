@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 //Import components
 import HackerPageTabs from './HackerPageTabs/HackerPageTabs';
-import HackerPageCommentList from './CommentTable/HackerPageCommentList';
+import HackerPageCommentList from './CommentsTable/HackerPageCommentList';
 import LineChart from '../Chart/LineChart';
 import BarChart from '../Chart/BarChart';
 
@@ -30,11 +30,11 @@ function HackerPage(props) {
           rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
           averageSaltiness={props.averageSaltiness}
         />
-        <SDHackerPageHeading>{hackerName}'s saltiness over the time</SDHackerPageHeading>
+        {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s saltiness over the time</SDHackerPageHeading>}
         {props.monthlyPlot && <LineChart monthlyPlot={props.monthlyPlot} />}
-        <SDHackerPageHeading>{hackerName}'s count of salty comments over the time</SDHackerPageHeading>
+        {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s count of salty comments over the time</SDHackerPageHeading>}
         {props.monthlyPlot && <BarChart monthlyPlot={props.monthlyPlot} />}
-        <SDHackerPageHeading>{hackerName}'s salties comments</SDHackerPageHeading>
+        {props.saltiestComments && <SDHackerPageHeading>{hackerName}'s salties comments</SDHackerPageHeading>}
         {props.saltiestComments && <HackerPageCommentList saltiestComments={props.saltiestComments} />}
       </SDHackerPageContainer>
     </SDHackerPageEnvContainer>
@@ -67,4 +67,4 @@ const SDHackerPageHeading = styled.div`
   padding: 70px 0 50px 0;
 `;
 
-export default withRouter(UserPage);
+export default withRouter(HackerPage);

@@ -7,6 +7,7 @@ export default function HackerPageTab(props) {
     color: props.color,
     backgroundColor: `${props.color}1A`
   };
+
   return (
     <SDHackerPageTab style={style}>
       <SDHackerPageTabHeading>{props.heading}</SDHackerPageTabHeading>

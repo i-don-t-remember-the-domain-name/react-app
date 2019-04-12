@@ -2,7 +2,7 @@ import React from 'react';
 
 //Import components
 import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
-import HackerPage from '../Components/HackerProfile/HackerPage';
+import HackerPage from '../Components/HackerPage/HackerPage';
 
 //Export default component
 export default function HackerProfilePage(props) {
