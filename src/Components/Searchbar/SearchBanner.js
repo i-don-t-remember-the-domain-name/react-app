@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Loader } from 'semantic-ui-react';
 
+//Import components
 import SearchBar from './SearchBar';
 
-function SearchBanner(props) {
+//Export default component
+export default function SearchBanner(props) {
   return (
     <SDSearchBanner>
       <h1>Find saltiest users on HackerNews</h1>
@@ -16,6 +18,7 @@ function SearchBanner(props) {
   );
 }
 
+//Styled components
 const SDSearchBanner = styled.div`
   width: 100vw;
   height: 50vh;
@@ -38,5 +41,3 @@ const SDSearchBarFull = styled.div`
   height: 40px;
   width: 30%;
 `;
-
-export default SearchBanner;

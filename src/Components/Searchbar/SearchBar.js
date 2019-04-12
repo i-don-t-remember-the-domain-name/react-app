@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
+//Import images
 import scale from '../../img/scale.png';
 
-function SearchBar(props) {
+//Export default component
+export default function SearchBar(props) {
   const usernameRef = useRef();
   const clearInput = () => {
     usernameRef.current.value = '';
@@ -52,5 +54,3 @@ const SDFormSearchBar = styled.form`
     background-size: 0.9rem;
   }
 `;
-
-export default SearchBar;

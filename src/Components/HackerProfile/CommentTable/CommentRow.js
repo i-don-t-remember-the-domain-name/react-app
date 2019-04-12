@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function CommentRow(props) {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function CommentRow(props) {
   );
 }
 
+//Styled components
 const SDCommentRow = styled.div`
   width: 100%;
   min-height: 50px;

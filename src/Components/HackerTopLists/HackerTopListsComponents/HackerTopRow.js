@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function HackerCardTopRow(props) {
   const style = {
     color: props.color
@@ -15,6 +16,7 @@ export default function HackerCardTopRow(props) {
   );
 }
 
+//Styled components
 const SDTopRowHackerCard = styled.div`
   width: 100%;
   min-height: 50px;

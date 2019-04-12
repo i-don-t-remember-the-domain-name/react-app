@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Import images
 import saltShaker from '../../img/salt-shaker.png';
 
-function Navbar() {
+//Export default component
+export default function Navbar() {
   return (
     <SDNavbar>
       <SDNavItem>
@@ -25,6 +27,7 @@ function Navbar() {
   );
 }
 
+//Styled components
 const SDNavbar = styled.div`
   box-sizing: border-box;
   position: fixed;
@@ -58,5 +61,3 @@ const SDLogoImg = styled.div`
     height: 100%;
   }
 `;
-
-export default Navbar;

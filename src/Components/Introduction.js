@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Introduction() {
+//Export default component
+export default function Introduction() {
   return (
     <div>
       <SDIntroContainer>
@@ -24,6 +25,7 @@ function Introduction() {
   );
 }
 
+//Styled components
 const SDIntroContainer = styled.div`
   box-sizing: border-box;
   width: 100vw;
@@ -49,5 +51,3 @@ const SDIntroContent = styled.div`
   text-align: left;
   line-height: 1.7;
 `;
-
-export default Introduction;

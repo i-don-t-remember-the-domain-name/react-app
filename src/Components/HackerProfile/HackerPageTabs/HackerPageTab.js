@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Export default component
 export default function HackerPageTab(props) {
   const style = {
     color: props.color,
@@ -14,6 +15,7 @@ export default function HackerPageTab(props) {
   );
 }
 
+//Styled components
 const SDHackerPageTab = styled.div`
   width: 26%;
   height: 100px;

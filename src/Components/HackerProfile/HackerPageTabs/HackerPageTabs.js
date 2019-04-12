@@ -2,16 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
+//Import components
 import HackerPageTab from './HackerPageTab';
 
+//Default export, exported at the bottom with withRouter
 function HackerPageTabs(props) {
-  // If hacker in state doesn't match
+  //CURRENTLY NOT USED: Redirect if hacker is not saved in state
   // if (props.hackerName !== props.match.params.username) {
   //   props.history.push('/');
   //   return null;
   // }
 
-  //Deconstructing the props
+  //Deconstructing all props
   const { dateOfFirstComment, countOfAllComments, countOfSaltyComments, rankAmountOfSaltiness, rankQuantityOfSaltiness, averageSaltiness } = props;
 
   return (
@@ -26,6 +28,7 @@ function HackerPageTabs(props) {
   );
 }
 
+//Styled components
 const SDHackerTabs = styled.div`
   display: flex;
   flex-direction: row;

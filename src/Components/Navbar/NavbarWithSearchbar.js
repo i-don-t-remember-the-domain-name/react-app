@@ -2,11 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Loader } from 'semantic-ui-react';
 
+//Import images
 import saltShaker from '../../img/salt-shaker.png';
 
+//Import components
 import Searchbar from '../Searchbar/SearchBar';
 
-function Navbar(props) {
+//Export default component
+export default function Navbar(props) {
   return (
     <SDNavbar>
       <SDLeftNav>
@@ -36,6 +39,7 @@ function Navbar(props) {
   );
 }
 
+//Styled components
 const SDNavbar = styled.div`
   box-sizing: border-box;
   position: fixed;
@@ -99,5 +103,3 @@ const SDNavSearchBar = styled.div`
   height: 80%;
   width: 40%;
 `;
-
-export default Navbar;

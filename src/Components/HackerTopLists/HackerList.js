@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Import components
 import HackerRow from './HackerTopListsComponents/HackerRow';
 import HackerTopRow from './HackerTopListsComponents/HackerTopRow';
 import ExplanationSection from './HackerTopListsComponents/ExplanationSection';
 
+//Export default component
 export default function HackerList(props) {
   return (
     <SDHackerList>
@@ -17,6 +19,7 @@ export default function HackerList(props) {
   );
 }
 
+//Styled components
 const SDHackerList = styled.div`
   box-sizing: border-box;
   width: 70vw;

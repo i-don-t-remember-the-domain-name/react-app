@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Import components
 import CommentRow from './CommentRow';
 import CommentTopRow from './CommentTopRow';
 
+//Export default component
 export default function HackerPageCommentList(props) {
   return (
     <SDCommentList>
@@ -15,6 +17,7 @@ export default function HackerPageCommentList(props) {
   );
 }
 
+//Styled components
 const SDCommentList = styled.div`
   box-sizing: border-box;
   width: 100%;

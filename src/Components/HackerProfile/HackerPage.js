@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
+
+//Import components
 import HackerPageTabs from './HackerPageTabs/HackerPageTabs';
 import HackerPageCommentList from './CommentTable/HackerPageCommentList';
 import LineChart from '../Chart/LineChart';
 import BarChart from '../Chart/BarChart';
 
+//Default export, exported at the bottom with withRouter
 function UserPage(props) {
-  //Redirect if hacker is not saved in state
+  // CURRENTLY NOT USED: Redirect if hacker is not saved in state
   // if (props.hackerName !== props.match.params.username) {
   //   props.history.push('/');
   //   return null;
@@ -38,6 +41,7 @@ function UserPage(props) {
   );
 }
 
+//Styled components
 const SDHackerPageEnvContainer = styled.div`
   width: 100vw;
   padding-top: 70px;
