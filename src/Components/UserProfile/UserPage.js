@@ -27,37 +27,15 @@ function UserPage(props) {
           averageSaltiness={props.averageSaltiness}
         />
         <SDUserPageHeading>{hackerName}'s saltiness over the time</SDUserPageHeading>
-        <LineChart monthlyPlot={props.monthlyPlot} />
+        {props.monthlyPlot && <LineChart monthlyPlot={props.monthlyPlot} />}
         <SDUserPageHeading>{hackerName}'s count of salty comments over the time</SDUserPageHeading>
-        <BarChart monthlyPlot={props.monthlyPlot} />
+        {props.monthlyPlot && <BarChart monthlyPlot={props.monthlyPlot} />}
         <SDUserPageHeading>{hackerName}'s salties comments</SDUserPageHeading>
-        <UserPageCommentList saltiestComments={props.saltiestComments} />
+        {props.saltiestComments && <UserPageCommentList saltiestComments={props.saltiestComments} />}
       </SDUserPageContainer>
     </SDUserPageEnvContainer>
   );
 }
-
-/*
-        searchHacker={props.searchHacker}
-        
-        
-        
-        hackerName={props.hackerName}
-        monthlyPlot={props.monthlyPlot}
-        
-        
-        saltiestComments={props.saltiestComments}
-
-        dateOfFirstComment={props.dateOfFirstComment}
-        countOfAllComments={props.ountOfAllComments}
-        countOfSaltyComments={props.countOfSaltyComments}
-        rankAmountOfSaltiness={props.rankAmountOfSaltiness}
-        rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
-        averageSaltiness={props.averageSaltiness}
-        
- */
-
-/*  const { dateOfFirstComment, countOfAllComments, countOfSaltyComments, rankAmountOfSaltiness, rankQuantityOfSaltiness, averageSaltiness } = props; */
 
 const SDUserPageEnvContainer = styled.div`
   width: 100vw;

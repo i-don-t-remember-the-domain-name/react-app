@@ -4,11 +4,11 @@ import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
 import UserPage from '../Components/UserProfile/UserPage';
 
 export default function UserProfilePage(props) {
-  //Redirect if hacker is not saved in state
-  // if (props.hackerName !== props.match.params.username) {
-  //   props.history.push('/');
-  //   return null;
-  // }
+  // Redirect if hacker is not saved in state
+  if (props.hackerName !== props.match.params.username) {
+    props.history.push('/');
+    return null;
+  }
 
   return (
     <div>
