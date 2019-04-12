@@ -6,18 +6,18 @@ import scale from '../../img/scale.png';
 
 //Export default component
 export default function SearchBar(props) {
-  const usernameRef = useRef();
+  const hackerNameRef = useRef();
   const clearInput = () => {
-    usernameRef.current.value = '';
+    hackerNameRef.current.value = '';
   };
   return (
     <SDFormSearchBar
       onSubmit={e => {
         e.preventDefault();
-        props.searchHacker(usernameRef.current.value);
+        props.searchHacker(hackerNameRef.current.value);
         clearInput();
       }}>
-      <SDInputSearchBar placeholder="Search" ref={usernameRef} />
+      <SDInputSearchBar placeholder="Search" ref={hackerNameRef} />
       <input className="submitButton" type="submit" value="" />
     </SDFormSearchBar>
   );

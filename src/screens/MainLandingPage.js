@@ -2,7 +2,7 @@ import React from 'react';
 
 //Import components
 import SearchBanner from '../Components/Searchbar/SearchBanner';
-import TabsList from '../Components/HackerTopLists/TabsList';
+import TabsList from '../Components/HackerTopLists/HackerTopListsTabs';
 import Navbar from '../Components/Navbar/Navbar';
 
 //Export default component

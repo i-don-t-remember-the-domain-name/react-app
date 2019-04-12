@@ -38,15 +38,15 @@ app.get('/:user', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
-app.get('/api/user/:username', async function(req, res) {
+app.get('/api/user/:hacker', async function(req, res) {
   try {
     const users = await db
       .collection('commentor_stats')
-      .where('commentor', '==', req.params.username)
+      .where('commentor', '==', req.params.hacker)
       .get();
 
     if (users.empty) {
-      console.log('No matching users');
+      console.log('No matching hacker');
       return;
     }
 

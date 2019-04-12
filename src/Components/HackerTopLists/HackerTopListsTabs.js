@@ -11,7 +11,7 @@ import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 import HackerList from './HackerList';
 
 //Export default component
-export default function TabsList(props) {
+export default function HackerTopListsTabs(props) {
   const panes = [
     {
       menuItem: 'Top 100 Overall Saltiest',

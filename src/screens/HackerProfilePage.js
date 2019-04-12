@@ -7,7 +7,7 @@ import HackerPage from '../Components/HackerProfile/HackerPage';
 //Export default component
 export default function HackerProfilePage(props) {
   // Redirect if hacker is not saved in state
-  if (props.hackerName !== props.match.params.username) {
+  if (props.hackerName !== props.match.params.hacker) {
     props.history.push('/');
     return null;
   }

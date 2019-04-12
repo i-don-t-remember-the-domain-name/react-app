@@ -32,7 +32,6 @@ const SDIntroContainer = styled.div`
   height: 90vh;
   padding: 10%;
   align-items: center;
-
   display: flex;
   justify-content: space-between;
 `;

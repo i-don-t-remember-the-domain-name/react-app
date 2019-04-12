@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 //Import components
-import HackerRow from './HackerTopListsComponents/HackerRow';
-import HackerTopRow from './HackerTopListsComponents/HackerTopRow';
-import ExplanationSection from './HackerTopListsComponents/ExplanationSection';
+import HackerRow from './HackerRow';
+import HackerTopRow from './HackerTopRow';
+import ExplanationSection from './ExplanationSection';
 
 //Export default component
 export default function HackerList(props) {

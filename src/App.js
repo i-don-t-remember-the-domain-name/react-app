@@ -24,10 +24,10 @@ function App(props) {
   const [saltiestComments, setSaltiestComments] = useState(undefined);
   const [loading, setLoading] = useState(false);
 
-  const searchHacker = username => {
+  const searchHacker = hacker => {
     setLoading(true);
     axios
-      .get(`https://hacker-salt.herokuapp.com/api/user/${username}`)
+      .get(`https://hacker-salt.herokuapp.com/api/user/${hacker}`)
       .then(res => {
         setHackerName(res.data.commentor);
         setCountOfAllComments(res.data.cnt_cmnts_oall);
@@ -62,7 +62,7 @@ function App(props) {
         }
       })
       .then(() => setLoading(false))
-      .then(() => props.history.push(`/${username}`))
+      .then(() => props.history.push(`/${hacker}`))
       .catch(err => {
         console.log(err);
         setLoading(false);
@@ -75,7 +75,7 @@ function App(props) {
         <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} loading={loading} />} />
         <Route exact path="/about" render={pr => <AboutPage {...pr} />} />
         <Route
-          path="/:username"
+          path="/:hacker"
           render={pr => (
             <HackerProfilePage
               {...pr}
