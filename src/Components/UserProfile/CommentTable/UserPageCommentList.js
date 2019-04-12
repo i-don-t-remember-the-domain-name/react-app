@@ -5,15 +5,10 @@ import CommentRow from './CommentRow';
 import CommentTopRow from './CommentTopRow';
 
 export default function UserPageCommentList(props) {
-  const comments = props.comments;
-  const commentsArray = Object.keys(comments).map(key => {
-    return comments[key];
-  });
-
   return (
     <SDCommentList>
       <CommentTopRow />
-      {commentsArray.map(comment => (
+      {props.saltiestComments.map(comment => (
         <CommentRow key={comment.comment_id} comment={comment} />
       ))}
     </SDCommentList>

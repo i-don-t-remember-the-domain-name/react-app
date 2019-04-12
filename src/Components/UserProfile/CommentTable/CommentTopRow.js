@@ -21,7 +21,7 @@ const SDCommentRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #ff5d3e;
+  color: #4c6cec;
 `;
 
 const SDRowSaltiestComment = styled.div`
@@ -31,14 +31,14 @@ const SDRowSaltiestComment = styled.div`
 
 const SDRowSaltiness = styled.div`
   width: 8%;
-  color: #ff5d3e;
+  color: #4c6cec;
   font-weight: 600;
   text-align: center;
 `;
 
 const SDRowLink = styled.div`
   width: 2%;
-  color: #ff5d3e;
+  color: #4c6cec;
   font-weight: 600;
   text-align: right;
 `;

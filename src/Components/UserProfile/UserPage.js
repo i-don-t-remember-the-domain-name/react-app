@@ -1,31 +1,63 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import UserPageTabs from './UserRank/UserPageTabs';
+import UserPageTabs from './UserTabs/UserPageTabs';
 import UserPageCommentList from './CommentTable/UserPageCommentList';
 import LineChart from '../Chart/LineChart';
 import BarChart from '../Chart/BarChart';
 
 function UserPage(props) {
-  if (props.hacker.commentor !== props.match.params.username) {
-    props.history.push('/');
-    return null;
-  }
+  //Redirect if hacker is not saved in state
+  // if (props.hackerName !== props.match.params.username) {
+  //   props.history.push('/');
+  //   return null;
+  // }
+
+  const { hackerName } = props;
   return (
     <SDUserPageEnvContainer>
       <SDUserPageContainer>
-        <SDUserPageHeading>{props.hacker.commentor}</SDUserPageHeading>
-        <UserPageTabs hacker={props.hacker} />
-        <SDUserPageHeading>{props.hacker.commentor}'s saltiness over the time</SDUserPageHeading>
-        <LineChart hacker={props.hacker} />
-        <SDUserPageHeading>{props.hacker.commentor}'s count of salty comments over the time</SDUserPageHeading>
-        <BarChart hacker={props.hacker} />
-        <SDUserPageHeading>{props.hacker.commentor}'s salties comments</SDUserPageHeading>
-        <UserPageCommentList comments={props.hacker.top_cmnts_s} />
+        <SDUserPageHeading>{hackerName}</SDUserPageHeading>
+        <UserPageTabs
+          dateOfFirstComment={props.dateOfFirstComment}
+          countOfAllComments={props.countOfAllComments}
+          countOfSaltyComments={props.countOfSaltyComments}
+          rankAmountOfSaltiness={props.rankAmountOfSaltiness}
+          rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
+          averageSaltiness={props.averageSaltiness}
+        />
+        <SDUserPageHeading>{hackerName}'s saltiness over the time</SDUserPageHeading>
+        <LineChart monthlyPlot={props.monthlyPlot} />
+        <SDUserPageHeading>{hackerName}'s count of salty comments over the time</SDUserPageHeading>
+        <BarChart monthlyPlot={props.monthlyPlot} />
+        <SDUserPageHeading>{hackerName}'s salties comments</SDUserPageHeading>
+        <UserPageCommentList saltiestComments={props.saltiestComments} />
       </SDUserPageContainer>
     </SDUserPageEnvContainer>
   );
 }
+
+/*
+        searchHacker={props.searchHacker}
+        
+        
+        
+        hackerName={props.hackerName}
+        monthlyPlot={props.monthlyPlot}
+        
+        
+        saltiestComments={props.saltiestComments}
+
+        dateOfFirstComment={props.dateOfFirstComment}
+        countOfAllComments={props.ountOfAllComments}
+        countOfSaltyComments={props.countOfSaltyComments}
+        rankAmountOfSaltiness={props.rankAmountOfSaltiness}
+        rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
+        averageSaltiness={props.averageSaltiness}
+        
+ */
+
+/*  const { dateOfFirstComment, countOfAllComments, countOfSaltyComments, rankAmountOfSaltiness, rankQuantityOfSaltiness, averageSaltiness } = props; */
 
 const SDUserPageEnvContainer = styled.div`
   width: 100vw;

@@ -3,15 +3,13 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Labe
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/30763kr7/';
-  commentsArray = Object.keys(this.props.hacker.monthly_plot).map(key => {
-    return { ...this.props.hacker.monthly_plot[key], key };
-  });
+
   render() {
     return (
       <BarChart
         width={1000}
         height={300}
-        data={this.commentsArray}
+        data={this.props.monthlyPlot}
         margin={{
           top: 5,
           right: 30,

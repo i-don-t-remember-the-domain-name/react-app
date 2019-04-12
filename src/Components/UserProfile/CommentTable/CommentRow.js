@@ -5,8 +5,8 @@ export default function CommentRow(props) {
   return (
     <div>
       <SDCommentRow>
-        <SDRowSaltiestComment>{props.comment.cleaned_comment}</SDRowSaltiestComment>
-        <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>
+        {props.comment.cleaned_comment && <SDRowSaltiestComment>{props.comment.cleaned_comment}</SDRowSaltiestComment>}
+        {props.comment.comment_saltiness && <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>}
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
             <i className="fas fa-arrow-right" />
@@ -43,6 +43,6 @@ const SDRowLink = styled.div`
   text-align: center;
   cursor: pointer;
   .fa-arrow-right {
-    color: #ff5d3e;
+    color: #4c6cec;
   }
 `;

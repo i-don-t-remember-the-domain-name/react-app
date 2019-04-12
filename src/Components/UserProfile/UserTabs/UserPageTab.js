@@ -29,6 +29,7 @@ const SDUserPageTab = styled.div`
 const SDUserPageTabHeading = styled.div`
   font-weight: 600;
   padding-bottom: 10px;
+  text-align: center;
 `;
 
 const SDUserPageTabContent = styled.div`
