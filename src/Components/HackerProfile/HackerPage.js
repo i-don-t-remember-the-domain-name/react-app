@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import UserPageTabs from './UserTabs/UserPageTabs';
-import UserPageCommentList from './CommentTable/UserPageCommentList';
+import HackerPageTabs from './HackerPageTabs/HackerPageTabs';
+import HackerPageCommentList from './CommentTable/HackerPageCommentList';
 import LineChart from '../Chart/LineChart';
 import BarChart from '../Chart/BarChart';
 
@@ -16,10 +16,10 @@ function UserPage(props) {
   const { hackerName } = props;
 
   return (
-    <SDUserPageEnvContainer>
-      <SDUserPageContainer>
-        <SDUserPageHeading>{hackerName}</SDUserPageHeading>
-        <UserPageTabs
+    <SDHackerPageEnvContainer>
+      <SDHackerPageContainer>
+        <SDHackerPageHeading>{hackerName}</SDHackerPageHeading>
+        <HackerPageTabs
           dateOfFirstComment={props.dateOfFirstComment}
           countOfAllComments={props.countOfAllComments}
           countOfSaltyComments={props.countOfSaltyComments}
@@ -27,18 +27,18 @@ function UserPage(props) {
           rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
           averageSaltiness={props.averageSaltiness}
         />
-        <SDUserPageHeading>{hackerName}'s saltiness over the time</SDUserPageHeading>
+        <SDHackerPageHeading>{hackerName}'s saltiness over the time</SDHackerPageHeading>
         {props.monthlyPlot && <LineChart monthlyPlot={props.monthlyPlot} />}
-        <SDUserPageHeading>{hackerName}'s count of salty comments over the time</SDUserPageHeading>
+        <SDHackerPageHeading>{hackerName}'s count of salty comments over the time</SDHackerPageHeading>
         {props.monthlyPlot && <BarChart monthlyPlot={props.monthlyPlot} />}
-        <SDUserPageHeading>{hackerName}'s salties comments</SDUserPageHeading>
-        {props.saltiestComments && <UserPageCommentList saltiestComments={props.saltiestComments} />}
-      </SDUserPageContainer>
-    </SDUserPageEnvContainer>
+        <SDHackerPageHeading>{hackerName}'s salties comments</SDHackerPageHeading>
+        {props.saltiestComments && <HackerPageCommentList saltiestComments={props.saltiestComments} />}
+      </SDHackerPageContainer>
+    </SDHackerPageEnvContainer>
   );
 }
 
-const SDUserPageEnvContainer = styled.div`
+const SDHackerPageEnvContainer = styled.div`
   width: 100vw;
   padding-top: 70px;
   height: auto;
@@ -48,14 +48,14 @@ const SDUserPageEnvContainer = styled.div`
   justify-content: center;
 `;
 
-const SDUserPageContainer = styled.div`
+const SDHackerPageContainer = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const SDUserPageHeading = styled.div`
+const SDHackerPageHeading = styled.div`
   font-weight: lighter;
   font-size: 2rem;
   letter-spacing: 0.05rem;

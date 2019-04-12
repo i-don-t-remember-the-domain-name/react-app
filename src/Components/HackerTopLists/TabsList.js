@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import AMT_Salt_Contributed from '../../data/top100_AMT_Salt_Contributed';
 import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
-// import Saltiest_Trolls from '../../data/top100_Saltiest_Trolls';
 
 import HackerList from './HackerList';
 

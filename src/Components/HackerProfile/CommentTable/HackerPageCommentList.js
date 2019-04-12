@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import CommentRow from './CommentRow';
 import CommentTopRow from './CommentTopRow';
 
-export default function UserPageCommentList(props) {
+export default function HackerPageCommentList(props) {
   return (
     <SDCommentList>
       <CommentTopRow />

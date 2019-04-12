@@ -8,7 +8,7 @@ import './App.scss';
 //Import Components
 import MainLandingPage from './screens/MainLandingPage';
 import AboutPage from './screens/AboutPage';
-import UserProfilePage from './screens/UserProfilePage';
+import HackerProfilePage from './screens/HackerProfilePage';
 import Footer from './Components/Footer/Footer';
 
 //Default export
@@ -77,7 +77,7 @@ function App(props) {
         <Route
           path="/:username"
           render={pr => (
-            <UserProfilePage
+            <HackerProfilePage
               {...pr}
               searchHacker={searchHacker}
               averageSaltiness={averageSaltiness}

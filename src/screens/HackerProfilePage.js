@@ -1,9 +1,9 @@
 import React from 'react';
 
 import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
-import UserPage from '../Components/UserProfile/UserPage';
+import HackerPage from '../Components/HackerProfile/HackerPage';
 
-export default function UserProfilePage(props) {
+export default function HackerProfilePage(props) {
   // Redirect if hacker is not saved in state
   if (props.hackerName !== props.match.params.username) {
     props.history.push('/');
@@ -13,7 +13,7 @@ export default function UserProfilePage(props) {
   return (
     <div>
       <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} />
-      <UserPage
+      <HackerPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}
         countOfAllComments={props.countOfAllComments}
