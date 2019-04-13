@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <SDFooter>
       <div>
-        Created by <a href="www.google.com">Ivana</a> and <a href="www.google.com">Britton</a>. All Rigts Reserved
+        Created by <a href="https://twitter.com/ivanahuckova">Ivana</a> and <a href="https://twitter.com/bwinterrose">Britton</a>. All Rights Reserved
       </div>
     </SDFooter>
   );
