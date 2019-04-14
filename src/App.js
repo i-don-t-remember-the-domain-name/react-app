@@ -28,7 +28,7 @@ function App(props) {
   const searchHacker = hacker => {
     setLoading(true);
     axios
-      .get(`https://hacker-salt.herokuapp.com/api/hacker/${hacker}`)
+      .get(`https://hackersalt.com/api/hacker/${hacker}`)
       .then(res => {
         setHackerName(res.data.commentor);
         setCountOfAllComments(res.data.cnt_cmnts_oall);
