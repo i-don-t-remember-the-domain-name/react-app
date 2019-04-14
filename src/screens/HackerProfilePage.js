@@ -14,7 +14,7 @@ export default function HackerProfilePage(props) {
 
   return (
     <div>
-      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} />
+      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} />
       <HackerPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}

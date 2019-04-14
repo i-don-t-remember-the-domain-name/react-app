@@ -14,16 +14,16 @@ function HackerPageTabs(props) {
   // }
 
   //Deconstructing all props
-  const { dateOfFirstComment, countOfAllComments, countOfSaltyComments, rankAmountOfSaltiness, rankQuantityOfSaltiness, averageSaltiness } = props;
+  const { countOfAllComments, countOfSaltyComments, rankAmountOfSaltiness, rankQuantityOfSaltiness, rankOverallSaltiness, averageSaltiness } = props;
 
   return (
     <SDHackerTabs>
-      {dateOfFirstComment && <HackerPageTab color={'#4c6cec'} heading={'First Comments'} data={dateOfFirstComment} />}
-      {countOfAllComments && <HackerPageTab color={'#f59f00'} heading={'All Comments'} data={countOfAllComments} />}
-      {countOfSaltyComments && <HackerPageTab color={'#4c6cec'} heading={'Salty Comments'} data={countOfSaltyComments} />}
-      {rankAmountOfSaltiness && <HackerPageTab color={'#ff5d3e'} heading={'Rank In Amount Of Salty Comments'} data={rankAmountOfSaltiness} />}
-      {rankQuantityOfSaltiness && <HackerPageTab color={'#74b816'} heading={'Rank In Qunatity of Brought Saltiness'} data={rankQuantityOfSaltiness} />}
-      {averageSaltiness && <HackerPageTab color={'#FBBD05'} heading={'Average Saltiness'} data={averageSaltiness} />}
+      {countOfAllComments && <HackerPageTab color={'#f59f00'} heading={'# of Comments Overall'} data={countOfAllComments} />}
+      {countOfSaltyComments && <HackerPageTab color={'#4c6cec'} heading={'# Salty Comments'} data={countOfSaltyComments} />}
+      {averageSaltiness && <HackerPageTab color={'#FBBD05'} heading={'Average Salt Score'} data={averageSaltiness} />}
+      {rankOverallSaltiness && <HackerPageTab color={'#4c6cec'} heading={'Rank: Total Overall Score'} data={rankOverallSaltiness} />}
+      {rankAmountOfSaltiness && <HackerPageTab color={'#74b816'} heading={'Rank: Total Salt Contributed'} data={rankAmountOfSaltiness} />}
+      {rankQuantityOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Number of Salty Comments'} data={rankQuantityOfSaltiness} />}
     </SDHackerTabs>
   );
 }

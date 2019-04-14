@@ -27,6 +27,9 @@ const SDHackerPageTab = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const SDHackerPageTabHeading = styled.div`

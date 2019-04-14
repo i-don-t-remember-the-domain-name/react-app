@@ -20,20 +20,28 @@ function App(props) {
   const [monthlyPlot, setMonthlyPlot] = useState(undefined);
   const [rankAmountOfSaltiness, setRankAmountOfSaltiness] = useState(undefined);
   const [rankQuantityOfSaltiness, setRankQuantityOfSaltiness] = useState(undefined);
+  const [rankOverallSaltiness, setRankOverallSaltiness] = useState(undefined);
   const [dateOfFirstComment, setDateOfFirstComment] = useState(undefined);
   const [saltiestComments, setSaltiestComments] = useState(undefined);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const searchHacker = hacker => {
     setLoading(true);
-    axios
-      .get(`https://hacker-salt.herokuapp.com/api/hacker/${hacker}`)
+    setError(false);
+    axios({
+      method: 'get',
+      url: `https:/hacker-salt.herokuapp.com/api/hacker/${hacker}`,
+      timeout: 5000
+    })
       .then(res => {
+        cleanPreviousHacker();
         setHackerName(res.data.commentor);
         setCountOfAllComments(res.data.cnt_cmnts_oall);
         setCountOfSaltyComments(res.data.cnt_slt_s);
         setRankAmountOfSaltiness(res.data.rank_lt_amt_slt);
         setRankQuantityOfSaltiness(res.data.rank_lt_qty_sc);
+        setRankOverallSaltiness(res.data.rank_oall_slt);
 
         //If there is average saltiness, fix it to 2 decimal numbers
         res.data.avg_slt_s && setAverageSaltiness(res.data.avg_slt_s.toFixed(2));
@@ -41,7 +49,7 @@ function App(props) {
         //If there is date, transform date to required format and set the DateOfFirstComment state
         if (res.data.time_cmnt_fst.seconds) {
           let dateInfo = new Date(res.data.time_cmnt_fst.seconds * 1000);
-          let date = `${dateInfo.getFullYear()}-${dateInfo.getMonth()}-${dateInfo.getDate()}`;
+          let date = `${dateInfo.getDate()}-${dateInfo.getMonth()}-${dateInfo.getFullYear()}`;
           setDateOfFirstComment(date);
         }
 
@@ -60,19 +68,33 @@ function App(props) {
           });
           setMonthlyPlot(monthlyPlotArray);
         }
+        console.log(res.data);
       })
       .then(() => setLoading(false))
       .then(() => props.history.push(`/${hacker}`))
       .catch(err => {
-        console.log(err);
+        setError(err);
         setLoading(false);
       });
   };
+  console.log(error);
+  function cleanPreviousHacker() {
+    setAverageSaltiness(undefined);
+    setCountOfAllComments(undefined);
+    setCountOfSaltyComments(undefined);
+    setHackerName(undefined);
+    setMonthlyPlot(undefined);
+    setRankAmountOfSaltiness(undefined);
+    setRankQuantityOfSaltiness(undefined);
+    setRankOverallSaltiness(undefined);
+    setDateOfFirstComment(undefined);
+    setSaltiestComments(undefined);
+  }
 
   return (
     <div className="app-container">
       <Switch>
-        <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} loading={loading} />} />
+        <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} loading={loading} error={error} />} />
         <Route exact path="/about" render={pr => <AboutPage {...pr} />} />
         <Route
           path="/:hacker"
@@ -87,9 +109,11 @@ function App(props) {
               monthlyPlot={monthlyPlot}
               rankAmountOfSaltiness={rankAmountOfSaltiness}
               rankQuantityOfSaltiness={rankQuantityOfSaltiness}
+              rankOverallSaltiness={rankOverallSaltiness}
               dateOfFirstComment={dateOfFirstComment}
               saltiestComments={saltiestComments}
               loading={loading}
+              error={error}
             />
           )}
         />

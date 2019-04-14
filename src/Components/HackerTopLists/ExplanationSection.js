@@ -8,12 +8,9 @@ export default function ExplanationSection(props) {
   };
   return (
     <SDExplanationCard style={style}>
-      <SDExplanationHeading style={style}>How do we count this</SDExplanationHeading>
-      <div>
-        -317.32 JavaScript was supposed to be Scheme not once but twice. JavaScript was supposed to be Scheme not and the reason we use it instead of a Lisp in the browser is the insane competition
-        with Microsoft. Source: interviews in Coders at Work. -317.32 JavaScript was supposed to be Scheme not once but twice , and the reason we use it instead of a Lisp in the browser is the insane
-        competition with Microsoft. Source: interviews in Coders at Work.
-      </div>
+      <SDExplanationHeading style={style}>What does the score mean?</SDExplanationHeading>
+      <div>The HackerNews commentros are ranked from the saltiest to less salty based on the specific criteria for each rank.</div>
+      <div>{props.explanation}</div>
     </SDExplanationCard>
   );
 }
@@ -30,6 +27,9 @@ const SDExplanationCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
 
   div {
     color: black;
@@ -40,4 +40,7 @@ const SDExplanationHeading = styled.div`
   font-weight: 600;
   font-size: 1rem;
   padding-bottom: 10px;
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
 `;

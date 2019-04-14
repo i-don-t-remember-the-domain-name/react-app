@@ -34,7 +34,17 @@ export default function Navbar(props) {
           <Searchbar background={'white'} className="navbar-searchbar" searchHacker={props.searchHacker} />
         </SDNavSearchBar>
       </SDMiddleNav>
-      <SDRightNav>{props.loading && <Loader active inline size="small" />}</SDRightNav>
+      {props.loading && (
+        <SDRightNav>
+          {' '}
+          <Loader active inline size="small" />
+        </SDRightNav>
+      )}
+      {!props.loading && props.error && (
+        <SDRightNav>
+          <SDErrorMessage>User not found. Check spelling and capitalization, and try to search again.</SDErrorMessage>
+        </SDRightNav>
+      )}
     </SDNavbar>
   );
 }
@@ -52,6 +62,11 @@ const SDNavbar = styled.div`
   width: 100vw;
   z-index: 2;
   background-color: white;
+  flex-wrap: wrap;
+  @media (max-width: 600px) {
+    height: 50px;
+    flex-wrap: wrap;
+  }
 `;
 
 const SDLeftNav = styled.div`
@@ -59,6 +74,11 @@ const SDLeftNav = styled.div`
   align-items: center;
   width: 20%;
   height: 100%;
+  @media (max-width: 600px) {
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+  }
 `;
 
 const SDMiddleNav = styled.div`
@@ -67,14 +87,34 @@ const SDMiddleNav = styled.div`
   justify-content: center;
   width: 60%;
   height: 100%;
+  @media (max-width: 900px) {
+    width: 74%;
+    justify-content: flex-end;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+    background-color: white;
+  }
 `;
 
 const SDRightNav = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 18%;
+  justify-content: center;
+  width: 100%;
   height: 100%;
+  @media (max-width: 900px) {
+    width: 100%;
+    justify-content: center;
+  }
+`;
+const SDErrorMessage = styled.div`
+  font-size: 0.9rem;
+  color: #f4a000;
+  padding: 0 10px;
+  text-align: center;
 `;
 
 const SDNavItem = styled.div`
@@ -84,6 +124,10 @@ const SDNavItem = styled.div`
   font-size: 1rem;
   font-weight: lighter;
   padding-left: 30px;
+  @media (max-width: 600px) {
+    margin-right: 15px;
+    padding: 0;
+  }
   cursor: pointer;
   a {
     padding: 0;
@@ -102,4 +146,7 @@ const SDNavSearchBar = styled.div`
   padding-top: 10px;
   height: 80%;
   width: 40%;
+  @media (max-width: 1100px) {
+    width: 60%;
+  }
 `;

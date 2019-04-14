@@ -39,6 +39,9 @@ const SDNavbar = styled.div`
   width: 100vw;
   background-color: #f8f9fa;
   z-index: 2;
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 const SDNavItem = styled.div`
@@ -48,6 +51,10 @@ const SDNavItem = styled.div`
   font-size: 1rem;
   font-weight: lighter;
   padding-left: 30px;
+  @media (max-width: 600px) {
+    padding-left: 0px;
+    margin-right: 15px;
+  }
   cursor: pointer;
   a {
     padding: 0;
