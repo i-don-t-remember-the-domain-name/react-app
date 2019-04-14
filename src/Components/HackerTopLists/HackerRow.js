@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Import images
+import searchicon from '../../img/searchicon.png';
+
 //Export default component
 export default function HackerRow(props) {
   const rankKey = Object.keys(props.data).find(key => key.startsWith('rank'));
@@ -20,7 +23,7 @@ export default function HackerRow(props) {
           e.preventDefault();
           props.searchHacker(props.data.commentor);
         }}>
-        <i className="fas fa-user-alt" />
+        <img src={searchicon} alt="search icon" />
       </SDRowLink>
     </SDHackerRow>
   );
@@ -59,4 +62,7 @@ const SDRowLink = styled.div`
   width: 8%;
   cursor: pointer;
   text-align: center;
+  img {
+    width: 14%;
+  }
 `;
