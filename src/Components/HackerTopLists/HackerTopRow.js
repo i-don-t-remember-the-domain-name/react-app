@@ -8,11 +8,11 @@ export default function HackerCardTopRow(props) {
   };
   return (
     <SDTopRowHackerCard style={style}>
-      <SDTopRowRank>rank</SDTopRowRank>
-      <SDTopRowCommentor>hacker name</SDTopRowCommentor>
-      <SDTopRowSpecificMetric>{props.metric}</SDTopRowSpecificMetric>
-      <SDTopRowSaltiestComment>saltiest comment</SDTopRowSaltiestComment>
-      <SDTopRowLink>see full profile</SDTopRowLink>
+      <SDTopRowRank>Rank</SDTopRowRank>
+      <SDTopRowCommentor>User</SDTopRowCommentor>
+      <SDTopRowSpecificMetric>Total</SDTopRowSpecificMetric>
+      <SDTopRowSaltiestComment>Saltiest Comment</SDTopRowSaltiestComment>
+      <SDTopRowLink>See User</SDTopRowLink>
     </SDTopRowHackerCard>
   );
 }

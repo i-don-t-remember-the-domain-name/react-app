@@ -14,15 +14,15 @@ import HackerList from './HackerList';
 export default function HackerTopListsTabs(props) {
   const panes = [
     {
-      menuItem: 'Top 100 Overall Saltiest',
+      menuItem: 'Top 100: Total Overall Score',
       render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Overall Saltiest'} color={'#4c6cec'} metric={'sum_slt_oall'} data={Overall_Saltiest} />
     },
     {
-      menuItem: 'Top 100 Salt Contributed',
+      menuItem: 'Top 100: Total Salt Score',
       render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Salt Contributed'} color={'#f59f00'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} />
     },
     {
-      menuItem: 'Top 100 Saltiest Trolls',
+      menuItem: 'Top 100: Number of Salty Comments',
       render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'tot_slt_comm'} data={QTY_Salty_Comments} />
     }
   ];

@@ -10,9 +10,16 @@ export default function ExplanationSection(props) {
     <SDExplanationCard style={style}>
       <SDExplanationHeading style={style}>How do we count this</SDExplanationHeading>
       <div>
-        -317.32 JavaScript was supposed to be Scheme not once but twice. JavaScript was supposed to be Scheme not and the reason we use it instead of a Lisp in the browser is the insane competition
-        with Microsoft. Source: interviews in Coders at Work. -317.32 JavaScript was supposed to be Scheme not once but twice , and the reason we use it instead of a Lisp in the browser is the insane
-        competition with Microsoft. Source: interviews in Coders at Work.
+      Ranking - From way bad to less bad.
+      </div>
+      <div>
+      Overall Saltiest: We take the total overall score by adding up all the comment scores for each user. Salty comments negate positive comments and the overall score is left behind. We then rank all the "salty" commentors by their overall score, highest to lowest. 
+      </div>
+      <div>
+      Salt Contributed: We take the total scores across all of a user's SALTY comments and add them up. This gives us the total salt score. We then rank the users from highest to lowest. 
+      </div>
+      <div>
+      Number of Salty Comments: We count the number of comments with a "salty" score  and tally them up. This gives us the number of salty comments. We then rank the users from highest to lowest. 
       </div>
     </SDExplanationCard>
   );

@@ -6,7 +6,7 @@ export default function CommentTopRow(props) {
   return (
     <SDCommentRow>
       <SDRowSaltiestComment>Comments</SDRowSaltiestComment>
-      <SDRowSaltiness>Saltiness</SDRowSaltiness>
+      <SDRowSaltiness>Score</SDRowSaltiness>
       <SDRowLink>See on HN</SDRowLink>
     </SDCommentRow>
   );
