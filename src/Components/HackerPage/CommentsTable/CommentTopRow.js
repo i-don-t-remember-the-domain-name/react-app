@@ -34,7 +34,7 @@ const SDRowSaltiestComment = styled.div`
   padding-left: 5px;
   font-weight: 600;
   @media (max-width: 600px) {
-    width: 55%;
+    width: 60%;
   }
 `;
 

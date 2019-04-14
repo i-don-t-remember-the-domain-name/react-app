@@ -24,9 +24,11 @@ function App(props) {
   const [dateOfFirstComment, setDateOfFirstComment] = useState(undefined);
   const [saltiestComments, setSaltiestComments] = useState(undefined);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const searchHacker = hacker => {
     setLoading(true);
+    setError(false);
     axios({
       method: 'get',
       url: `https:/hacker-salt.herokuapp.com/api/hacker/${hacker}`,
@@ -71,11 +73,11 @@ function App(props) {
       .then(() => setLoading(false))
       .then(() => props.history.push(`/${hacker}`))
       .catch(err => {
-        console.log(err);
+        setError(err);
         setLoading(false);
       });
   };
-
+  console.log(error);
   function cleanPreviousHacker() {
     setAverageSaltiness(undefined);
     setCountOfAllComments(undefined);
@@ -92,7 +94,7 @@ function App(props) {
   return (
     <div className="app-container">
       <Switch>
-        <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} loading={loading} />} />
+        <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={searchHacker} loading={loading} error={error} />} />
         <Route exact path="/about" render={pr => <AboutPage {...pr} />} />
         <Route
           path="/:hacker"
@@ -111,6 +113,7 @@ function App(props) {
               dateOfFirstComment={dateOfFirstComment}
               saltiestComments={saltiestComments}
               loading={loading}
+              error={error}
             />
           )}
         />

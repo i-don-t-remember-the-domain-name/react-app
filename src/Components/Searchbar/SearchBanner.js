@@ -13,7 +13,7 @@ export default function SearchBanner(props) {
       <SDSearchBarFull>
         <SearchBar searchHacker={props.searchHacker} />
       </SDSearchBarFull>
-      {!props.loading && <LoaderReplacement />}
+      {!props.loading && props.error && <SDErrorMessage>User not found. Check spelling and capitalization, and try to search again.</SDErrorMessage>}
       {props.loading && <Loader active inline="centered" size="medium" />}
     </SDSearchBanner>
   );
@@ -51,6 +51,9 @@ const SDSearchBarFull = styled.div`
     width: 80%;
   }
 `;
-const LoaderReplacement = styled.div`
+const SDErrorMessage = styled.div`
   height: 30px;
+  font-size: 0.9rem;
+  color: #f4a000;
+  padding: 0 10px;
 `;

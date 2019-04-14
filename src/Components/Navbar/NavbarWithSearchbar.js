@@ -34,7 +34,17 @@ export default function Navbar(props) {
           <Searchbar background={'white'} className="navbar-searchbar" searchHacker={props.searchHacker} />
         </SDNavSearchBar>
       </SDMiddleNav>
-      <SDRightNav>{props.loading && <Loader active inline size="small" />}</SDRightNav>
+      {props.loading && (
+        <SDRightNav>
+          {' '}
+          <Loader active inline size="small" />
+        </SDRightNav>
+      )}
+      {!props.loading && props.error && (
+        <SDRightNav>
+          <SDErrorMessage>User not found. Check spelling and capitalization, and try to search again.</SDErrorMessage>
+        </SDRightNav>
+      )}
     </SDNavbar>
   );
 }
@@ -52,6 +62,7 @@ const SDNavbar = styled.div`
   width: 100vw;
   z-index: 2;
   background-color: white;
+  flex-wrap: wrap;
   @media (max-width: 600px) {
     height: 50px;
     flex-wrap: wrap;
@@ -91,16 +102,19 @@ const SDMiddleNav = styled.div`
 const SDRightNav = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 18%;
+  justify-content: center;
+  width: 100%;
   height: 100%;
   @media (max-width: 900px) {
-    width: 5%;
-  }
-  @media (max-width: 600px) {
     width: 100%;
     justify-content: center;
   }
+`;
+const SDErrorMessage = styled.div`
+  font-size: 0.9rem;
+  color: #f4a000;
+  padding: 0 10px;
+  text-align: center;
 `;
 
 const SDNavItem = styled.div`
