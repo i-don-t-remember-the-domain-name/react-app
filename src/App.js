@@ -30,6 +30,7 @@ function App(props) {
     axios
       .get(`https:/hacker-salt.herokuapp.com/api/hacker/${hacker}`)
       .then(res => {
+        cleanPreviousHacker();
         setHackerName(res.data.commentor);
         setCountOfAllComments(res.data.cnt_cmnts_oall);
         setCountOfSaltyComments(res.data.cnt_slt_s);
@@ -70,6 +71,19 @@ function App(props) {
         setLoading(false);
       });
   };
+
+  function cleanPreviousHacker() {
+    setAverageSaltiness(undefined);
+    setCountOfAllComments(undefined);
+    setCountOfSaltyComments(undefined);
+    setHackerName(undefined);
+    setMonthlyPlot(undefined);
+    setRankAmountOfSaltiness(undefined);
+    setRankQuantityOfSaltiness(undefined);
+    setRankOverallSaltiness(undefined);
+    setDateOfFirstComment(undefined);
+    setSaltiestComments(undefined);
+  }
 
   return (
     <div className="app-container">

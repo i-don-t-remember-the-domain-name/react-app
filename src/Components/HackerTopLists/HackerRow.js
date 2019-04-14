@@ -20,7 +20,7 @@ export default function HackerRow(props) {
           e.preventDefault();
           props.searchHacker(props.data.commentor);
         }}>
-        <i class="fas fa-user-alt" />
+        <i className="fas fa-user-alt" />
       </SDRowLink>
     </SDHackerRow>
   );

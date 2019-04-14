@@ -10,7 +10,7 @@ export default function CommentRow(props) {
         {props.comment.comment_saltiness && <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>}
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
-            <i class="fas fa-external-link-alt" />
+            <i className="fas fa-external-link-alt" />
           </a>
         </SDRowLink>
       </SDCommentRow>
