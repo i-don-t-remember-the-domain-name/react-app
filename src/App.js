@@ -68,7 +68,6 @@ function App(props) {
           });
           setMonthlyPlot(monthlyPlotArray);
         }
-        console.log(res.data);
       })
       .then(() => setLoading(false))
       .then(() => props.history.push(`/${hacker}`))
@@ -77,7 +76,6 @@ function App(props) {
         setLoading(false);
       });
   };
-  console.log(error);
   function cleanPreviousHacker() {
     setAverageSaltiness(undefined);
     setCountOfAllComments(undefined);
