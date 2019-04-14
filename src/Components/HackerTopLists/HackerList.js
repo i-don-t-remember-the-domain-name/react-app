@@ -10,7 +10,7 @@ import ExplanationSection from './ExplanationSection';
 export default function HackerList(props) {
   return (
     <SDHackerList>
-      <ExplanationSection color={props.color} />
+      <ExplanationSection color={props.color} explanation={props.explanation} />
       <HackerTopRow metric={props.metric} color={props.color} />
       {props.data.map((data, index) => (
         <HackerRow searchHacker={props.searchHacker} key={data.commentor} data={data} index={index} heading={props.heading} color={props.color} />

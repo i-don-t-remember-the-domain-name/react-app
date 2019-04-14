@@ -2,28 +2,33 @@ import React from 'react';
 import { Tab } from 'semantic-ui-react';
 import styled from 'styled-components';
 
+//Import components
+import HackerList from './HackerList';
+
 //Import data
 import AMT_Salt_Contributed from '../../data/top100_AMT_Salt_Contributed';
 import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 
-//Import components
-import HackerList from './HackerList';
+//Data - explanation section
+const overallScore = `For Total Overall Score, we take the total overall score by adding up all the comment scores for each user. Salty comments negative positive comments and the overall score is left behind. We then rank all the "salty" commentors by their overall score, highest to lowest.`;
+const saltScore = `For Total Salt Score, we take the total scores across all of a user's SALTY comments and add them up. This gives us the total salt score. We then rank the users from highest to lowest.`;
+const numberOfSaltyComments = `For Number of Salty Comments, we count the number of comments with a "salty" score and tally them up. This gives us the number of salty comments. We then rank the users from highest to lowest.`;
 
 //Export default component
 export default function HackerTopListsTabs(props) {
   const panes = [
     {
       menuItem: 'Top 100: Total Overall Score',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Overall Saltiest'} color={'#4c6cec'} metric={'sum_slt_oall'} data={Overall_Saltiest} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} color={'#4c6cec'} data={Overall_Saltiest} explanation={overallScore} />
     },
     {
       menuItem: 'Top 100: Total Salt Score',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Salt Contributed'} color={'#f59f00'} metric={'sum_slt_s'} data={AMT_Salt_Contributed} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} color={'#f59f00'} data={AMT_Salt_Contributed} explanation={saltScore} />
     },
     {
       menuItem: 'Top 100: Number of Salty Comments',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100 Saltiest Trolls'} color={'#74b816'} metric={'tot_slt_comm'} data={QTY_Salty_Comments} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} color={'#74b816'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
     }
   ];
 

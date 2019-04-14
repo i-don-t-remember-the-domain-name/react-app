@@ -8,19 +8,9 @@ export default function ExplanationSection(props) {
   };
   return (
     <SDExplanationCard style={style}>
-      <SDExplanationHeading style={style}>How do we count this</SDExplanationHeading>
-      <div>
-      Ranking - From way bad to less bad.
-      </div>
-      <div>
-      Overall Saltiest: We take the total overall score by adding up all the comment scores for each user. Salty comments negate positive comments and the overall score is left behind. We then rank all the "salty" commentors by their overall score, highest to lowest. 
-      </div>
-      <div>
-      Salt Contributed: We take the total scores across all of a user's SALTY comments and add them up. This gives us the total salt score. We then rank the users from highest to lowest. 
-      </div>
-      <div>
-      Number of Salty Comments: We count the number of comments with a "salty" score  and tally them up. This gives us the number of salty comments. We then rank the users from highest to lowest. 
-      </div>
+      <SDExplanationHeading style={style}>What does the score mean?</SDExplanationHeading>
+      <div>The HackerNews commentros are ranked from the saltiest to less salty based on the specific criteria for each rank.</div>
+      <div>{props.explanation}</div>
     </SDExplanationCard>
   );
 }
