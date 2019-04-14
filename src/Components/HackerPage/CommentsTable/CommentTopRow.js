@@ -37,6 +37,7 @@ const SDRowSaltiness = styled.div`
   color: #4c6cec;
   font-weight: 600;
   text-align: center;
+  padding-left: 20px;
 `;
 
 const SDRowLink = styled.div`

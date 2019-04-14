@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Import images
+import scale from '../../../img/scale.png';
+
 //Export default component
 export default function CommentRow(props) {
   return (
@@ -10,7 +13,7 @@ export default function CommentRow(props) {
         {props.comment.comment_saltiness && <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>}
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
-            <i className="fas fa-external-link-alt" />
+            <img src={scale} alt="image of scale" />
           </a>
         </SDRowLink>
       </SDCommentRow>
@@ -44,7 +47,10 @@ const SDRowLink = styled.div`
   width: 10%;
   text-align: center;
   cursor: pointer;
-  .fa-arrow-right {
-    color: #4c6cec;
+  a {
+    img {
+      max-width: 12%;
+      padding-top: 6px;
+    }
   }
 `;
