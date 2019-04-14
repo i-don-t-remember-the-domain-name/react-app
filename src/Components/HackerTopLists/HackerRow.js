@@ -40,6 +40,10 @@ const SDHackerRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1rem;
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const SDRowRank = styled.div`
@@ -47,7 +51,7 @@ const SDRowRank = styled.div`
 `;
 
 const SDRowCommentor = styled.div`
-  min-width: 12%;
+  min-width: 16%;
 `;
 
 const SDRowSpecificMetric = styled.div`
@@ -55,7 +59,7 @@ const SDRowSpecificMetric = styled.div`
 `;
 
 const SDRowSaltiestComment = styled.div`
-  width: 60%;
+  width: 54%;
 `;
 
 const SDRowLink = styled.div`
@@ -63,6 +67,14 @@ const SDRowLink = styled.div`
   cursor: pointer;
   text-align: center;
   img {
-    width: 14%;
+    width: 1rem;
+  }
+  img {
+    @media (max-width: 900px) {
+      width: 0.9rem;
+    }
+    @media (max-width: 800px) {
+      width: 0.8rem;
+    }
   }
 `;

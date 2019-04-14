@@ -67,6 +67,10 @@ const SDMiddleNav = styled.div`
   justify-content: center;
   width: 60%;
   height: 100%;
+  @media (max-width: 900px) {
+    width: 74%;
+    justify-content: flex-end;
+  }
 `;
 
 const SDRightNav = styled.div`
@@ -75,6 +79,9 @@ const SDRightNav = styled.div`
   justify-content: flex-end;
   width: 18%;
   height: 100%;
+  @media (max-width: 900px) {
+    width: 5%;
+  }
 `;
 
 const SDNavItem = styled.div`
@@ -102,4 +109,7 @@ const SDNavSearchBar = styled.div`
   padding-top: 10px;
   height: 80%;
   width: 40%;
+  @media (max-width: 1100px) {
+    width: 60%;
+  }
 `;

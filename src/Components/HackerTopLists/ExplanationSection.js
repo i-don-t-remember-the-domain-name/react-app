@@ -27,6 +27,9 @@ const SDExplanationCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
 
   div {
     color: black;
@@ -37,4 +40,7 @@ const SDExplanationHeading = styled.div`
   font-weight: 600;
   font-size: 1rem;
   padding-bottom: 10px;
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
 `;

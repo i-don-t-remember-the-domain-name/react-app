@@ -57,6 +57,12 @@ const SDHackerPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+  @media (max-width: 900px) {
+    width: 95%;
+  }
 `;
 
 const SDHackerPageHeading = styled.div`
@@ -65,6 +71,7 @@ const SDHackerPageHeading = styled.div`
   letter-spacing: 0.05rem;
   margin: 0;
   padding: 70px 0 50px 0;
+  text-align: center;
 `;
 
 export default withRouter(HackerPage);

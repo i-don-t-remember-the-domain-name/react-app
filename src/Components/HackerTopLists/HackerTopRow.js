@@ -30,6 +30,9 @@ const SDTopRowHackerCard = styled.div`
   justify-content: space-between;
   font-size: 1rem;
   font-weight: 600;
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const SDTopRowRank = styled.div`
@@ -37,7 +40,7 @@ const SDTopRowRank = styled.div`
 `;
 
 const SDTopRowCommentor = styled.div`
-  min-width: 12%;
+  min-width: 16%;
   display: flex;
   justify-content: flex-start;
 `;
@@ -47,7 +50,7 @@ const SDTopRowSpecificMetric = styled.div`
 `;
 
 const SDTopRowSaltiestComment = styled.div`
-  width: 60%;
+  width: 54%;
 `;
 
 const SDTopRowLink = styled.div`

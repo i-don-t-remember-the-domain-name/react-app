@@ -22,7 +22,6 @@ export default function HackerList(props) {
 //Styled components
 const SDHackerList = styled.div`
   box-sizing: border-box;
-  width: 70vw;
   min-height: 40vh;
   padding: 2%;
   background-color: #f8f9fa;

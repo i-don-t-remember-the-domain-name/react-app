@@ -41,6 +41,12 @@ const SDSearchBarFull = styled.div`
   margin-bottom: 20px;
   height: 40px;
   width: 30%;
+  @media (max-width: 1100px) {
+    width: 40%;
+  }
+  @media (max-width: 900px) {
+    width: 50%;
+  }
 `;
 const LoaderReplacement = styled.div`
   height: 30px;

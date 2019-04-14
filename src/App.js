@@ -27,8 +27,11 @@ function App(props) {
 
   const searchHacker = hacker => {
     setLoading(true);
-    axios
-      .get(`https:/hacker-salt.herokuapp.com/api/hacker/${hacker}`)
+    axios({
+      method: 'get',
+      url: `https:/hacker-salt.herokuapp.com/api/hacker/${hacker}`,
+      timeout: 5000
+    })
       .then(res => {
         cleanPreviousHacker();
         setHackerName(res.data.commentor);
@@ -63,6 +66,7 @@ function App(props) {
           });
           setMonthlyPlot(monthlyPlotArray);
         }
+        console.log(res.data);
       })
       .then(() => setLoading(false))
       .then(() => props.history.push(`/${hacker}`))

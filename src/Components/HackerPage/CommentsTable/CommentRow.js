@@ -13,7 +13,7 @@ export default function CommentRow(props) {
         {props.comment.comment_saltiness && <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>}
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
-            <img src={scale} alt="image of scale" />
+            <img src={scale} alt="search icon" />
           </a>
         </SDRowLink>
       </SDCommentRow>
@@ -49,7 +49,7 @@ const SDRowLink = styled.div`
   cursor: pointer;
   a {
     img {
-      max-width: 12%;
+      width: 1rem;
       padding-top: 6px;
     }
   }

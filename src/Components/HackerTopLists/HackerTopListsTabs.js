@@ -51,6 +51,13 @@ const SDTabsEnvContainer = styled.div`
 
 const SDTabsContainer = styled.div`
   width: 70%;
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+  @media (max-width: 900px) {
+    width: 95%;
+  }
+
   .tab-container {
     width: 100%;
     justify-content: space-between;
@@ -63,11 +70,16 @@ const SDTabsContainer = styled.div`
   }
   .ui.menu .item {
     width: 32%;
+    line-height: 1.5;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f8f9fa;
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
+    font-size: 1rem;
+    @media (max-width: 600px) {
+      font-size: 0.9rem;
+    }
     &:nth-of-type(1) {
       color: #4c6cec;
     }
