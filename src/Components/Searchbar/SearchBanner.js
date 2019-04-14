@@ -13,6 +13,7 @@ export default function SearchBanner(props) {
       <SDSearchBarFull>
         <SearchBar searchHacker={props.searchHacker} />
       </SDSearchBarFull>
+      {!props.loading && <LoaderReplacement />}
       {props.loading && <Loader active inline="centered" size="medium" />}
     </SDSearchBanner>
   );
@@ -40,4 +41,7 @@ const SDSearchBarFull = styled.div`
   margin-bottom: 20px;
   height: 40px;
   width: 30%;
+`;
+const LoaderReplacement = styled.div`
+  height: 30px;
 `;
