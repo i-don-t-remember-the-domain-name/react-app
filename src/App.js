@@ -28,13 +28,13 @@ function App(props) {
 
   const searchHacker = hacker => {
     setLoading(true);
-    setError(false);
     axios({
       method: 'get',
       url: `https:/hacker-salt.herokuapp.com/api/hacker/${hacker}`,
       timeout: 5000
     })
       .then(res => {
+        setError(false);
         cleanPreviousHacker();
         setHackerName(res.data.commentor);
         setCountOfAllComments(res.data.cnt_cmnts_oall);
