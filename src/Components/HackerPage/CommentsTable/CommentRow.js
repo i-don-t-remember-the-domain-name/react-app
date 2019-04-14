@@ -32,20 +32,33 @@ const SDCommentRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const SDRowSaltiestComment = styled.div`
   width: 80%;
+  @media (max-width: 600px) {
+    width: 55%;
+  }
 `;
 
 const SDRowSaltiness = styled.div`
   width: 10%;
   text-align: center;
+  @media (max-width: 600px) {
+    width: 15%;
+  }
 `;
 
 const SDRowLink = styled.div`
   width: 10%;
   text-align: center;
+  @media (max-width: 600px) {
+    width: 15%;
+    text-align: center;
+  }
   cursor: pointer;
   a {
     img {
