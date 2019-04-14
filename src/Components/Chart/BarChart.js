@@ -20,7 +20,7 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar name="sweet comments count" dataKey="c_h" fill="#74B816" />
+          <Bar name="sweet comments count" dataKey="c_h" fill="#4c6cec" />
           <Bar name="salty comments count" dataKey="c_s" fill="#F4A000" />
         </BarChart>
       </ResponsiveContainer>

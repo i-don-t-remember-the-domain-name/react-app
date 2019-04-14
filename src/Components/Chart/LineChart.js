@@ -22,8 +22,8 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line name="salty comments monthly sentiment" type="monotone" dataKey="t_s" stroke="#F4A000" />
-          <Line name="sweet comments monthly sentiment" type="monotone" dataKey="t_h" stroke="#74B816" />
+          <Line name="salty comments sentiment" type="monotone" dataKey="t_s" stroke="#F4A000" />
+          <Line name="sweet comments sentiment" type="monotone" dataKey="t_h" stroke="#4c6cec" />
         </LineChart>
       </ResponsiveContainer>
     );
