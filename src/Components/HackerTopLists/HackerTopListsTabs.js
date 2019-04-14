@@ -67,6 +67,9 @@ const SDTabsContainer = styled.div`
     box-shadow: none;
     border: none;
     justify-content: space-between;
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
   .ui.menu .item {
     width: 32%;
@@ -79,6 +82,8 @@ const SDTabsContainer = styled.div`
     font-size: 1rem;
     @media (max-width: 600px) {
       font-size: 0.9rem;
+      margin-top: 5px;
+      width: 100%;
     }
     &:nth-of-type(1) {
       color: #4c6cec;

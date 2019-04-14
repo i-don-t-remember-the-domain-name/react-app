@@ -6,7 +6,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer height={300} width="100%">
+      <ResponsiveContainer height={300} width="115%">
         <LineChart
           width={1000}
           height={300}

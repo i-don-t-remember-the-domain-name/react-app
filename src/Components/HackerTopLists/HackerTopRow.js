@@ -37,23 +37,42 @@ const SDTopRowHackerCard = styled.div`
 
 const SDTopRowRank = styled.div`
   width: 5%;
+  @media (max-width: 600px) {
+    flex-order: 1;
+    width: 20%;
+  }
 `;
 
 const SDTopRowCommentor = styled.div`
   min-width: 16%;
   display: flex;
   justify-content: flex-start;
+  @media (max-width: 600px) {
+    order: 2;
+    width: 40%;
+  }
 `;
 
 const SDTopRowSpecificMetric = styled.div`
   width: 12%;
+  @media (max-width: 600px) {
+    order: 3;
+    width: 25%;
+  }
 `;
 
 const SDTopRowSaltiestComment = styled.div`
   width: 54%;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const SDTopRowLink = styled.div`
   width: 8%;
   text-align: center;
+  @media (max-width: 600px) {
+    order: 4;
+    width: 10%;
+  }
 `;
