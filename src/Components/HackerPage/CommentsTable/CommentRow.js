@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 //Import images
-import scale from '../../../img/scale.png';
+// import scale from '../../../img/scale.png';
 
 //Export default component
 export default function CommentRow(props) {
@@ -13,7 +13,12 @@ export default function CommentRow(props) {
         {props.comment.comment_saltiness && <SDRowSaltiness>{props.comment.comment_saltiness.toFixed(2)}</SDRowSaltiness>}
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
-            <img src={scale} alt="search icon" />
+            {/* <img src={scale} alt="search icon" /> */}
+            <div>
+              <span role="img" aria-label="eyes">
+                👀
+              </span>
+            </div>
           </a>
         </SDRowLink>
       </SDCommentRow>
@@ -61,9 +66,6 @@ const SDRowLink = styled.div`
   }
   cursor: pointer;
   a {
-    img {
-      width: 1rem;
-      padding-top: 6px;
-    }
+    font-size: 1.2rem;
   }
 `;

@@ -36,6 +36,7 @@ const SDIntroContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 `;
 
@@ -49,11 +50,14 @@ const SDIntroHeading = styled.div`
   }
   @media (max-width: 900px) {
     width: 70%;
+    text-align: center;
   }
   @media (max-width: 600px) {
     width: 95%;
     padding: 0;
     padding-bottom: 10px;
+    text-align: center;
+    padding-top: 30px;
   }
 `;
 
@@ -64,9 +68,11 @@ const SDIntroContent = styled.div`
   line-height: 1.7;
   @media (max-width: 900px) {
     width: 70%;
+    text-align: center;
   }
   @media (max-width: 600px) {
     width: 95%;
     padding: 0;
+    text-align: center;
   }
 `;

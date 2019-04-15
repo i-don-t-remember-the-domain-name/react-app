@@ -27,6 +27,7 @@ function HackerPage(props) {
           countOfAllComments={props.countOfAllComments}
           countOfSaltyComments={props.countOfSaltyComments}
           rankAmountOfSaltiness={props.rankAmountOfSaltiness}
+          rankOverallSaltiness={props.rankOverallSaltiness}
           rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
           averageSaltiness={props.averageSaltiness}
         />
