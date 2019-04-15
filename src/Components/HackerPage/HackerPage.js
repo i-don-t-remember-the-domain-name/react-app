@@ -30,11 +30,11 @@ function HackerPage(props) {
           rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
           averageSaltiness={props.averageSaltiness}
         />
-        {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s saltiness over the time</SDHackerPageHeading>}
+        {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s salt score over time</SDHackerPageHeading>}
         {props.monthlyPlot && <LineChart monthlyPlot={props.monthlyPlot} />}
-        {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s count of salty comments over the time</SDHackerPageHeading>}
+        {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s count of salty comments over time</SDHackerPageHeading>}
         {props.monthlyPlot && <BarChart monthlyPlot={props.monthlyPlot} />}
-        {props.saltiestComments && <SDHackerPageHeading>{hackerName}'s salties comments</SDHackerPageHeading>}
+        {props.saltiestComments && <SDHackerPageHeading>{hackerName}'s saltiest comments</SDHackerPageHeading>}
         {props.saltiestComments && <HackerPageCommentList saltiestComments={props.saltiestComments} />}
       </SDHackerPageContainer>
     </SDHackerPageEnvContainer>
