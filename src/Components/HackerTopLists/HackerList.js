@@ -13,7 +13,7 @@ export default function HackerList(props) {
       <ExplanationSection color={props.color} explanation={props.explanation} />
       <HackerTopRow metric={props.metric} color={props.color} />
       {props.data.map((data, index) => (
-        <HackerRow searchHacker={props.searchHacker} key={data.commentor} data={data} index={index} heading={props.heading} color={props.color} />
+        <HackerRow searchHacker={props.searchHacker} color={props.color} key={data.commentor} data={data} index={index} heading={props.heading} />
       ))}
     </SDHackerList>
   );

@@ -10,7 +10,7 @@ export default function ExplanationSection(props) {
     <SDExplanationCard style={style}>
       <SDExplanationHeading style={style}>What does the score mean?</SDExplanationHeading>
       <div>We scored the sentiment of 15,397,309 Hacker News comments. We then ranked users by their "saltiness" - or level of subjective negativity. </div>
-      <div></div>
+      <div />
       <div>{props.explanation}</div>
     </SDExplanationCard>
   );
@@ -28,6 +28,7 @@ const SDExplanationCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  cursor: default;
   @media (max-width: 900px) {
     font-size: 0.9rem;
   }

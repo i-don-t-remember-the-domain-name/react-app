@@ -30,7 +30,7 @@ function App(props) {
     setLoading(true);
     axios({
       method: 'get',
-      url: `/api/hacker/${hacker}`,
+      url: `https://hacker-salt.herokuapp.com/api/hacker/${hacker}`,
       timeout: 5000
     })
       .then(res => {
