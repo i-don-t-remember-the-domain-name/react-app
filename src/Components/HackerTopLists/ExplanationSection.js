@@ -9,7 +9,7 @@ export default function ExplanationSection(props) {
   return (
     <SDExplanationCard style={style}>
       <SDExplanationHeading style={style}>What does the score mean?</SDExplanationHeading>
-      <div>The HackerNews commentros are ranked from the saltiest to less salty based on the specific criteria for each rank.</div>
+      <div>We analyzed the and scored the sentiment of 15,397,309 Hacker News comments and then ranked users by their "saltiness" - a combination of subjective negativity. </div>
       <div>{props.explanation}</div>
     </SDExplanationCard>
   );
