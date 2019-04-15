@@ -13,7 +13,7 @@ export default function SearchBanner(props) {
       <SDSearchBarFull>
         <SearchBar searchHacker={props.searchHacker} />
       </SDSearchBarFull>
-      {!props.loading && props.error && <SDErrorMessage>User not found. Check spelling and capitalization, and try to search again.</SDErrorMessage>}
+      {!props.loading && props.error && <SDErrorMessage>User not found. Check spelling and capitalization, and search again.</SDErrorMessage>}
       {props.loading && <Loader active inline="centered" size="medium" />}
     </SDSearchBanner>
   );
