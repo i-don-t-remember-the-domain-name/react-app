@@ -27,19 +27,33 @@ export default function Introduction() {
 const SDIntroContainer = styled.div`
   box-sizing: border-box;
   width: 100vw;
-  height: 90vh;
+  min-height: 90vh;
   padding: 10%;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const SDIntroHeading = styled.div`
   width: 49.5%;
+  height: auto;
   padding: 10px;
   font-size: 2rem;
   &:nth-of-type(2) {
     text-align: right;
+  }
+  @media (max-width: 900px) {
+    width: 70%;
+  }
+  @media (max-width: 600px) {
+    width: 95%;
+    padding: 0;
+    padding-bottom: 10px;
   }
 `;
 
@@ -48,4 +62,11 @@ const SDIntroContent = styled.div`
   padding: 10px;
   text-align: left;
   line-height: 1.7;
+  @media (max-width: 900px) {
+    width: 70%;
+  }
+  @media (max-width: 600px) {
+    width: 95%;
+    padding: 0;
+  }
 `;

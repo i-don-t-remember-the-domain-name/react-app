@@ -10,12 +10,12 @@ const firebase = require('firebase');
 
 //DbConfig
 const config = {
-  apiKey: "AIzaSyCAUlq3XK2lXeTFsQThdL4GyivWx-c5DCQ",
-  authDomain: "winterrose-nlp.firebaseapp.com",
-  databaseURL: "https://winterrose-nlp.firebaseio.com",
-  projectId: "winterrose-nlp",
-  storageBucket: "winterrose-nlp.appspot.com",
-  messagingSenderId: "468502233263"
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  databaseURL: process.env.TESTURL,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.PROJECTBUCKET,
+  messagingSenderId: process.env.ID
 };
 firebase.initializeApp(config);
 const db = firebase.firestore();
