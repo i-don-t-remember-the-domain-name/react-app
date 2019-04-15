@@ -9,7 +9,7 @@ import SearchBar from './SearchBar';
 export default function SearchBanner(props) {
   return (
     <SDSearchBanner>
-      <h1>Find saltiest users on HackerNews</h1>
+      <h1>Find the saltiest users on HackerNews</h1>
       <SDSearchBarFull>
         <SearchBar searchHacker={props.searchHacker} />
       </SDSearchBarFull>
