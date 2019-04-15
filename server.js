@@ -10,12 +10,12 @@ const firebase = require('firebase');
 
 //DbConfig
 const config = {
-  apiKey: "AIzaSyCAUlq3XK2lXeTFsQThdL4GyivWx-c5DCQ",
-  authDomain: "winterrose-nlp.firebaseapp.com",
-  databaseURL: "https://winterrose-nlp.firebaseio.com",
-  projectId: "winterrose-nlp",
-  storageBucket: "winterrose-nlp.appspot.com",
-  messagingSenderId: "468502233263"
+  apiKey: 'AIzaSyCAUlq3XK2lXeTFsQThdL4GyivWx-c5DCQ',
+  authDomain: 'winterrose-nlp.firebaseapp.com',
+  databaseURL: 'https://winterrose-nlp.firebaseio.com',
+  projectId: 'winterrose-nlp',
+  storageBucket: 'winterrose-nlp.appspot.com',
+  messagingSenderId: '468502233263'
 };
 firebase.initializeApp(config);
 const db = firebase.firestore();
