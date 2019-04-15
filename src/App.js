@@ -58,7 +58,11 @@ function App(props) {
           const saltiestCommentsArray = Object.keys(res.data.top_cmnts_s).map(key => {
             return res.data.top_cmnts_s[key];
           });
-          setSaltiestComments(saltiestCommentsArray);
+          setSaltiestComments(
+            saltiestCommentsArray.sort(function(a, b) {
+              return a.comment_saltiness - b.comment_saltiness;
+            })
+          );
         }
 
         //If monthly plot is there, transform monthly plot object to array and set the monthly Plot state
@@ -91,7 +95,7 @@ function App(props) {
     setDateOfFirstComment(undefined);
     setSaltiestComments(undefined);
   }
-
+  console.log(saltiestComments);
   return (
     <div className="app-container">
       <Switch>

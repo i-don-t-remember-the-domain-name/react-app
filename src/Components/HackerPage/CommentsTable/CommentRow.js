@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 //Import images
-import scale from '../../../img/scale.png';
+// import scale from '../../../img/scale.png';
 
 //Export default component
 export default function CommentRow(props) {
@@ -14,7 +14,11 @@ export default function CommentRow(props) {
         <SDRowLink>
           <a target="_blank" rel="noopener noreferrer" href={`https://news.ycombinator.com/item?id=${props.comment.parent_id}`}>
             {/* <img src={scale} alt="search icon" /> */}
-            <div>👀</div>
+            <div>
+              <span role="img" aria-label="eyes">
+                👀
+              </span>
+            </div>
           </a>
         </SDRowLink>
       </SDCommentRow>
