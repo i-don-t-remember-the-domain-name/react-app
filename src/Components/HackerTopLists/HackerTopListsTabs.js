@@ -12,7 +12,7 @@ import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 
 //Data - explanation section
 const overallScore = `For Total Overall Score, we add up all the comment scores for each user. Salty comments cancel out positive comments and the overall score is left behind. We then rank all the "salty" users by their overall score, lowest to highest.`;
-const saltScore = `For Total Salt Score, we take the total scores across all of a user's "salty" comments and add them up. This gives us the total salt score. We then rank the "salty" users from highest to lowest.`;
+const saltScore = `For Total Salt Score, we take the total scores across all of a user's "salty" comments and add them up. This gives us the total salt score. We then rank the "salty" users from lowest to highest.`;
 const numberOfSaltyComments = `For Number of Salty Comments, we count the number of comments with a "salty" score and tally them up. This gives us the number of salty comments. We then rank the "salty" users from highest to lowest.`;
 
 //Export default component
