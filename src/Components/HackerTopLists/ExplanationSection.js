@@ -9,7 +9,7 @@ export default function ExplanationSection(props) {
   return (
     <SDExplanationCard style={style}>
       <SDExplanationHeading style={style}>What does the score mean?</SDExplanationHeading>
-      <div>We analyzed and scored the sentiment of 15,397,309 Hacker News comments and ranked users by their "saltiness" - a combination of subjective negativity. </div>
+      <div>We scored the sentiment of 15,397,309 Hacker News comments. We then ranked users by their "saltiness" - or level of subjective negativity. </div>
       <div></div>
       <div>{props.explanation}</div>
     </SDExplanationCard>
