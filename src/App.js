@@ -95,7 +95,7 @@ function App(props) {
     setDateOfFirstComment(undefined);
     setSaltiestComments(undefined);
   }
-  console.log(saltiestComments);
+
   return (
     <div className="app-container">
       <Switch>
