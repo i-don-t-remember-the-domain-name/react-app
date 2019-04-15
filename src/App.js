@@ -70,7 +70,10 @@ function App(props) {
         }
       })
       .then(() => setLoading(false))
-      .then(() => props.history.push(`/${hacker}`))
+      .then(() => {
+        props.history.push(`/${hacker}`);
+        window.scrollTo(0, 0);
+      })
       .catch(err => {
         setError(err);
         setLoading(false);
