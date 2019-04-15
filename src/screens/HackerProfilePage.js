@@ -18,6 +18,7 @@ export default function HackerProfilePage(props) {
       <HackerPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}
+        rankOverallSaltiness={props.rankOverallSaltiness}
         countOfAllComments={props.countOfAllComments}
         countOfSaltyComments={props.countOfSaltyComments}
         hackerName={props.hackerName}
