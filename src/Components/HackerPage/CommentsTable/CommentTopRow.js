@@ -55,6 +55,7 @@ const SDRowLink = styled.div`
   color: #4c6cec;
   font-weight: 600;
   text-align: center;
+
   @media (max-width: 600px) {
     width: 15%;
     text-align: center;
