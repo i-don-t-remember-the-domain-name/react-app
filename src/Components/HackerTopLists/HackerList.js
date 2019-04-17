@@ -29,7 +29,6 @@ const SDHackerList = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  cursor: pointer;
 
   h3 {
     margin-bottom: 20px;

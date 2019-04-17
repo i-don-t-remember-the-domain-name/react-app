@@ -30,7 +30,7 @@ function App(props) {
     setLoading(true);
     axios({
       method: 'get',
-      url: `/api/hacker/${hacker}`,
+      url: `https://hacker-salt.herokuapp.com/api/hacker/${hacker}`,
       timeout: 5000
     })
       .then(res => {
@@ -53,7 +53,7 @@ function App(props) {
           setDateOfFirstComment(date);
         }
 
-        //Transform saltiest comments object to array and set the SaltiestComments state
+        //Transform saltiest comments object to array and set the SaltiestComments state and sort them by the saltiness
         if (res.data.top_cmnts_s) {
           const saltiestCommentsArray = Object.keys(res.data.top_cmnts_s).map(key => {
             return res.data.top_cmnts_s[key];
@@ -83,6 +83,7 @@ function App(props) {
         setLoading(false);
       });
   };
+
   function cleanPreviousHacker() {
     setAverageSaltiness(undefined);
     setCountOfAllComments(undefined);
