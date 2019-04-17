@@ -28,7 +28,7 @@ const SDTopRowHackerCard = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   cursor: default;
   @media (max-width: 900px) {
     font-size: 0.9rem;

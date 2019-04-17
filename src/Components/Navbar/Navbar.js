@@ -53,7 +53,7 @@ const SDNavItem = styled.div`
   padding-left: 30px;
   @media (max-width: 600px) {
     padding-left: 0px;
-    margin-right: 15px;
+    margin-right: 30px;
   }
   cursor: pointer;
   a {

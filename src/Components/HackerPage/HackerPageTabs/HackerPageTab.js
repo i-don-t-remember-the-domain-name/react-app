@@ -33,7 +33,7 @@ const SDHackerPageTab = styled.div`
 `;
 
 const SDHackerPageTabHeading = styled.div`
-  font-weight: 600;
+  /* font-weight: 600; */
   padding-bottom: 10px;
   text-align: center;
 `;
