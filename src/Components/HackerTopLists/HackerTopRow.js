@@ -39,7 +39,7 @@ const SDTopRowRank = styled.div`
   width: 10%;
   @media (max-width: 600px) {
     flex-order: 1;
-    width: 10%;
+    width: 15%;
   }
 `;
 
