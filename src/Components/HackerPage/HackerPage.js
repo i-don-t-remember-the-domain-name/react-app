@@ -70,9 +70,12 @@ const SDHackerPageHeading = styled.div`
   font-weight: lighter;
   font-size: 2rem;
   letter-spacing: 0.05rem;
-  margin: 0;
+  margin: 10vh 0 0 0;
   padding: 70px 0 50px 0;
   text-align: center;
+  @media (max-width: 600px) {
+    margin: 5vh 0 0 0;
+  }
 `;
 
 export default withRouter(HackerPage);
