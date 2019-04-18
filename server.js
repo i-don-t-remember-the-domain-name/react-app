@@ -7,6 +7,7 @@ const app = express();
 const helmet = require('helmet');
 const cors = require('cors');
 const firebase = require('firebase');
+const secure = require('ssl-express-www');
 
 //DbConfig
 const config = {
@@ -24,33 +25,26 @@ const db = firebase.firestore();
 const pathToBuildFolder = path.join(__dirname, 'build');
 const pathToIndexHtml = path.join(pathToBuildFolder, 'index.html');
 
-function ensureSecure(req, res, next) {
-  if (req.headers['x-forwarded-proto'] === 'https') {
-    // OK, continue
-    return next();
-  }
-  res.redirect('https://' + req.hostname + req.url);
-}
-
+app.use(secure);
 app.use(express.static(pathToBuildFolder));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
 //Routes
-app.get('/', ensureSecure, (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
-app.get('/about', ensureSecure, (req, res) => {
+app.get('/about', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
-app.get('/:hacker', ensureSecure, (req, res) => {
+app.get('/:hacker', (req, res) => {
   res.sendFile(pathToIndexHtml);
 });
 
-app.get('/api/hacker/:hacker', ensureSecure, async function(req, res) {
+app.get('/api/hacker/:hacker', async function(req, res) {
   try {
     const hackers = await db
       .collection('commentor_stats')
