@@ -37,7 +37,7 @@ function App(props) {
         saltiestComments={saltiestComments}
         loading={loading}
         error={error}
-        //useState
+        //setState
         setAverageSaltiness={setAverageSaltiness}
         setCountOfAllComments={setCountOfAllComments}
         setCountOfSaltyComments={setCountOfSaltyComments}
