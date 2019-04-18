@@ -23,11 +23,11 @@ export default function Navbar(props) {
             <a href="/">HackerSalt</a>
           </div>
         </SDNavItem>
-        {/* <SDNavItem>
+        <SDNavItem className="about-section">
           <div>
             <a href="/about">About</a>
           </div>
-        </SDNavItem> */}
+        </SDNavItem>
       </SDLeftNav>
       <SDMiddleNav>
         <SDNavSearchBar>
@@ -63,6 +63,11 @@ const SDNavbar = styled.div`
   z-index: 2;
   background-color: white;
   flex-wrap: wrap;
+  .about-section {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
   @media (max-width: 600px) {
     height: 50px;
     flex-wrap: wrap;
