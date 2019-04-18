@@ -25,11 +25,11 @@ const db = firebase.firestore();
 const pathToBuildFolder = path.join(__dirname, 'build');
 const pathToIndexHtml = path.join(pathToBuildFolder, 'index.html');
 
-app.use(secure);
 app.use(express.static(pathToBuildFolder));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+app.use(secure);
 
 //Routes
 app.get('/', (req, res) => {
