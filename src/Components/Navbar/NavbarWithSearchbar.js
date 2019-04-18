@@ -23,11 +23,11 @@ export default function Navbar(props) {
             <a href="/">HackerSalt</a>
           </div>
         </SDNavItem>
-        <SDNavItem>
+        {/* <SDNavItem>
           <div>
             <a href="/about">About</a>
           </div>
-        </SDNavItem>
+        </SDNavItem> */}
       </SDLeftNav>
       <SDMiddleNav>
         <SDNavSearchBar>

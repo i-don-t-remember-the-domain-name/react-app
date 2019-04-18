@@ -18,11 +18,11 @@ export default function Navbar() {
           <a href="/">HackerSalt</a>
         </div>
       </SDNavItem>
-      <SDNavItem>
+      {/* <SDNavItem>
         <div>
           <a href="/about">About</a>
         </div>
-      </SDNavItem>
+      </SDNavItem> */}
     </SDNavbar>
   );
 }

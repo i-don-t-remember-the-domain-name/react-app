@@ -7,7 +7,6 @@ const app = express();
 const helmet = require('helmet');
 const cors = require('cors');
 const firebase = require('firebase');
-const secure = require('ssl-express-www');
 
 //DbConfig
 const config = {
@@ -29,7 +28,6 @@ app.use(express.static(pathToBuildFolder));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
-app.use(secure);
 
 //Routes
 app.get('/', (req, res) => {
