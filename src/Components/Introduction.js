@@ -8,15 +8,17 @@ export default function Introduction() {
       <SDIntroContainer>
         <SDIntroHeading>About HackerSalt</SDIntroHeading>
         <SDIntroContent>
-          HackerSalt lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We're using sentiment analysis to create individual scores of
-          commenters' interactions as well as creating a score card for the "saltiness" of the activity overall on HackerNews. You can explore users and trends over time.
-          <br />
-          <br />
-          We are taking the open source HN dataset, applying text cleaning and sentiment analysis then generating summaries of usage across commenters' lifetimes.
-          <br />
-          <br />
-          Our hope is that this will be a useful insight into the behavior trends of individual user types and that companies that own and operate social forums like these can utilize a monitoring
-          system in the future that will enable them to see how effectively their community policies and moderation systems are functioning.
+        HackerSalt lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across commenters' lifetimes.
+        <br />
+        <br />
+        Please explore and share. We've prepared visualizations &amp; dashboards of commenters' activity for your curiosity. Just be prepared there's some really nasty trolls out there.
+        <br />
+        <br />
+        Our hope is that this will be a useful insight into the behavior trends of various user types. We believe customers should be free to make their own experiences better and avoid salty trolls. Companies that own and operate these platforms should focus more resources on systems that improve and augment moderation system effectiveness. We would love to help you build these systems.
+        <br />
+        <br />
+        We're not here to witch hunt. If you would like your data taken down, we're happy to oblige. Please send us proof of a kind deed you did for a random stranger and we'll consider your appeal.<br />
+        sorry@hackersalt.com
         </SDIntroContent>
       </SDIntroContainer>
     </div>
