@@ -35,5 +35,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-testing-library": "^6.1.2",
+    "supertest": "^4.0.2"
+  }
 }
