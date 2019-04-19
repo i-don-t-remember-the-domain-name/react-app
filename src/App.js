@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 //Styling
 import './App.scss';
@@ -7,7 +8,7 @@ import './App.scss';
 import HackerContainer from './Components/HackerContainer';
 
 //Default export
-function App(props) {
+function App() {
   const [averageSaltiness, setAverageSaltiness] = useState(undefined);
   const [countOfAllComments, setCountOfAllComments] = useState(undefined);
   const [countOfSaltyComments, setCountOfSaltyComments] = useState(undefined);
@@ -22,36 +23,36 @@ function App(props) {
   const [error, setError] = useState(false);
 
   return (
-    <div className="app-container">
-      <HackerContainer
-        //state
-        averageSaltiness={averageSaltiness}
-        countOfAllComments={countOfAllComments}
-        countOfSaltyComments={countOfSaltyComments}
-        hackerName={hackerName}
-        monthlyPlot={monthlyPlot}
-        rankAmountOfSaltiness={rankAmountOfSaltiness}
-        rankQuantityOfSaltiness={rankQuantityOfSaltiness}
-        rankOverallSaltiness={rankOverallSaltiness}
-        dateOfFirstComment={dateOfFirstComment}
-        saltiestComments={saltiestComments}
-        loading={loading}
-        error={error}
-        //setState
-        setAverageSaltiness={setAverageSaltiness}
-        setCountOfAllComments={setCountOfAllComments}
-        setCountOfSaltyComments={setCountOfSaltyComments}
-        setHackerName={setHackerName}
-        setMonthlyPlot={setMonthlyPlot}
-        setRankAmountOfSaltiness={setRankAmountOfSaltiness}
-        setRankQuantityOfSaltiness={setRankQuantityOfSaltiness}
-        setRankOverallSaltiness={setRankOverallSaltiness}
-        setDateOfFirstComment={setDateOfFirstComment}
-        setSaltiestComments={setSaltiestComments}
-        setLoading={setLoading}
-        setError={setError}
-      />
-    </div>
+    <Router>
+      <div className="app-container">
+        <HackerContainer
+          averageSaltiness={averageSaltiness}
+          countOfAllComments={countOfAllComments}
+          countOfSaltyComments={countOfSaltyComments}
+          hackerName={hackerName}
+          monthlyPlot={monthlyPlot}
+          rankAmountOfSaltiness={rankAmountOfSaltiness}
+          rankQuantityOfSaltiness={rankQuantityOfSaltiness}
+          rankOverallSaltiness={rankOverallSaltiness}
+          dateOfFirstComment={dateOfFirstComment}
+          saltiestComments={saltiestComments}
+          loading={loading}
+          error={error}
+          setAverageSaltiness={setAverageSaltiness}
+          setCountOfAllComments={setCountOfAllComments}
+          setCountOfSaltyComments={setCountOfSaltyComments}
+          setHackerName={setHackerName}
+          setMonthlyPlot={setMonthlyPlot}
+          setRankAmountOfSaltiness={setRankAmountOfSaltiness}
+          setRankQuantityOfSaltiness={setRankQuantityOfSaltiness}
+          setRankOverallSaltiness={setRankOverallSaltiness}
+          setDateOfFirstComment={setDateOfFirstComment}
+          setSaltiestComments={setSaltiestComments}
+          setLoading={setLoading}
+          setError={setError}
+        />
+      </div>
+    </Router>
   );
 }
 

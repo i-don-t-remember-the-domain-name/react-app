@@ -12,6 +12,11 @@ export default function HackerProfilePage(props) {
     return null;
   }
 
+  //axios call here
+  //have 3 states - error/loading/success
+  //display different content based on search
+
+
   return (
     <div>
       <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} />
