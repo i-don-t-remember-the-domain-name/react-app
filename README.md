@@ -99,15 +99,17 @@ HackerSalt was developed by a Ivana and Britton based on idea from Lambda School
 ## Environment Variables
 
 **Database Enviroment Variables**
-APIKEY
-AUTHDOMAIN
-ID
-PROJECTBUCKET
-PROJECTID
-TESTURL
+
+- APIKEY
+- AUTHDOMAIN
+- ID
+- PROJECTBUCKET
+- PROJECTID
+- TESTURL
 
 **For Production**
-NODE_ENV=production
+
+- NODE_ENV=production
 
 ## API
 
