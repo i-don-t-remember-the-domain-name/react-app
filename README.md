@@ -1,68 +1,148 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HackerSalt 🧂
 
-## Available Scripts
+https://www.hackersalt.com
 
-In the project directory, you can run:
+HackerSalt is an app that lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across commenters' lifetimes.
 
-### `npm start`
+Please explore. 🙂 We've prepared visualizations & dashboards of commenters' activity for your curiosity. Just be prepared there's some really nasty trolls out there.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- [Demo](#demo)
+- [Contributors](#contributors)
+- [Technologies used and dependencies](#built-with)
+- [Installation](#installation)
+- [Environment variables](#environment-variables)
+- [API](#api)
+- [Endpoints description](#endpoints-description)
+- [Contribution guidelines](#contribution-guidelines)
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For more information on app, you can check out our [ProductHunt HackerSalt page](https://www.producthunt.com/posts/hackersalt/).
 
-### `npm run build`
+## Contributors
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+HackerSalt was developed by a Ivana and Britton based on idea from Lambda School build week. 🚀
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+<table>
+	<tr>
+		<td align="center">
+			<a href="https://github.com/ivanahuckova">
+				<img src="https://avatars1.githubusercontent.com/u/30407135?s=460&v=4" width="128px;" alt="Ivana Huckova"/>
+				<br />
+				<sub>
+					<b>Ivana Huckova</b>
+					<p>Full-stack Developer</p>
+				</sub>
+			</a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/BrittonWinterrose">
+				<img src="https://avatars0.githubusercontent.com/u/12835712?s=460&v=4" width="128px;" alt="Britton Winterrose"/>
+				<br />
+				<sub>
+					<b>Britton Winterrose</b>
+					<p>Machine Learning Developer</p>
+				</sub>
+			</a>
+		</td>
+  </tr>
+</table>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built with
 
-### `npm run eject`
+- JavaScript
+- React
+- Semantic UI 🧡
+- Recharts 💙
+- Styled Components 💜
+- Express.js
+- Firebase
+- Jest
+- Supertest
+- React Testing Library 🐐
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- axios: ^0.18.0,
+- cors: ^2.8.5,
+- dotenv: ^7.0.0,
+- express: ^4.16.4,
+- firebase: ^5.9.4,
+- helmet: ^3.16.0,
+- node-sass: ^4.11.0,
+- proptypes: ^1.1.0,
+- react: ^16.8.5,
+- react-dom: ^16.8.5,
+- react-router-dom: ^5.0.0,
+- react-scripts: 2.1.8,
+- react-tabs: ^3.0.0,
+- recharts: ^1.5.0,
+- semantic-ui-react: ^0.86.0,
+- styled-components: ^4.2.0
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Dev Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- react-testing-library: ^6.1.2,
+- supertest: ^4.0.2
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Fork the repository
+1. Run _yarn_
+1. You need to add environment dependencies to connect to database
+1. Run _yarn run-app_ for react app and _yarn start_ for express app
+1. Run _yarn test_ for tests
+1. Enjoy the app 🙂
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Environment Variables
 
-### Code Splitting
+**Database Enviroment Variables**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- APIKEY
+- AUTHDOMAIN
+- ID
+- PROJECTBUCKET
+- PROJECTID
+- TESTURL
 
-### Analyzing the Bundle Size
+**For Production**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- NODE_ENV=production
 
-### Making a Progressive Web App
+## API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### GET /api/hacker/:hacker
 
-### Advanced Configuration
+**Overview**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Used to fetch the data from database about the hacker, where :hacker is replaced with the username of hacker.
 
-### Deployment
+**Success Outputs**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Javascript object in following format:
 
-### `npm run build` fails to minify
+```
+{
+avg_slt_oall: 0.04860141148784049,
+avg_slt_s: -0.09191689742938368,
+cnt_cmnts_oall: 9964,
+cnt_slt_s: 2075,
+commentor: "pg",
+monthly_plot: {},
+rank_lt_amt_slt: 46,
+rank_lt_qty_sc: 45,
+rank_oall_slt: null,
+rank_slt_trolls: null,
+sum_slt_oall: 484.2644640648426,
+sum_slt_s: -190.72756216597114,
+time_cmnt_fst: {},
+time_cmnt_lst: {},
+top_cmnts_s: {}
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contribution guidelines
+
+We are currently working on contribution guidelines. 🙂
