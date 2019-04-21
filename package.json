@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server": "react-scripts start",
+    "run-app": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +35,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-testing-library": "^6.1.2",
+    "supertest": "^4.0.2"
+  }
 }

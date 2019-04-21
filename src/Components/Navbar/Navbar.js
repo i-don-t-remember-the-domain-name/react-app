@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 //Import images
 import saltShaker from '../../img/salt-shaker.png';
-
 //Export default component
 export default function Navbar() {
   return (
@@ -18,11 +17,11 @@ export default function Navbar() {
           <a href="/">HackerSalt</a>
         </div>
       </SDNavItem>
-      {/* <SDNavItem>
+      <SDNavItem className="about-section">
         <div>
           <a href="/about">About</a>
         </div>
-      </SDNavItem> */}
+      </SDNavItem>
     </SDNavbar>
   );
 }
@@ -39,6 +38,11 @@ const SDNavbar = styled.div`
   width: 100vw;
   background-color: #f8f9fa;
   z-index: 2;
+  .about-section {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
   @media (max-width: 600px) {
     justify-content: center;
   }

@@ -19,7 +19,7 @@ export default class Example extends PureComponent {
           }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="key" />
-          <YAxis />
+          <YAxis label={{ value: 'sentiment', angle: -90, position: 'left' }} />
           <Tooltip />
           <Legend />
           <Line name="salty comments sentiment" type="monotone" dataKey="t_s" stroke="#F4A000" />

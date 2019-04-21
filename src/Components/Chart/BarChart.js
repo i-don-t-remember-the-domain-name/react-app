@@ -17,11 +17,11 @@ export default class Example extends PureComponent {
           }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="key" />
-          <YAxis />
+          <YAxis label={{ value: 'comments count', angle: -90, position: 'left' }} />
           <Tooltip />
           <Legend />
-          <Bar name="sweet comments count" dataKey="c_h" fill="#4c6cec" />
-          <Bar name="salty comments count" dataKey="c_s" fill="#F4A000" />
+          <Bar name="# sweet comments" dataKey="c_h" fill="#4c6cec" />
+          <Bar name="# salty comments" dataKey="c_s" fill="#F4A000" />
         </BarChart>
       </ResponsiveContainer>
     );

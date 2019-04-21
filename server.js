@@ -3,10 +3,11 @@ dotenv.config();
 
 const express = require('express');
 const path = require('path');
-const app = express();
 const helmet = require('helmet');
 const cors = require('cors');
 const firebase = require('firebase');
+
+const app = express();
 
 //DbConfig
 const config = {
@@ -22,25 +23,27 @@ const db = firebase.firestore();
 
 //Paths
 const pathToBuildFolder = path.join(__dirname, 'build');
-const pathToIndexHtml = path.join(pathToBuildFolder, 'index.html');
+const pathToIndexHtmlInBuildFolder = path.join(pathToBuildFolder, 'index.html');
 
-app.use(express.static(pathToBuildFolder));
+app.use('/', express.static(pathToBuildFolder));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
 //Routes
-app.get('/', (req, res) => {
-  res.sendFile(pathToIndexHtml);
-});
+if (process.env.NODE_ENV === 'production') {
+  app.get('/', (req, res) => {
+    res.sendFile(pathToIndexHtmlInBuildFolder);
+  });
 
-app.get('/about', (req, res) => {
-  res.sendFile(pathToIndexHtml);
-});
+  app.get('/about', (req, res) => {
+    res.sendFile(pathToIndexHtmlInBuildFolder);
+  });
 
-app.get('/:hacker', (req, res) => {
-  res.sendFile(pathToIndexHtml);
-});
+  app.get('/:hacker', (req, res) => {
+    res.sendFile(pathToIndexHtmlInBuildFolder);
+  });
+}
 
 app.get('/api/hacker/:hacker', async function(req, res) {
   try {
@@ -66,4 +69,4 @@ app.get('/api/hacker/:hacker', async function(req, res) {
   console.log('Get Request');
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 2222);
