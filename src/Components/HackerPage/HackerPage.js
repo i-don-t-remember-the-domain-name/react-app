@@ -16,8 +16,8 @@ function HackerPage(props) {
   return (
     <SDHackerPageEnvContainer>
       <SDHackerPageContainer>
-        <SDHackerPageHeading>{hackerName}</SDHackerPageHeading>
         {hackerName && <SocialButton hackerName={hackerName} />}
+        <SDHackerPageHeading>{hackerName}</SDHackerPageHeading>
         <HackerPageTabs
           dateOfFirstComment={props.dateOfFirstComment}
           countOfAllComments={props.countOfAllComments}
@@ -54,6 +54,11 @@ const SDHackerPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  div.focus,
+  div:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
   @media (max-width: 1100px) {
     width: 90%;
   }
@@ -66,7 +71,7 @@ const SDHackerPageHeading = styled.div`
   font-weight: lighter;
   font-size: 2rem;
   letter-spacing: 0.05rem;
-  margin: 10vh 0 0 0;
+  margin: 5vh 0 0 0;
   padding: 70px 0 50px 0;
   text-align: center;
   @media (max-width: 600px) {
