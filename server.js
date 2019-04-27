@@ -8,6 +8,16 @@ const cors = require('cors');
 const firebase = require('firebase');
 
 const app = express();
+app.all(/.*/, function(req, res, next) {
+  let host = req.header('host');
+  if (host.match(/^www\..*/i)) {
+    next();
+  } else {
+    res.redirect(301, 'http://www.' + host + req.url);
+  }
+});
+
+app.use('/', express.static('public'));
 
 //DbConfig
 const config = {
