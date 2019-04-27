@@ -17,7 +17,6 @@ function HackerContainer(props) {
       .where('commentor', '==', hacker)
       .get()
       .then(qs => {
-        console.log(qs);
         if (qs.docs.length > 0) {
           qs.forEach(doc => {
             props.setError(false);
