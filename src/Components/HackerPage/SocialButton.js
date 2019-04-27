@@ -6,7 +6,7 @@ import { FacebookIcon, TwitterIcon, FacebookShareButton, TwitterShareButton, Red
 export default function SocialButtons(props) {
   return (
     <SDButtonContainer>
-      <div>share this with other hackers on</div>
+      <SDSocialHeading>share this with other hackers on</SDSocialHeading>
       <SDButton>
         <TwitterShareButton
           url={`https://www.hackersalt.com/${props.hackerName}`}
@@ -32,13 +32,18 @@ export default function SocialButtons(props) {
 //Styling
 const SDButtonContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 60px 0;
-  font-style: italic;
+  padding: 100px 0 0 0;
+`;
+
+const SDSocialHeading = styled.div`
+  width: 100%;
+  text-align: center;
 `;
 
 const SDButton = styled.div`
-  padding-left: 10px;
+  padding: 10px 0 0 10px;
   cursor: pointer;
 `;
