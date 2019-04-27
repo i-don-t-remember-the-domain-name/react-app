@@ -6,16 +6,9 @@ const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
 const firebase = require('firebase');
+const forceDomain = require('forcedomain');
 
 const app = express();
-app.all(/.*/, function(req, res, next) {
-  let host = req.header('host');
-  if (host.match(/^www\..*/i)) {
-    next();
-  } else {
-    res.redirect(301, 'http://www.' + host + req.url);
-  }
-});
 
 app.use('/', express.static('public'));
 
@@ -35,6 +28,12 @@ const db = firebase.firestore();
 const pathToBuildFolder = path.join(__dirname, 'build');
 const pathToIndexHtmlInBuildFolder = path.join(pathToBuildFolder, 'index.html');
 
+app.use(
+  forceDomain({
+    hostname: 'hackersalt.com',
+    port: Number(process.env.PORT)
+  })
+);
 app.use('/', express.static(pathToBuildFolder));
 app.use(helmet());
 app.use(cors());
