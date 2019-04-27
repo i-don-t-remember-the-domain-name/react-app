@@ -22,15 +22,14 @@ function HackerContainer(props) {
             props.setError(false);
             cleanPreviousHacker();
             props.setHackerName(doc.data().commentor);
-            props.setCountOfAllComments(doc.data().cnt_cmnts_oall);
-            props.setCountOfSaltyComments(doc.data().cnt_slt_s);
-            console.log(doc.data().rank_oall_slt);
+            !isNaN(doc.data().cnt_cmnts_oall) && props.setCountOfAllComments(doc.data().cnt_cmnts_oall);
+            !isNaN(doc.data().cnt_slt_s) && props.setCountOfSaltyComments(doc.data().cnt_slt_s);
             !isNaN(doc.data().rank_lt_amt_slt) && props.setRankAmountOfSaltiness(doc.data().rank_lt_amt_slt);
             !isNaN(doc.data().rank_lt_qty_sc) && props.setRankQuantityOfSaltiness(doc.data().rank_lt_qty_sc);
             !isNaN(doc.data().rank_oall_slt) && props.setRankOverallSaltiness(doc.data().rank_oall_slt);
 
             //If there is average saltiness, fix it to 2 decimal numbers
-            doc.data().avg_slt_s && props.setAverageSaltiness(doc.data().avg_slt_s.toFixed(2));
+            !isNaN(doc.data().avg_slt_s) && doc.data().avg_slt_s && props.setAverageSaltiness(doc.data().avg_slt_s.toFixed(2));
 
             //If there is date, transform date to required format and set the DateOfFirstComment state
             if (doc.data().time_cmnt_fst.seconds) {

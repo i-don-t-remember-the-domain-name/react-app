@@ -57,7 +57,6 @@ HackerSalt was developed by a Ivana and Britton based on idea from Lambda School
 - Semantic UI 🧡
 - Recharts 💙
 - Styled Components 💜
-- Express.js
 - Firebase
 - Jest
 - Supertest

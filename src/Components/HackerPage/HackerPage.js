@@ -10,12 +10,6 @@ import BarChart from '../Chart/BarChart';
 
 //Default export, exported at the bottom with withRouter
 function HackerPage(props) {
-  // CURRENTLY NOT USED: Redirect if hacker is not saved in state
-  // if (props.hackerName !== props.match.params.hacker) {
-  //   props.history.push('/');
-  //   return null;
-  // }
-
   const { hackerName } = props;
 
   return (
