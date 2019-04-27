@@ -8,11 +8,11 @@ import HackerPage from '../Components/HackerPage/HackerPage';
 export default function HackerProfilePage(props) {
   useEffect(() => {
     props.searchHacker(props.match.params.hacker);
-  }, []);
+  }, [props.match.params.hacker]);
 
   return (
     <div>
-      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} />
+      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
       <HackerPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}

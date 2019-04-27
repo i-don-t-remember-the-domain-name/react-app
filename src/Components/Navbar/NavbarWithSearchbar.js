@@ -32,7 +32,7 @@ export default function Navbar(props) {
       </SDLeftNav>
       <SDMiddleNav>
         <SDNavSearchBar>
-          <Searchbar background={'white'} className="navbar-searchbar" searchHacker={props.searchHacker} />
+          <Searchbar background={'white'} className="navbar-searchbar" redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
         </SDNavSearchBar>
       </SDMiddleNav>
       {props.loading && (

@@ -7,12 +7,6 @@ import HackerPageTab from './HackerPageTab';
 
 //Default export, exported at the bottom with withRouter
 function HackerPageTabs(props) {
-  //CURRENTLY NOT USED: Redirect if hacker is not saved in state
-  // if (props.hackerName !== props.match.params.hacker) {
-  //   props.history.push('/');
-  //   return null;
-  // }
-
   //Deconstructing all props
   const { countOfAllComments, countOfSaltyComments, rankAmountOfSaltiness, rankQuantityOfSaltiness, rankOverallSaltiness, averageSaltiness } = props;
 
