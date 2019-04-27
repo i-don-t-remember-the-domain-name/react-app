@@ -17,7 +17,7 @@ function HackerPage(props) {
     <SDHackerPageEnvContainer>
       <SDHackerPageContainer>
         <SDHackerPageHeading>{hackerName}</SDHackerPageHeading>
-        <SocialButton hackerName={hackerName} />
+        {hackerName && <SocialButton hackerName={hackerName} />}
         <HackerPageTabs
           dateOfFirstComment={props.dateOfFirstComment}
           countOfAllComments={props.countOfAllComments}
