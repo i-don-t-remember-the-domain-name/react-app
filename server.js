@@ -6,7 +6,6 @@ const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
 const firebase = require('firebase');
-const force = require('express-force-domain');
 
 const app = express();
 
@@ -28,7 +27,6 @@ const db = firebase.firestore();
 const pathToBuildFolder = path.join(__dirname, 'build');
 const pathToIndexHtmlInBuildFolder = path.join(pathToBuildFolder, 'index.html');
 
-app.use(force('https://www.hackersalt.com'));
 app.use('/', express.static(pathToBuildFolder));
 app.use(helmet());
 app.use(cors());
