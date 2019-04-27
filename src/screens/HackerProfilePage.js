@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 //Import components
 import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
@@ -6,20 +6,13 @@ import HackerPage from '../Components/HackerPage/HackerPage';
 
 //Export default component
 export default function HackerProfilePage(props) {
-  // Redirect if hacker is not saved in state
-  if (props.hackerName !== props.match.params.hacker) {
-    props.history.push('/');
-    return null;
-  }
-
-  //axios call here
-  //have 3 states - error/loading/success
-  //display different content based on search
-
+  useEffect(() => {
+    props.searchHacker(props.match.params.hacker);
+  }, [props.match.params.hacker]);
 
   return (
     <div>
-      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} />
+      <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
       <HackerPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}

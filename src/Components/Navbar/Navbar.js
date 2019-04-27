@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 //Import images
 import saltShaker from '../../img/salt-shaker.png';
@@ -9,17 +10,17 @@ export default function Navbar() {
     <SDNavbar>
       <SDNavItem>
         <SDLogoImg>
-          <a href="/">
+          <Link to="/">
             <img src={saltShaker} alt="salt shaker" />
-          </a>
+          </Link>
         </SDLogoImg>
         <div>
-          <a href="/">HackerSalt</a>
+          <Link to="/">HackerSalt</Link>
         </div>
       </SDNavItem>
       <SDNavItem className="about-section">
         <div>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </div>
       </SDNavItem>
     </SDNavbar>

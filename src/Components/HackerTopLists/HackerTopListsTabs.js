@@ -78,7 +78,7 @@ const SDTabsContainer = styled.div`
     padding-bottom: 30px;
     background-color: #f8f9fa;
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    /* font-weight: 600; */
+    font-weight: 600;
     font-size: 1rem;
     @media (max-width: 600px) {
       font-size: 0.9rem;

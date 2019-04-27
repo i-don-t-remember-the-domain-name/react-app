@@ -39,7 +39,7 @@ const SDExplanationCard = styled.div`
 `;
 
 const SDExplanationHeading = styled.div`
-  /* font-weight: 600; */
+  font-weight: 600;
   font-size: 1rem;
   padding-bottom: 10px;
   @media (max-width: 900px) {

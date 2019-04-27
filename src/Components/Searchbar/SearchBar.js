@@ -14,7 +14,7 @@ export default function SearchBar(props) {
     <SDFormSearchBar
       onSubmit={e => {
         e.preventDefault();
-        props.searchHacker(hackerNameRef.current.value);
+        props.redirectToHackerProfilePage(hackerNameRef.current.value);
         clearInput();
       }}>
       <SDInputSearchBar placeholder="Search" ref={hackerNameRef} />
