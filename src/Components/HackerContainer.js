@@ -79,10 +79,18 @@ function HackerContainer(props) {
     props.setSaltiestComments(undefined);
   }
 
+  function redirectToHackerProfilePage(hacker) {
+    props.setError(false);
+    cleanPreviousHacker();
+    props.history.push(`/${hacker}`);
+    window.scrollTo(0, 0);
+  }
+
   return (
     <React.Fragment>
       <RoutesContainer
         searchHacker={searchHacker}
+        redirectToHackerProfilePage={redirectToHackerProfilePage}
         averageSaltiness={props.averageSaltiness}
         countOfAllComments={props.countOfAllComments}
         countOfSaltyComments={props.countOfSaltyComments}

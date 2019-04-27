@@ -10,7 +10,11 @@ import HackerProfilePage from '../screens/HackerProfilePage';
 function RoutesContainer(props) {
   return (
     <Switch>
-      <Route exact path="/" render={pr => <MainLandingPage {...pr} searchHacker={props.searchHacker} loading={props.loading} error={props.error} />} />
+      <Route
+        exact
+        path="/"
+        render={pr => <MainLandingPage {...pr} redirectToHackerProfilePage={props.redirectToHackerProfilePage} searchHacker={props.searchHacker} loading={props.loading} error={props.error} />}
+      />
       <Route exact path="/about" render={pr => <AboutPage {...pr} />} />
       <Route
         path="/:hacker"
@@ -18,6 +22,7 @@ function RoutesContainer(props) {
           <HackerProfilePage
             {...pr}
             searchHacker={props.searchHacker}
+            redirectToHackerProfilePage={props.redirectToHackerProfilePage}
             averageSaltiness={props.averageSaltiness}
             countOfAllComments={props.countOfAllComments}
             countOfSaltyComments={props.countOfSaltyComments}

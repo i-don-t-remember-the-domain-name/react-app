@@ -11,7 +11,7 @@ export default function SearchBanner(props) {
     <SDSearchBanner>
       <h1>Find the saltiest users on HackerNews</h1>
       <SDSearchBarFull>
-        <SearchBar searchHacker={props.searchHacker} />
+        <SearchBar searchHacker={props.searchHacker} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
       </SDSearchBarFull>
       {!props.loading && props.error && <SDErrorMessage>User not found. Check spelling and capitalization, and search again.</SDErrorMessage>}
       {props.loading && <Loader active inline="centered" size="medium" />}
