@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
 //Import components
+import SocialButton from './SocialButton';
 import HackerPageTabs from './HackerPageTabs/HackerPageTabs';
 import HackerPageCommentList from './CommentsTable/HackerPageCommentList';
 import LineChart from '../Chart/LineChart';
@@ -10,18 +11,13 @@ import BarChart from '../Chart/BarChart';
 
 //Default export, exported at the bottom with withRouter
 function HackerPage(props) {
-  // CURRENTLY NOT USED: Redirect if hacker is not saved in state
-  // if (props.hackerName !== props.match.params.hacker) {
-  //   props.history.push('/');
-  //   return null;
-  // }
-
   const { hackerName } = props;
 
   return (
     <SDHackerPageEnvContainer>
       <SDHackerPageContainer>
         <SDHackerPageHeading>{hackerName}</SDHackerPageHeading>
+        <SocialButton hackerName={hackerName} />
         <HackerPageTabs
           dateOfFirstComment={props.dateOfFirstComment}
           countOfAllComments={props.countOfAllComments}
