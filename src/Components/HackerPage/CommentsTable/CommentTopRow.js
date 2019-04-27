@@ -32,7 +32,7 @@ const SDCommentRow = styled.div`
 const SDRowSaltiestComment = styled.div`
   width: 78%;
   padding-left: 5px;
-  /* font-weight: 600; */
+  font-weight: 600;
   @media (max-width: 600px) {
     width: 60%;
   }
@@ -41,7 +41,7 @@ const SDRowSaltiestComment = styled.div`
 const SDRowSaltiness = styled.div`
   width: 10%;
   color: #4c6cec;
-  /* font-weight: 600; */
+  font-weight: 600;
   text-align: center;
   padding-left: 20px;
   @media (max-width: 600px) {
@@ -53,7 +53,7 @@ const SDRowSaltiness = styled.div`
 const SDRowLink = styled.div`
   width: 10%;
   color: #4c6cec;
-  /* font-weight: 600; */
+  font-weight: 600;
   text-align: center;
 
   @media (max-width: 600px) {

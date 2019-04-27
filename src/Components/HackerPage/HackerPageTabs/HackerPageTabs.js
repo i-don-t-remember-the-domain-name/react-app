@@ -18,11 +18,11 @@ function HackerPageTabs(props) {
 
   return (
     <SDHackerTabs>
-      {countOfAllComments && <HackerPageTab color={'#f59f00'} heading={'# of Comments Overall'} data={countOfAllComments} />}
+      {countOfAllComments && <HackerPageTab color={'#4c6cec'} heading={'# of Comments Overall'} data={countOfAllComments} />}
       {countOfSaltyComments && <HackerPageTab color={'#4c6cec'} heading={'# Salty Comments'} data={countOfSaltyComments} />}
-      {averageSaltiness && <HackerPageTab color={'#FBBD05'} heading={'Average Salt Score'} data={averageSaltiness} />}
-      {rankOverallSaltiness && <HackerPageTab color={'#4c6cec'} heading={'Rank: Total Overall Score'} data={rankOverallSaltiness} />}
-      {rankAmountOfSaltiness && <HackerPageTab color={'#74b816'} heading={'Rank: Total Salt Contributed'} data={rankAmountOfSaltiness} />}
+      {averageSaltiness && <HackerPageTab color={'#4c6cec'} heading={'Average Salt Score'} data={averageSaltiness} />}
+      {rankOverallSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Total Overall Score'} data={rankOverallSaltiness} />}
+      {rankAmountOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Total Salt Contributed'} data={rankAmountOfSaltiness} />}
       {rankQuantityOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Number of Salty Comments'} data={rankQuantityOfSaltiness} />}
     </SDHackerTabs>
   );
