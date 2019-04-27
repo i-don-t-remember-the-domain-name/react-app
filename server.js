@@ -9,8 +9,6 @@ const firebase = require('firebase');
 
 const app = express();
 
-app.use('/', express.static('public'));
-
 //DbConfig
 const config = {
   apiKey: process.env.APIKEY,
