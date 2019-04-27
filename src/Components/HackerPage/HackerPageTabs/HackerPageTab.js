@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export default function HackerPageTab(props) {
   const style = {
     color: props.color,
-    backgroundColor: `${props.color}1A`
+    backgroundColor: `${props.color}12`
   };
   console.log(props.data);
   return (
@@ -33,7 +33,7 @@ const SDHackerPageTab = styled.div`
 `;
 
 const SDHackerPageTabHeading = styled.div`
-  /* font-weight: 600; */
+  font-weight: 600;
   padding-bottom: 10px;
   text-align: center;
 `;
