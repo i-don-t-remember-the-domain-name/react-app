@@ -20,7 +20,7 @@ const SDHackerPageTab = styled.div`
   width: 26%;
   height: 100px;
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
   margin: 10px;
   display: flex;
   flex-direction: column;

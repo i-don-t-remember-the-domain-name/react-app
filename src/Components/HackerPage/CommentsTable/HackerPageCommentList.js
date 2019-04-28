@@ -23,7 +23,7 @@ const SDCommentList = styled.div`
   width: 100%;
   min-height: 40vh;
   padding: 2%;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: space-between;

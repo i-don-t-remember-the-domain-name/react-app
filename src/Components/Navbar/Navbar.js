@@ -37,7 +37,7 @@ const SDNavbar = styled.div`
   left: 0;
   height: 60px;
   width: 100vw;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
   z-index: 2;
   .about-section {
     @media (max-width: 600px) {

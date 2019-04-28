@@ -24,7 +24,7 @@ const SDHackerList = styled.div`
   box-sizing: border-box;
   min-height: 40vh;
   padding: 2%;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

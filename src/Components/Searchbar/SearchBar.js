@@ -27,14 +27,14 @@ const SDInputSearchBar = styled.input`
   height: 100%;
   width: 100%;
   padding-left: 15px;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
   border-radius: 6px 0 0 6px;
   border: none;
   font-weight: lighter;
 
   ::placeholder {
     font-size: 0.9rem;
-    color: lightgray;
+    color: darkgray;
   }
 `;
 
@@ -49,7 +49,7 @@ const SDFormSearchBar = styled.form`
     border-radius: 0 6px 6px 0;
     width: 35px;
     cursor: pointer;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
     background-image: url(${scale});
     background-position: center right 15px;
     background-repeat: no-repeat;
