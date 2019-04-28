@@ -84,6 +84,6 @@ const SDRowSaltiestComment = styled.div`
     padding-top: 10px;
     margin-top: 10px;
     order: 6;
-    border-top: 1px solid #f8f9fa;
+    border-top: 1px solid #f4f4f4;
   }
 `;
