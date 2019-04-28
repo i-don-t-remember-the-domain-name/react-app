@@ -35,7 +35,7 @@ const SDButtonContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 0 0;
+  padding: 10px 0 60px 0;
 `;
 
 const SDSocialHeading = styled.div`
