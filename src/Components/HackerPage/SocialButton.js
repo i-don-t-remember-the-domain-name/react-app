@@ -6,7 +6,7 @@ import { FacebookIcon, TwitterIcon, FacebookShareButton, TwitterShareButton, Red
 export default function SocialButtons(props) {
   return (
     <SDButtonContainer>
-      <SDSocialHeading>share this with other hackers on</SDSocialHeading>
+      <SDSocialHeading>{`share ${props.hackerName}'s result with other hackers`}</SDSocialHeading>
       <SDButton>
         <TwitterShareButton
           url={`https://www.hackersalt.com/${props.hackerName}`}
