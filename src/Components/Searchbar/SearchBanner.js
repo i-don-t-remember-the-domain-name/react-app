@@ -33,6 +33,8 @@ const SDSearchBanner = styled.div`
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
     font-size: 2rem;
+    color: #f59f00;
+    font-weight: 400;
   }
 `;
 
