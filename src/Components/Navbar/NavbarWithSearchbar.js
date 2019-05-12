@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { Loader } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-//Import images
-import saltShaker from '../../img/salt-shaker.png';
-
 //Import components
 import Searchbar from '../Searchbar/SearchBar';
 
@@ -15,11 +12,6 @@ export default function Navbar(props) {
     <SDNavbar>
       <SDLeftNav>
         <SDNavItem>
-          <SDLogoImg>
-            <Link to="/">
-              <img src={saltShaker} alt="salt shaker" />
-            </Link>
-          </SDLogoImg>
           <div>
             <Link to="/">HackerSalt</Link>
           </div>
@@ -32,7 +24,11 @@ export default function Navbar(props) {
       </SDLeftNav>
       <SDMiddleNav>
         <SDNavSearchBar>
-          <Searchbar background={'white'} className="navbar-searchbar" redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
+          <Searchbar
+            background={'white'}
+            className="navbar-searchbar"
+            redirectToHackerProfilePage={props.redirectToHackerProfilePage}
+          />
         </SDNavSearchBar>
       </SDMiddleNav>
       {props.loading && (

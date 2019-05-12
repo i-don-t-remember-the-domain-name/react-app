@@ -8,17 +8,25 @@ export default function AboutSection() {
       <SDIntroContainer>
         <SDIntroHeading>About HackerSalt</SDIntroHeading>
         <SDIntroContent>
-        HackerSalt lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across commenters' lifetimes.
-        <br />
-        <br />
-        Please explore and share. We've prepared visualizations &amp; dashboards of commenters' activity for your curiosity. Just be prepared there's some really nasty trolls out there.
-        <br />
-        <br />
-        Our hope is that this will be a useful insight into the behavior trends of various user types. We believe customers should be free to make their own experiences better and avoid salty trolls. Companies that own and operate these platforms should focus more resources on systems that improve and augment moderation system effectiveness. We would love to help you build these systems.
-        <br />
-        <br />
-        We're not here to witch hunt. If you would like your data taken down, we're happy to oblige. Please send us proof of a kind deed you did for a random stranger and we'll consider your appeal.<br />
-        sorry@hackersalt.com
+          HackerSalt lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the
+          "Saltiest". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries
+          of usage across commenters' lifetimes.
+          <br />
+          <br />
+          Please explore and share. We've prepared visualizations &amp; dashboards of commenters' activity for your
+          curiosity. Just be prepared there's some really nasty trolls out there.
+          <br />
+          <br />
+          Our hope is that this will be a useful insight into the behavior trends of various user types. We believe
+          customers should be free to make their own experiences better and avoid salty trolls. Companies that own and
+          operate these platforms should focus more resources on systems that improve and augment moderation system
+          effectiveness. We would love to help you build these systems.
+          <br />
+          <br />
+          We're not here to witch hunt. If you would like your data taken down, we're happy to oblige. Please send us
+          proof of a kind deed you did for a random stranger and we'll consider your appeal.
+          <br />
+          sorry@hackersalt.com
         </SDIntroContent>
       </SDIntroContainer>
     </div>
@@ -29,7 +37,7 @@ export default function AboutSection() {
 const SDIntroContainer = styled.div`
   box-sizing: border-box;
   width: 100vw;
-  min-height: 90vh;
+  min-height: 94vh;
   padding: 10%;
   align-items: center;
   display: flex;

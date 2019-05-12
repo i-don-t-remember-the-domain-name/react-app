@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from 'styled-theming';
 
 //Styling
 import './App.scss';
@@ -8,7 +10,7 @@ import './App.scss';
 import HackerContainer from './Components/HackerContainer';
 
 //Default export
-function App() {
+export default function App() {
   const [averageSaltiness, setAverageSaltiness] = useState(undefined);
   const [countOfAllComments, setCountOfAllComments] = useState(undefined);
   const [countOfSaltyComments, setCountOfSaltyComments] = useState(undefined);
@@ -24,36 +26,61 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container">
-        <HackerContainer
-          averageSaltiness={averageSaltiness}
-          countOfAllComments={countOfAllComments}
-          countOfSaltyComments={countOfSaltyComments}
-          hackerName={hackerName}
-          monthlyPlot={monthlyPlot}
-          rankAmountOfSaltiness={rankAmountOfSaltiness}
-          rankQuantityOfSaltiness={rankQuantityOfSaltiness}
-          rankOverallSaltiness={rankOverallSaltiness}
-          dateOfFirstComment={dateOfFirstComment}
-          saltiestComments={saltiestComments}
-          loading={loading}
-          error={error}
-          setAverageSaltiness={setAverageSaltiness}
-          setCountOfAllComments={setCountOfAllComments}
-          setCountOfSaltyComments={setCountOfSaltyComments}
-          setHackerName={setHackerName}
-          setMonthlyPlot={setMonthlyPlot}
-          setRankAmountOfSaltiness={setRankAmountOfSaltiness}
-          setRankQuantityOfSaltiness={setRankQuantityOfSaltiness}
-          setRankOverallSaltiness={setRankOverallSaltiness}
-          setDateOfFirstComment={setDateOfFirstComment}
-          setSaltiestComments={setSaltiestComments}
-          setLoading={setLoading}
-          setError={setError}
-        />
-      </div>
+      <ThemeProvider theme={{ mode: 'dark' }}>
+        <StyledAppContainer>
+          <HackerContainer
+            averageSaltiness={averageSaltiness}
+            countOfAllComments={countOfAllComments}
+            countOfSaltyComments={countOfSaltyComments}
+            hackerName={hackerName}
+            monthlyPlot={monthlyPlot}
+            rankAmountOfSaltiness={rankAmountOfSaltiness}
+            rankQuantityOfSaltiness={rankQuantityOfSaltiness}
+            rankOverallSaltiness={rankOverallSaltiness}
+            dateOfFirstComment={dateOfFirstComment}
+            saltiestComments={saltiestComments}
+            loading={loading}
+            error={error}
+            setAverageSaltiness={setAverageSaltiness}
+            setCountOfAllComments={setCountOfAllComments}
+            setCountOfSaltyComments={setCountOfSaltyComments}
+            setHackerName={setHackerName}
+            setMonthlyPlot={setMonthlyPlot}
+            setRankAmountOfSaltiness={setRankAmountOfSaltiness}
+            setRankQuantityOfSaltiness={setRankQuantityOfSaltiness}
+            setRankOverallSaltiness={setRankOverallSaltiness}
+            setDateOfFirstComment={setDateOfFirstComment}
+            setSaltiestComments={setSaltiestComments}
+            setLoading={setLoading}
+            setError={setError}
+          />
+        </StyledAppContainer>
+      </ThemeProvider>
     </Router>
   );
 }
 
-export default App;
+//Theming
+const backgroundColor = theme('mode', {
+  light: '#fafafa',
+  dark: '#283042'
+});
+
+const textColor = theme('mode', {
+  light: '#000',
+  dark: '#fff'
+});
+
+//Styled components
+const StyledAppContainer = styled.div`
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: lighter;
+  box-sizing: border-box;
+  line-height: 1.5;
+  background-color: ${backgroundColor};
+  color: ${textColor};
+`;

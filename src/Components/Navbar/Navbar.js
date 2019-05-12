@@ -1,19 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import theme from 'styled-theming';
 
-//Import images
-import saltShaker from '../../img/salt-shaker.png';
 //Export default component
 export default function Navbar() {
   return (
     <SDNavbar>
       <SDNavItem>
-        <SDLogoImg>
-          <Link to="/">
-            <img src={saltShaker} alt="salt shaker" />
-          </Link>
-        </SDLogoImg>
         <div>
           <Link to="/">HackerSalt</Link>
         </div>
@@ -27,6 +21,12 @@ export default function Navbar() {
   );
 }
 
+//Theming
+const backgroundColor = theme('mode', {
+  light: '#f4f4f4',
+  dark: '#1B2332'
+});
+
 //Styled components
 const SDNavbar = styled.div`
   box-sizing: border-box;
@@ -37,7 +37,7 @@ const SDNavbar = styled.div`
   left: 0;
   height: 60px;
   width: 100vw;
-  background-color: #f4f4f4;
+  background-color: ${backgroundColor};
   z-index: 2;
   .about-section {
     @media (max-width: 600px) {

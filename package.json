@@ -19,7 +19,8 @@
     "react-tabs": "^3.0.0",
     "recharts": "^1.5.0",
     "semantic-ui-react": "^0.86.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "styled-theming": "^2.2.0"
   },
   "scripts": {
     "start": "node server.js",

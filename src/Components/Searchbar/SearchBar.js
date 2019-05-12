@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 
 //Import images
-import scale from '../../img/scale.png';
+import searchIconDark from '../../img/icon-search-dark.svg';
+import searchIconLight from '../../img/icon-search-light.svg';
 
 //Export default component
 export default function SearchBar(props) {
@@ -23,6 +25,17 @@ export default function SearchBar(props) {
   );
 }
 
+//Theming
+const placeholderColor = theme('mode', {
+  light: 'darkgray',
+  dark: 'darkgray'
+});
+
+const searchIcon = theme('mode', {
+  light: `url(${searchIconLight})`,
+  dark: `url(${searchIconDark})`
+});
+
 const SDInputSearchBar = styled.input`
   height: 100%;
   width: 100%;
@@ -34,7 +47,7 @@ const SDInputSearchBar = styled.input`
 
   ::placeholder {
     font-size: 0.9rem;
-    color: darkgray;
+    color: ${placeholderColor};
   }
 `;
 
@@ -50,9 +63,9 @@ const SDFormSearchBar = styled.form`
     width: 35px;
     cursor: pointer;
     background-color: #f4f4f4;
-    background-image: url(${scale});
+    background-image: ${searchIcon};
     background-position: center right 15px;
     background-repeat: no-repeat;
-    background-size: 0.9rem;
+    background-size: 1.2rem;
   }
 `;
