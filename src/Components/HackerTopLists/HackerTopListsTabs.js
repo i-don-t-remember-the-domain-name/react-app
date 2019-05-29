@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 
 //Import components
 import HackerList from './HackerList';
@@ -20,15 +21,39 @@ export default function HackerTopListsTabs(props) {
   const panes = [
     {
       menuItem: 'Top 100: Total Overall Score',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} color={'#4c6cec'} data={Overall_Saltiest} explanation={overallScore} />
+      render: () => (
+        <HackerList
+          searchHacker={props.searchHacker}
+          heading={'Top 100: Total Overall Score'}
+          color={'#4c6cec'}
+          data={Overall_Saltiest}
+          explanation={overallScore}
+        />
+      )
     },
     {
       menuItem: 'Top 100: Total Salt Score',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} color={'#f59f00'} data={AMT_Salt_Contributed} explanation={saltScore} />
+      render: () => (
+        <HackerList
+          searchHacker={props.searchHacker}
+          heading={'Top 100: Total Salt Score'}
+          color={'#f59f00'}
+          data={AMT_Salt_Contributed}
+          explanation={saltScore}
+        />
+      )
     },
     {
       menuItem: 'Top 100: Number of Salty Comments',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} color={'#74b816'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
+      render: () => (
+        <HackerList
+          searchHacker={props.searchHacker}
+          heading={'Top 100: Number of Salty Comments'}
+          color={'#74b816'}
+          data={QTY_Salty_Comments}
+          explanation={numberOfSaltyComments}
+        />
+      )
     }
   ];
 
@@ -40,6 +65,23 @@ export default function HackerTopListsTabs(props) {
     </SDTabsEnvContainer>
   );
 }
+
+//Theming
+const textColorInChart = theme('mode', {
+  dark: '#000'
+});
+
+const textColorInTabs = theme('mode', {
+  dark: 'white'
+});
+
+const backgroundColor = theme('mode', {
+  dark: '#283042'
+});
+
+const backgroundColorTabs = theme('mode', {
+  dark: '#1a2232'
+});
 
 //Styled components
 const SDTabsEnvContainer = styled.div`
@@ -61,12 +103,14 @@ const SDTabsContainer = styled.div`
   .tab-container {
     width: 100%;
     justify-content: space-between;
+    color: ${textColorInChart};
   }
 
   .ui.menu {
     box-shadow: none;
     border: none;
     justify-content: space-between;
+    background-color: ${backgroundColor};
     @media (max-width: 600px) {
       flex-direction: column;
     }
@@ -77,7 +121,8 @@ const SDTabsContainer = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f4f4f4;
-    font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+      'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     font-size: 1rem;
     @media (max-width: 600px) {
@@ -87,15 +132,18 @@ const SDTabsContainer = styled.div`
     }
     &:nth-of-type(1) {
       color: #4c6cec;
+      color: ${textColorInTabs};
+      background-color: ${backgroundColorTabs};
     }
     &:nth-of-type(2) {
       color: #f59f00;
+      color: ${textColorInTabs};
+      background-color: ${backgroundColorTabs};
     }
     &:nth-of-type(3) {
       color: #74b816;
-    }
-    &:nth-of-type(4) {
-      color: #ff5d3e;
+      color: ${textColorInTabs};
+      background-color: ${backgroundColorTabs};
     }
   }
 
@@ -112,10 +160,6 @@ const SDTabsContainer = styled.div`
       background-color: #74b8161a;
       color: #74b816;
     }
-    &:nth-of-type(4) {
-      background-color: #ff5d3e1a;
-      color: #ff5d3e;
-    }
   }
   .ui.menu .active.item {
     &:nth-of-type(1) {
@@ -130,17 +174,13 @@ const SDTabsContainer = styled.div`
       background-color: #74b8161a;
       color: #74b816;
     }
-    &:nth-of-type(4) {
-      background-color: #ff5d3e1a;
-      color: #ff5d3e;
-    }
   }
   .ui.menu .item:before {
     display: none;
   }
 
   .ui.pointing.menu .item:after {
-    border: none;
+    display: none;
   }
   .ui.menu:after {
     display: none;

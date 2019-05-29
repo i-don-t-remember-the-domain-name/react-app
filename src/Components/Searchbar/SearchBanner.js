@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Loader } from 'semantic-ui-react';
+import theme from 'styled-theming';
 
 //Import components
 import SearchBar from './SearchBar';
@@ -21,6 +22,17 @@ export default function SearchBanner(props) {
   );
 }
 
+//Theming
+const h1Color = theme('mode', {
+  light: '#f59f00',
+  dark: '#f48c1b'
+});
+
+const errorTextColor = theme('mode', {
+  light: '#f4a000',
+  dark: '#f48c1b'
+});
+
 //Styled components
 const SDSearchBanner = styled.div`
   width: 100vw;
@@ -36,8 +48,7 @@ const SDSearchBanner = styled.div`
       'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
     font-size: 2rem;
-    color: #f59f00;
-    color: #f48c1b;
+    color: ${h1Color};
     font-weight: 400;
   }
 `;
@@ -60,6 +71,6 @@ const SDSearchBarFull = styled.div`
 const SDErrorMessage = styled.div`
   height: 30px;
   font-size: 0.9rem;
-  color: #f4a000;
+  color: ${errorTextColor};
   padding: 0 10px;
 `;

@@ -62,7 +62,7 @@ export default function App() {
 
 //Theming
 const backgroundColor = theme('mode', {
-  light: '#fafafa',
+  light: 'white',
   dark: '#283042'
 });
 
