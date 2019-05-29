@@ -47,12 +47,22 @@ export default function Navbar(props) {
 
 const backgroundColor = theme('mode', {
     light: '#white',
-    dark: '#0E0179'
+    dark: '#290ADE'
 });
 
 const boldness = theme('mode', {
     light: '300',
     dark: '600'
+});
+
+const hoverColor = theme('mode', {
+    light: 'darkgray',
+    dark: '#FD8A20'
+});
+
+const align = theme('mode', {
+    light: 'center',
+    dark: '#baseline'
 });
 
 //Styled components
@@ -70,6 +80,11 @@ const SDNavbar = styled.div`
     background-color: ${backgroundColor};
     flex-wrap: wrap;
     font-weight: ${boldness};
+    a {
+        &:hover {
+            color: ${hoverColor};
+        }
+    }
     .about-section {
         @media (max-width: 600px) {
             display: none;
@@ -96,6 +111,7 @@ const SDLeftNav = styled.div`
 const SDMiddleNav = styled.div`
     display: flex;
     justify-content: center;
+    align-items: ${align};
     width: 60%;
     height: 100%;
     @media (max-width: 900px) {

@@ -24,12 +24,17 @@ export default function Navbar() {
 //Theming
 const backgroundColor = theme('mode', {
     light: '#f4f4f4',
-    dark: '#0E0179'
+    dark: '#290ADE'
 });
 
 const boldness = theme('mode', {
     light: '300',
     dark: '600'
+});
+
+const hoverColor = theme('mode', {
+    light: 'darkgray',
+    dark: '#FD8A20'
 });
 
 //Styled components
@@ -45,6 +50,11 @@ const SDNavbar = styled.div`
     font-weight: ${boldness};
     background-color: ${backgroundColor};
     z-index: 2;
+    a {
+        &:hover {
+            color: ${hoverColor};
+        }
+    }
     .about-section {
         @media (max-width: 600px) {
             display: none;
