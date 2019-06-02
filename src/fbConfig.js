@@ -3,12 +3,13 @@ require('firebase/firestore');
 
 //Firebase configuration
 firebase.initializeApp({
-    apiKey: 'AIzaSyCAUlq3XK2lXeTFsQThdL4GyivWx-c5DCQ',
-    authDomain: 'winterrose-nlp.firebaseapp.com',
-    databaseURL: 'https://winterrose-nlp.firebaseio.com',
-    projectId: 'winterrose-nlp',
-    storageBucket: 'winterrose-nlp.appspot.com',
-    messagingSenderId: '468502233263'
+  apiKey: 'AIzaSyDMrnsvujDZ1VeimRwhYOXB0xAhQ7SPF8M',
+  authDomain: 'toxic-hackers.firebaseapp.com',
+  databaseURL: 'https://toxic-hackers.firebaseio.com',
+  projectId: 'toxic-hackers',
+  storageBucket: 'toxic-hackers.appspot.com',
+  messagingSenderId: '393394024642',
+  appId: '1:393394024642:web:ddd9021d6d0d634e'
 });
 const db = firebase.firestore();
 
