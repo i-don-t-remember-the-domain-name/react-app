@@ -6,9 +6,11 @@ import theme from 'styled-theming';
 //Styling
 import './App.scss';
 
-//Import Components
+//Import components
 import HackerContainer from './Components/HackerContainer';
 
+//Import colors
+import { dtDarkBlue, dtWhiteFont, ltWhite, ltBlackFont } from './colors';
 //Default export
 export default function App() {
     const [averageSaltiness, setAverageSaltiness] = useState(undefined);
@@ -62,24 +64,26 @@ export default function App() {
 
 //Theming
 const backgroundColor = theme('mode', {
-    light: 'white',
-    dark: '#0E017A'
+    light: ltWhite,
+    dark: dtDarkBlue
 });
 
 const textColor = theme('mode', {
-    light: '#000',
-    dark: '#fff'
+    light: ltBlackFont,
+    dark: dtWhiteFont
 });
 
 //Styled components
 const StyledAppContainer = styled.div`
+    /*themed*/
+    background-color: ${backgroundColor};
+    color: ${textColor};
+    /*non-themed*/
     max-width: 100vw;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
-    box-sizing: border-box;
     line-height: 1.5;
-    background-color: ${backgroundColor};
-    color: ${textColor};
 `;

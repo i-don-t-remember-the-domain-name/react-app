@@ -9,12 +9,12 @@ export default function Navbar() {
         <SDNavbar>
             <SDNavItem>
                 <div>
-                    <Link to="/">HackerSalt</Link>
+                    <Link to="/">toxic hackers</Link>
                 </div>
             </SDNavItem>
             <SDNavItem className="about-section">
                 <div>
-                    <Link to="/about">About</Link>
+                    <Link to="/about">about</Link>
                 </div>
             </SDNavItem>
         </SDNavbar>
@@ -24,17 +24,12 @@ export default function Navbar() {
 //Theming
 const backgroundColor = theme('mode', {
     light: '#f4f4f4',
-    dark: '#290ADE'
-});
-
-const boldness = theme('mode', {
-    light: '300',
-    dark: '600'
+    dark: '#16163E'
 });
 
 const hoverColor = theme('mode', {
     light: 'darkgray',
-    dark: '#FD8A20'
+    dark: '#1FDA02'
 });
 
 //Styled components
@@ -47,7 +42,7 @@ const SDNavbar = styled.div`
     left: 0;
     height: 60px;
     width: 100vw;
-    font-weight: ${boldness};
+    font-weight: 600;
     background-color: ${backgroundColor};
     z-index: 2;
     a {

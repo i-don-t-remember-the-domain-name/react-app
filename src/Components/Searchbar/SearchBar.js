@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 
 //Import images
-import searchIconDark from '../../img/icon-search-dark.svg';
+import searchIconDark from '../../img/icon-search-darkblue.svg';
 import searchIconLight from '../../img/icon-search-light.svg';
+
+//Import colors
+
+import { ltLightGray, ltBlackFont, dtLightBlue, dtPurple, dtWhiteFont } from '../../colors.js';
 
 //Export default component
 export default function SearchBar(props) {
@@ -26,32 +30,45 @@ export default function SearchBar(props) {
 }
 
 //Theming
-const placeholderColor = theme('mode', {
-    light: 'darkgray',
-    dark: '#FD8A2099'
-});
-
 const searchIcon = theme('mode', {
     light: `url(${searchIconLight})`,
     dark: `url(${searchIconDark})`
 });
 
 const backgroundColor = theme('mode', {
-    light: `#f4f4f4`,
-    dark: `white`
+    light: ltLightGray,
+    dark: dtLightBlue
+});
+
+const submitBackgroundColor = theme('mode', {
+    light: ltLightGray,
+    dark: dtPurple
+});
+
+const borderStyle = theme('mode', {
+    light: `2px solid ${ltLightGray}`,
+    dark: `2px solid ${dtPurple}`
+});
+
+const textColor = theme('mode', {
+    light: ltBlackFont,
+    dark: dtWhiteFont
 });
 
 const SDInputSearchBar = styled.input`
+    /*themed */
+    background-color: ${backgroundColor};
+    border: ${borderStyle};
+    color: ${textColor};
+    /*non-themed*/
     height: 100%;
     width: 100%;
     padding-left: 15px;
-    background-color: ${backgroundColor};
     border-radius: 6px 0 0 6px;
-    border: none;
     font-weight: lighter;
     ::placeholder {
         font-size: 0.9rem;
-        color: ${placeholderColor};
+        color: darkgray;
     }
 `;
 
@@ -62,14 +79,16 @@ const SDFormSearchBar = styled.form`
     z-index: 2;
 
     .submitButton {
-        border: none;
+        /*themed*/
+        border: ${borderStyle};
+        background-color: ${submitBackgroundColor};
+        background-image: ${searchIcon};
+        /*non-themed*/
         border-radius: 0 6px 6px 0;
         width: 35px;
-        cursor: pointer;
-        background-color: ${backgroundColor};
-        background-image: ${searchIcon};
-        background-position: center right 15px;
+        background-position: center;
         background-repeat: no-repeat;
-        background-size: 1.2rem;
+        background-size: 1rem;
+        cursor: pointer;
     }
 `;

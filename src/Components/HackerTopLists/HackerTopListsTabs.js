@@ -55,38 +55,20 @@ const backgroundColor = theme('mode', {
     dark: 'inherit'
 });
 
-const backgroundColorTabs = theme('mode', {
-    dark: '#290ADE'
+const themedbackgroundColorTabs = theme('mode', {
+    dark: '#3C4458'
 });
 
-const backgroundActive1 = theme('mode', {
+const themedBackgroundActiveTab = theme('mode', {
     light: '#4c6cec1a',
-    dark: '#FD8A20'
+    gray: 'linear-gradient(to right, #f46b45, #eea849)',
+    blue: '#17D702'
 });
 
-const backgroundActive2 = theme('mode', {
-    light: '#f59f001a',
-    dark: '#FD8A20'
-});
-
-const backgroundActive3 = theme('mode', {
-    light: '#74b8161a',
-    dark: '#FD8A20'
-});
-
-const colorActive1 = theme('mode', {
+const themedColorActiveTab = theme('mode', {
     light: '#4c6cec',
-    dark: '#290ADE'
-});
-
-const colorActive2 = theme('mode', {
-    light: '#f59f00',
-    dark: '#290ADE'
-});
-
-const colorActive3 = theme('mode', {
-    light: '#74b816',
-    dark: '#290ADE'
+    gray: '#3C4458',
+    blue: '#17D702'
 });
 
 //Styled components
@@ -116,7 +98,7 @@ const SDTabsContainer = styled.div`
         box-shadow: none;
         border: none;
         justify-content: space-between;
-        background-color: ${backgroundColor};
+        background: ${backgroundColor};
         @media (max-width: 600px) {
             flex-direction: column;
         }
@@ -126,7 +108,6 @@ const SDTabsContainer = styled.div`
         line-height: 1.5;
         padding-top: 30px;
         padding-bottom: 30px;
-        background-color: #f4f4f4;
         font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         font-weight: 600;
         font-size: 1rem;
@@ -135,50 +116,15 @@ const SDTabsContainer = styled.div`
             margin-top: 5px;
             width: 100%;
         }
-        &:nth-of-type(1) {
-            color: #4c6cec;
-            color: ${textColorInTabs};
-            background-color: ${backgroundColorTabs};
-        }
-        &:nth-of-type(2) {
-            color: #f59f00;
-            color: ${textColorInTabs};
-            background-color: ${backgroundColorTabs};
-        }
-        &:nth-of-type(3) {
-            color: #74b816;
-            color: ${textColorInTabs};
-            background-color: ${backgroundColorTabs};
-        }
     }
 
     .ui.menu .item:hover {
-        &:nth-of-type(1) {
-            background-color: ${backgroundActive1};
-            color: ${colorActive1};
-        }
-        &:nth-of-type(2) {
-            background-color: ${backgroundActive2};
-            color: ${colorActive2};
-        }
-        &:nth-of-type(3) {
-            background-color: ${backgroundActive3};
-            color: ${colorActive3};
-        }
+        background: ${themedBackgroundActiveTab};
+        color: ${themedColorActiveTab};
     }
     .ui.menu .active.item {
-        &:nth-of-type(1) {
-            background-color: ${backgroundActive1};
-            color: ${colorActive1};
-        }
-        &:nth-of-type(2) {
-            background-color: ${backgroundActive2};
-            color: ${colorActive2};
-        }
-        &:nth-of-type(3) {
-            background-color: ${backgroundActive3};
-            color: ${colorActive3};
-        }
+        background: ${themedBackgroundActiveTab};
+        color: ${themedColorActiveTab};
     }
     .ui.menu .item:before {
         display: none;
