@@ -7,8 +7,7 @@ import searchIconDark from '../../img/icon-search-darkblue.svg';
 import searchIconLight from '../../img/icon-search-light.svg';
 
 //Import colors
-
-import { ltLightGray, ltBlackFont, dtLightBlue, dtPurple, dtWhiteFont } from '../../colors.js';
+import { ltLightGray, ltBlackFont, ltPlaceholder, dtLightBlue, dtPurple, dtWhiteFont, dtPlaceholder } from '../../colors.js';
 
 //Export default component
 export default function SearchBar(props) {
@@ -55,6 +54,11 @@ const textColor = theme('mode', {
     dark: dtWhiteFont
 });
 
+const placeholderColor = theme('mode', {
+    light: ltPlaceholder,
+    dark: dtPlaceholder
+});
+
 const SDInputSearchBar = styled.input`
     /*themed */
     background-color: ${backgroundColor};
@@ -67,8 +71,10 @@ const SDInputSearchBar = styled.input`
     border-radius: 6px 0 0 6px;
     font-weight: lighter;
     ::placeholder {
+        /*themed */
+        color: ${placeholderColor};
+        /*non-themed*/
         font-size: 0.9rem;
-        color: darkgray;
     }
 `;
 

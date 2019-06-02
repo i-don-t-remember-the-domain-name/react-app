@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Loader } from 'semantic-ui-react';
 import theme from 'styled-theming';
 
 //Import components
 import SearchBar from './SearchBar';
+import { Loader } from 'semantic-ui-react';
+
+//Import colors
+import { ltOrange, dtPurple, dtWhiteFont } from '../../colors.js';
 
 //Export default component
 export default function SearchBanner(props) {
     return (
         <SDSearchBanner>
-            <h1>Find the most toxic hackers on HackerNews</h1>
+            <h1>find the most toxic hackers on internet</h1>
             <SDSearchBarFull>
                 <SearchBar searchHacker={props.searchHacker} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
             </SDSearchBarFull>
@@ -22,13 +25,13 @@ export default function SearchBanner(props) {
 
 //Theming
 const h1Color = theme('mode', {
-    light: '#f59f00',
-    dark: '#f48c1b'
+    light: ltOrange,
+    dark: dtWhiteFont
 });
 
 const errorTextColor = theme('mode', {
-    light: '#f4a000',
-    dark: '#f48c1b'
+    light: ltOrange,
+    dark: dtPurple
 });
 
 //Styled components
@@ -42,10 +45,12 @@ const SDSearchBanner = styled.div`
     align-items: center;
     text-align: center;
     h1 {
+        /*themed*/
+        color: ${h1Color};
+        /*non-themed*/
         font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         font-weight: lighter;
         font-size: 2rem;
-        color: ${h1Color};
         font-weight: 400;
     }
 `;
@@ -66,8 +71,10 @@ const SDSearchBarFull = styled.div`
     }
 `;
 const SDErrorMessage = styled.div`
+    /*themed*/
+    color: ${errorTextColor};
+    /*non-themed*/
     height: 30px;
     font-size: 0.9rem;
-    color: ${errorTextColor};
     padding: 0 10px;
 `;

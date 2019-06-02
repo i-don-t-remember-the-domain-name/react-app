@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import theme from 'styled-theming';
+import { Link } from 'react-router-dom';
+
+//Import colors
+import { dtLightBlue, dtHover, ltLightGray, ltHover } from '../../colors.js';
 
 //Export default component
 export default function Navbar() {
@@ -23,31 +26,36 @@ export default function Navbar() {
 
 //Theming
 const backgroundColor = theme('mode', {
-    light: '#f4f4f4',
-    dark: '#16163E'
+    light: ltLightGray,
+    dark: dtLightBlue
 });
 
 const hoverColor = theme('mode', {
-    light: 'darkgray',
-    dark: '#1FDA02'
+    light: ltHover,
+    dark: dtHover
 });
 
 //Styled components
 const SDNavbar = styled.div`
-    box-sizing: border-box;
+    /*themed*/
+    background-color: ${backgroundColor};
+    /*non-themed*/
     position: fixed;
-    display: flex;
-    align-items: center;
+    z-index: 2;
+    box-sizing: border-box;
     top: 0;
     left: 0;
     height: 60px;
     width: 100vw;
+    display: flex;
+    align-items: center;
     font-weight: 600;
-    background-color: ${backgroundColor};
-    z-index: 2;
     a {
         &:hover {
+            /*themed*/
             color: ${hoverColor};
+            /*non-themed*/
+            cursor: pointer;
         }
     }
     .about-section {
@@ -61,8 +69,8 @@ const SDNavbar = styled.div`
 `;
 
 const SDNavItem = styled.div`
-    display: flex;
     height: 100%;
+    display: flex;
     align-items: center;
     font-size: 1rem;
     font-weight: lighter;
