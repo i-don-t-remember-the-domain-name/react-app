@@ -7,6 +7,7 @@ import db from '../fbConfig';
 //Import Components
 import RoutesContainer from './RoutesContainer';
 import Footer from './Footer/Footer';
+import Navbar from './Navbar/Navbar';
 
 //Default export
 function HackerContainer(props) {
@@ -94,6 +95,7 @@ function HackerContainer(props) {
 
   return (
     <React.Fragment>
+      <Navbar setTheme={props.setTheme} theme={props.theme} />
       <RoutesContainer
         searchHacker={searchHacker}
         redirectToHackerProfilePage={redirectToHackerProfilePage}
@@ -110,7 +112,6 @@ function HackerContainer(props) {
         loading={props.loading}
         error={props.error}
         theme={props.theme}
-        setTheme={props.setTheme}
       />
       <Footer />
     </React.Fragment>

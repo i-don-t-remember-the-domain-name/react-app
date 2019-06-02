@@ -6,7 +6,7 @@ import theme from 'styled-theming';
 import { Loader } from 'semantic-ui-react';
 
 //Import colors
-import { ltOrange, dtPurple, dtWhiteFont } from '../../colors.js';
+import { ltOrange, dtPurple } from '../../colors.js';
 
 //Export default component
 export default function SearchBanner(props) {

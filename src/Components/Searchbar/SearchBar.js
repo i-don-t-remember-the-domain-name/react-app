@@ -50,8 +50,8 @@ const submitBackgroundColor = theme('mode', {
 });
 
 const borderStyle = theme('mode', {
-  light: `2px solid ${ltLightGray}`,
-  dark: `2px solid ${dtPurple}`
+  light: `1.5px solid ${ltLightGray}`,
+  dark: `1.5px solid ${dtPurple}`
 });
 
 const textColor = theme('mode', {

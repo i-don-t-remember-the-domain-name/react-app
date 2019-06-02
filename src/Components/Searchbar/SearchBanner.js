@@ -4,10 +4,9 @@ import theme from 'styled-theming';
 
 //Import components
 import SearchBar from './SearchBar';
-import { Loader } from 'semantic-ui-react';
 
 //Import colors
-import { ltOrange, dtPurple, dtWhiteFont } from '../../colors.js';
+import { ltOrange, dtWhiteFont } from '../../colors.js';
 
 //Export default component
 export default function SearchBanner(props) {
@@ -25,11 +24,6 @@ export default function SearchBanner(props) {
 const h1Color = theme('mode', {
   light: ltOrange,
   dark: dtWhiteFont
-});
-
-const errorTextColor = theme('mode', {
-  light: ltOrange,
-  dark: dtPurple
 });
 
 //Styled components
@@ -67,12 +61,4 @@ const SDSearchBarFull = styled.div`
   @media (max-width: 600px) {
     width: 80%;
   }
-`;
-const SDErrorMessage = styled.div`
-  /*themed*/
-  color: ${errorTextColor};
-  /*non-themed*/
-  height: 30px;
-  font-size: 0.9rem;
-  padding: 0 10px;
 `;

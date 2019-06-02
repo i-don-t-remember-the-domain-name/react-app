@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 //Import components
-import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
-import Navbar from '../Components/Navbar/Navbar';
 import Searchbar from '../Components/Searchbar/SearchBar';
 
 import HackerPage from '../Components/HackerPage/HackerPage';
@@ -18,7 +16,6 @@ export default function HackerProfilePage(props) {
 
   return (
     <div>
-      <Navbar />
       <SDSearchbarContainer>
         <SDSearchbar>
           <Searchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
