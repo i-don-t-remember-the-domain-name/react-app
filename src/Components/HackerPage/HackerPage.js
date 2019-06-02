@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 import { withRouter } from 'react-router-dom';
 
 //Import components
 import SocialButton from './SocialButton';
 import HackerPageTabs from './HackerPageTabs/HackerPageTabs';
 import HackerPageCommentList from './CommentsTable/HackerPageCommentList';
-import LineChart from '../Chart/LineChart';
-import BarChart from '../Chart/BarChart';
+import LineChartLight from '../Chart/LineChartLight';
+import BarChartLight from '../Chart/BarChartLight';
+import LineChartDark from '../Chart/LineChartDark';
+import BarChartDark from '../Chart/BarChartDark';
+
+//Import colors
+import { dtWhiteFont, dtDarkBlue, ltBlackFont, ltWhite } from '../../colors.js';
 
 //Default export, exported at the bottom with withRouter
 function HackerPage(props) {
@@ -28,9 +34,9 @@ function HackerPage(props) {
           averageSaltiness={props.averageSaltiness}
         />
         {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s salt score over time</SDHackerPageHeading>}
-        {props.monthlyPlot && <LineChart monthlyPlot={props.monthlyPlot} />}
+        {props.monthlyPlot && <LineChartDark monthlyPlot={props.monthlyPlot} />}
         {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s count of salty comments over time</SDHackerPageHeading>}
-        {props.monthlyPlot && <BarChart monthlyPlot={props.monthlyPlot} />}
+        {props.monthlyPlot && <BarChartDark monthlyPlot={props.monthlyPlot} />}
         {props.saltiestComments && <SDHackerPageHeading>{hackerName}'s saltiest comments</SDHackerPageHeading>}
         {props.saltiestComments && <HackerPageCommentList saltiestComments={props.saltiestComments} />}
       </SDHackerPageContainer>
@@ -38,13 +44,26 @@ function HackerPage(props) {
   );
 }
 
+//Theming
+const textColor = theme('mode', {
+  light: ltBlackFont,
+  dark: dtWhiteFont
+});
+
+const backgroundColor = theme('mode', {
+  light: ltWhite,
+  dark: dtDarkBlue
+});
+
 //Styled components
 const SDHackerPageEnvContainer = styled.div`
+  /*themed*/
+  color: ${textColor};
+  background-color: ${backgroundColor};
+  /*non-themed*/
   width: 100vw;
-  padding-top: 70px;
   height: auto;
   min-height: 90vh;
-  background-color: white;
   display: flex;
   justify-content: center;
 `;

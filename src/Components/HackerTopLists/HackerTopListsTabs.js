@@ -1,14 +1,18 @@
 import React from 'react';
-import { Tab } from 'semantic-ui-react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 
 //Import components
 import HackerList from './HackerList';
+import { Tab } from 'semantic-ui-react';
 
 //Import data
 import AMT_Salt_Contributed from '../../data/top100_AMT_Salt_Contributed';
 import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
+
+//Import colors
+import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltPlaceholder } from '../../colors.js';
 
 //Data - explanation section
 const overallScore = `For Total Overall Score, we add up all the comment scores for each user. Salty comments cancel out positive comments and the overall score is left behind. We then rank all the "salty" users by their overall score, lowest to highest.`;
@@ -20,15 +24,15 @@ export default function HackerTopListsTabs(props) {
   const panes = [
     {
       menuItem: 'Top 100: Total Overall Score',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} color={'#4c6cec'} data={Overall_Saltiest} explanation={overallScore} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} data={Overall_Saltiest} explanation={overallScore} />
     },
     {
       menuItem: 'Top 100: Total Salt Score',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} color={'#f59f00'} data={AMT_Salt_Contributed} explanation={saltScore} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} data={AMT_Salt_Contributed} explanation={saltScore} />
     },
     {
       menuItem: 'Top 100: Number of Salty Comments',
-      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} color={'#74b816'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
+      render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
     }
   ];
 
@@ -40,6 +44,22 @@ export default function HackerTopListsTabs(props) {
     </SDTabsEnvContainer>
   );
 }
+
+//Theming
+const headingColor = theme('mode', {
+  light: ltBlue,
+  dark: dtGreen
+});
+
+const textColor = theme('mode', {
+  light: ltPlaceholder,
+  dark: dtWhiteFont
+});
+
+const backgroundColor = theme('mode', {
+  light: ltLightGray,
+  dark: dtLightBlue
+});
 
 //Styled components
 const SDTabsEnvContainer = styled.div`
@@ -59,6 +79,9 @@ const SDTabsContainer = styled.div`
   }
 
   .tab-container {
+    /*themed*/
+    color: ${textColor};
+    /*non-themed*/
     width: 100%;
     justify-content: space-between;
   }
@@ -67,16 +90,20 @@ const SDTabsContainer = styled.div`
     box-shadow: none;
     border: none;
     justify-content: space-between;
+    background: inherit;
     @media (max-width: 600px) {
       flex-direction: column;
     }
   }
   .ui.menu .item {
+    /*themed*/
+    background-color: ${backgroundColor};
+    color: ${textColor};
+    /*non-themed*/
     width: 32%;
     line-height: 1.5;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #f4f4f4;
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     font-size: 1rem;
@@ -85,62 +112,22 @@ const SDTabsContainer = styled.div`
       margin-top: 5px;
       width: 100%;
     }
-    &:nth-of-type(1) {
-      color: #4c6cec;
-    }
-    &:nth-of-type(2) {
-      color: #f59f00;
-    }
-    &:nth-of-type(3) {
-      color: #74b816;
-    }
-    &:nth-of-type(4) {
-      color: #ff5d3e;
-    }
   }
 
   .ui.menu .item:hover {
-    &:nth-of-type(1) {
-      background-color: #4c6cec1a;
-      color: #4c6cec;
-    }
-    &:nth-of-type(2) {
-      background-color: #f59f001a;
-      color: #f59f00;
-    }
-    &:nth-of-type(3) {
-      background-color: #74b8161a;
-      color: #74b816;
-    }
-    &:nth-of-type(4) {
-      background-color: #ff5d3e1a;
-      color: #ff5d3e;
-    }
+    background-color: ${backgroundColor};
+    color: ${headingColor};
   }
   .ui.menu .active.item {
-    &:nth-of-type(1) {
-      background-color: #4c6cec1a;
-      color: #4c6cec;
-    }
-    &:nth-of-type(2) {
-      background-color: #f59f001a;
-      color: #f59f00;
-    }
-    &:nth-of-type(3) {
-      background-color: #74b8161a;
-      color: #74b816;
-    }
-    &:nth-of-type(4) {
-      background-color: #ff5d3e1a;
-      color: #ff5d3e;
-    }
+    background-color: ${backgroundColor};
+    color: ${headingColor};
   }
   .ui.menu .item:before {
     display: none;
   }
 
   .ui.pointing.menu .item:after {
-    border: none;
+    display: none;
   }
   .ui.menu:after {
     display: none;

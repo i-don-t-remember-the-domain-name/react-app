@@ -1,47 +1,84 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 import { Link } from 'react-router-dom';
 
-//Import images
-import saltShaker from '../../img/salt-shaker.png';
+//Import colors
+import { dtLightBlue, dtHover, ltLightGray, ltHover } from '../../colors.js';
+
 //Export default component
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <SDNavbar>
-      <SDNavItem>
-        <SDLogoImg>
-          <Link to="/">
-            <img src={saltShaker} alt="salt shaker" />
-          </Link>
-        </SDLogoImg>
+      <SDNavRight>
+        <SDNavItem>
+          <div>
+            <Link to="/">toxic hackers</Link>
+          </div>
+        </SDNavItem>
+        <SDNavItem className="about-section">
+          <div>
+            <Link to="/about">about</Link>
+          </div>
+        </SDNavItem>
+      </SDNavRight>
+      <SDNavItem className="theme-button">
         <div>
-          <Link to="/">HackerSalt</Link>
-        </div>
-      </SDNavItem>
-      <SDNavItem className="about-section">
-        <div>
-          <Link to="/about">About</Link>
+          <button
+            onClick={() => {
+              if (props.theme === 'dark') {
+                props.setTheme('light');
+              } else {
+                props.setTheme('dark');
+              }
+            }}>
+            Click
+          </button>
         </div>
       </SDNavItem>
     </SDNavbar>
   );
 }
 
+//Theming
+const backgroundColor = theme('mode', {
+  light: ltLightGray,
+  dark: dtLightBlue
+});
+
+const hoverColor = theme('mode', {
+  light: ltHover,
+  dark: dtHover
+});
+
 //Styled components
 const SDNavbar = styled.div`
-  box-sizing: border-box;
+  /*themed*/
+  background-color: ${backgroundColor};
+  /*non-themed*/
   position: fixed;
-  display: flex;
-  align-items: center;
+  z-index: 2;
+  box-sizing: border-box;
   top: 0;
   left: 0;
   height: 60px;
   width: 100vw;
-  background-color: #f4f4f4;
-  z-index: 2;
-  .about-section {
-    @media (max-width: 600px) {
-      display: none;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  a {
+    &:hover {
+      /*themed*/
+      color: ${hoverColor};
+      /*non-themed*/
+      cursor: pointer;
+    }
+  }
+  .theme-button {
+    button {
+      justify-self: flex-end;
     }
   }
   @media (max-width: 600px) {
@@ -49,13 +86,19 @@ const SDNavbar = styled.div`
   }
 `;
 
-const SDNavItem = styled.div`
+const SDNavRight = styled.div`
   display: flex;
+`;
+
+const SDNavItem = styled.div`
   height: 100%;
+  display: flex;
   align-items: center;
   font-size: 1rem;
   font-weight: lighter;
-  padding-left: 30px;
+  :nth-child(2) {
+    padding-left: 20px;
+  }
   @media (max-width: 600px) {
     padding-left: 0px;
     margin-right: 30px;
@@ -63,13 +106,5 @@ const SDNavItem = styled.div`
   cursor: pointer;
   a {
     padding: 0;
-  }
-`;
-
-const SDLogoImg = styled.div`
-  height: 35%;
-  padding: 0 5px;
-  img {
-    height: 100%;
   }
 `;

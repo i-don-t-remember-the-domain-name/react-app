@@ -1,9 +1,16 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 
 //Import images
-import scale from '../../img/scale.png';
+import searchIconDark from '../../img/icon-search-darkblue.svg';
+import searchIconLight from '../../img/icon-search-light.svg';
 
+//Import colors
+import { ltLightGray, ltBlackFont, ltPlaceholder, dtLightBlue, dtPurple, dtWhiteFont, dtPlaceholder } from '../../colors.js';
+
+//Import components
+import SearchMessagesAndLoader from './SearchMessagesAndLoader';
 //Export default component
 export default function SearchBar(props) {
   const hackerNameRef = useRef();
@@ -11,48 +18,100 @@ export default function SearchBar(props) {
     hackerNameRef.current.value = '';
   };
   return (
-    <SDFormSearchBar
-      onSubmit={e => {
-        e.preventDefault();
-        props.redirectToHackerProfilePage(hackerNameRef.current.value);
-        clearInput();
-      }}>
-      <SDInputSearchBar placeholder="Search" ref={hackerNameRef} />
-      <input className="submitButton" type="submit" value="" />
-    </SDFormSearchBar>
+    <SDSearchContainer>
+      <SDFormSearchBar
+        onSubmit={e => {
+          e.preventDefault();
+          props.redirectToHackerProfilePage(hackerNameRef.current.value);
+          clearInput();
+        }}>
+        <SDInputSearchBar placeholder="Search" ref={hackerNameRef} />
+        <input className="submitButton" type="submit" value="" />
+      </SDFormSearchBar>
+      <SearchMessagesAndLoader error={props.error} loading={props.loading} />
+    </SDSearchContainer>
   );
 }
 
+//Theming
+const searchIcon = theme('mode', {
+  light: `url(${searchIconLight})`,
+  dark: `url(${searchIconDark})`
+});
+
+const backgroundColor = theme('mode', {
+  light: ltLightGray,
+  dark: dtLightBlue
+});
+
+const submitBackgroundColor = theme('mode', {
+  light: ltLightGray,
+  dark: dtPurple
+});
+
+const borderStyle = theme('mode', {
+  light: `1.5px solid ${ltLightGray}`,
+  dark: `1.5px solid ${dtPurple}`
+});
+
+const textColor = theme('mode', {
+  light: ltBlackFont,
+  dark: dtWhiteFont
+});
+
+const placeholderColor = theme('mode', {
+  light: ltPlaceholder,
+  dark: dtPlaceholder
+});
+
 const SDInputSearchBar = styled.input`
+  /*themed */
+  background-color: ${backgroundColor};
+  border: ${borderStyle};
+  color: ${textColor};
+  /*non-themed*/
   height: 100%;
   width: 100%;
   padding-left: 15px;
-  background-color: #f4f4f4;
-  border-radius: 6px 0 0 6px;
-  border: none;
-  font-weight: lighter;
 
+  border-radius: 6px 0 0 6px;
+
+  font-weight: lighter;
   ::placeholder {
+    /*themed */
+    color: ${placeholderColor};
+    /*non-themed*/
     font-size: 0.9rem;
-    color: darkgray;
   }
 `;
 
 const SDFormSearchBar = styled.form`
   height: 100%;
+  min-height: 35px;
   width: 100%;
   display: flex;
   z-index: 2;
 
   .submitButton {
-    border: none;
+    /*themed*/
+    border: ${borderStyle};
+    background-color: ${submitBackgroundColor};
+    background-image: ${searchIcon};
+    /*non-themed*/
     border-radius: 0 6px 6px 0;
     width: 35px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    background-image: url(${scale});
-    background-position: center right 15px;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 0.9rem;
+    background-size: 1rem;
+    cursor: pointer;
   }
+`;
+
+const SDSearchContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;

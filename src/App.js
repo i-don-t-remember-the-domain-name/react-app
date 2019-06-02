@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from 'styled-theming';
 
 //Styling
 import './App.scss';
 
-//Import Components
+//Import components
 import HackerContainer from './Components/HackerContainer';
 
+//Import colors
+import { dtDarkBlue, dtWhiteFont, ltWhite, ltBlackFont } from './colors';
 //Default export
-function App() {
+export default function App() {
   const [averageSaltiness, setAverageSaltiness] = useState(undefined);
   const [countOfAllComments, setCountOfAllComments] = useState(undefined);
   const [countOfSaltyComments, setCountOfSaltyComments] = useState(undefined);
@@ -21,39 +25,68 @@ function App() {
   const [saltiestComments, setSaltiestComments] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [theme, setTheme] = useState('dark');
 
   return (
     <Router>
-      <div className="app-container">
-        <HackerContainer
-          averageSaltiness={averageSaltiness}
-          countOfAllComments={countOfAllComments}
-          countOfSaltyComments={countOfSaltyComments}
-          hackerName={hackerName}
-          monthlyPlot={monthlyPlot}
-          rankAmountOfSaltiness={rankAmountOfSaltiness}
-          rankQuantityOfSaltiness={rankQuantityOfSaltiness}
-          rankOverallSaltiness={rankOverallSaltiness}
-          dateOfFirstComment={dateOfFirstComment}
-          saltiestComments={saltiestComments}
-          loading={loading}
-          error={error}
-          setAverageSaltiness={setAverageSaltiness}
-          setCountOfAllComments={setCountOfAllComments}
-          setCountOfSaltyComments={setCountOfSaltyComments}
-          setHackerName={setHackerName}
-          setMonthlyPlot={setMonthlyPlot}
-          setRankAmountOfSaltiness={setRankAmountOfSaltiness}
-          setRankQuantityOfSaltiness={setRankQuantityOfSaltiness}
-          setRankOverallSaltiness={setRankOverallSaltiness}
-          setDateOfFirstComment={setDateOfFirstComment}
-          setSaltiestComments={setSaltiestComments}
-          setLoading={setLoading}
-          setError={setError}
-        />
-      </div>
+      <ThemeProvider theme={{ mode: theme }}>
+        <StyledAppContainer>
+          <HackerContainer
+            averageSaltiness={averageSaltiness}
+            countOfAllComments={countOfAllComments}
+            countOfSaltyComments={countOfSaltyComments}
+            hackerName={hackerName}
+            monthlyPlot={monthlyPlot}
+            rankAmountOfSaltiness={rankAmountOfSaltiness}
+            rankQuantityOfSaltiness={rankQuantityOfSaltiness}
+            rankOverallSaltiness={rankOverallSaltiness}
+            dateOfFirstComment={dateOfFirstComment}
+            saltiestComments={saltiestComments}
+            loading={loading}
+            error={error}
+            setAverageSaltiness={setAverageSaltiness}
+            setCountOfAllComments={setCountOfAllComments}
+            setCountOfSaltyComments={setCountOfSaltyComments}
+            setHackerName={setHackerName}
+            setMonthlyPlot={setMonthlyPlot}
+            setRankAmountOfSaltiness={setRankAmountOfSaltiness}
+            setRankQuantityOfSaltiness={setRankQuantityOfSaltiness}
+            setRankOverallSaltiness={setRankOverallSaltiness}
+            setDateOfFirstComment={setDateOfFirstComment}
+            setSaltiestComments={setSaltiestComments}
+            setLoading={setLoading}
+            setError={setError}
+            theme={theme}
+            setTheme={setTheme}
+          />
+        </StyledAppContainer>
+      </ThemeProvider>
     </Router>
   );
 }
 
-export default App;
+//Theming
+const backgroundColor = theme('mode', {
+  light: ltWhite,
+  dark: dtDarkBlue
+});
+
+const textColor = theme('mode', {
+  light: ltBlackFont,
+  dark: dtWhiteFont
+});
+
+//Styled components
+const StyledAppContainer = styled.div`
+  /*themed*/
+  background-color: ${backgroundColor};
+  color: ${textColor};
+  /*non-themed*/
+  max-width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: lighter;
+  line-height: 1.5;
+`;

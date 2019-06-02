@@ -1,23 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Loader } from 'semantic-ui-react';
+import theme from 'styled-theming';
 
 //Import components
 import SearchBar from './SearchBar';
+
+//Import colors
+import { ltOrange, dtWhiteFont } from '../../colors.js';
 
 //Export default component
 export default function SearchBanner(props) {
   return (
     <SDSearchBanner>
-      <h1>Find the saltiest users on HackerNews</h1>
+      <h1>find the most toxic hackers on internet</h1>
       <SDSearchBarFull>
-        <SearchBar searchHacker={props.searchHacker} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
+        <SearchBar searchHacker={props.searchHacker} redirectToHackerProfilePage={props.redirectToHackerProfilePage} loading={props.loading} error={props.error} />
       </SDSearchBarFull>
-      {!props.loading && props.error && <SDErrorMessage>User not found. Check spelling and capitalization, and search again.</SDErrorMessage>}
-      {props.loading && <Loader active inline="centered" size="medium" />}
     </SDSearchBanner>
   );
 }
+
+//Theming
+const h1Color = theme('mode', {
+  light: ltOrange,
+  dark: dtWhiteFont
+});
 
 //Styled components
 const SDSearchBanner = styled.div`
@@ -30,10 +37,12 @@ const SDSearchBanner = styled.div`
   align-items: center;
   text-align: center;
   h1 {
+    /*themed*/
+    color: ${h1Color};
+    /*non-themed*/
     font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
     font-size: 2rem;
-    color: #f59f00;
     font-weight: 400;
   }
 `;
@@ -52,10 +61,4 @@ const SDSearchBarFull = styled.div`
   @media (max-width: 600px) {
     width: 80%;
   }
-`;
-const SDErrorMessage = styled.div`
-  height: 30px;
-  font-size: 0.9rem;
-  color: #f4a000;
-  padding: 0 10px;
 `;

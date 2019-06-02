@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
+
+//Import colors
+import { dtGreen, dtDarkBlue, ltWhite, ltBlue } from '../../../colors.js';
 
 //Export default component
 export default function CommentTopRow(props) {
@@ -12,18 +16,32 @@ export default function CommentTopRow(props) {
   );
 }
 
+//Theming
+const headingColor = theme('mode', {
+  light: ltBlue,
+  dark: dtGreen
+});
+
+const backgroundColor = theme('mode', {
+  light: ltWhite,
+  dark: dtDarkBlue
+});
+
 //Styled components
 const SDCommentRow = styled.div`
+  /*themed*/
+  background-color: ${backgroundColor};
+  color: ${headingColor};
+  /*non-themed*/
   width: 100%;
   min-height: 50px;
   height: auto;
   margin: 5px 0;
   padding: 10px;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #4c6cec;
+
   @media (max-width: 600px) {
     font-size: 0.9rem;
   }
@@ -40,7 +58,6 @@ const SDRowSaltiestComment = styled.div`
 
 const SDRowSaltiness = styled.div`
   width: 10%;
-  color: #4c6cec;
   font-weight: 600;
   text-align: center;
   padding-left: 20px;
@@ -52,10 +69,8 @@ const SDRowSaltiness = styled.div`
 
 const SDRowLink = styled.div`
   width: 10%;
-  color: #4c6cec;
   font-weight: 600;
   text-align: center;
-
   @media (max-width: 600px) {
     width: 15%;
     text-align: center;
