@@ -1,15 +1,18 @@
 import React from 'react';
-import { Tab } from 'semantic-ui-react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
 //Import components
 import HackerList from './HackerList';
+import { Tab } from 'semantic-ui-react';
 
 //Import data
 import AMT_Salt_Contributed from '../../data/top100_AMT_Salt_Contributed';
 import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
+
+//Import colors
+import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltBlackFont } from '../../colors.js';
 
 //Data - explanation section
 const overallScore = `For Total Overall Score, we add up all the comment scores for each user. Salty comments cancel out positive comments and the overall score is left behind. We then rank all the "salty" users by their overall score, lowest to highest.`;
@@ -21,15 +24,15 @@ export default function HackerTopListsTabs(props) {
     const panes = [
         {
             menuItem: 'Top 100: Total Overall Score',
-            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} color={'#4c6cec'} data={Overall_Saltiest} explanation={overallScore} />
+            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} data={Overall_Saltiest} explanation={overallScore} />
         },
         {
             menuItem: 'Top 100: Total Salt Score',
-            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} color={'#f59f00'} data={AMT_Salt_Contributed} explanation={saltScore} />
+            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} data={AMT_Salt_Contributed} explanation={saltScore} />
         },
         {
             menuItem: 'Top 100: Number of Salty Comments',
-            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} color={'#74b816'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
+            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
         }
     ];
 
@@ -43,32 +46,19 @@ export default function HackerTopListsTabs(props) {
 }
 
 //Theming
-const textColorInChart = theme('mode', {
-    dark: '#000'
+const headingColor = theme('mode', {
+    light: ltBlue,
+    dark: dtGreen
 });
 
-const textColorInTabs = theme('mode', {
-    dark: 'white'
+const textColor = theme('mode', {
+    light: ltBlackFont,
+    dark: dtWhiteFont
 });
 
 const backgroundColor = theme('mode', {
-    dark: 'inherit'
-});
-
-const themedbackgroundColorTabs = theme('mode', {
-    dark: '#3C4458'
-});
-
-const themedBackgroundActiveTab = theme('mode', {
-    light: '#4c6cec1a',
-    gray: 'linear-gradient(to right, #f46b45, #eea849)',
-    blue: '#17D702'
-});
-
-const themedColorActiveTab = theme('mode', {
-    light: '#4c6cec',
-    gray: '#3C4458',
-    blue: '#17D702'
+    light: ltLightGray,
+    dark: dtLightBlue
 });
 
 //Styled components
@@ -89,21 +79,27 @@ const SDTabsContainer = styled.div`
     }
 
     .tab-container {
+        /*themed*/
+        color: ${textColor};
+        /*non-themed*/
         width: 100%;
         justify-content: space-between;
-        color: ${textColorInChart};
     }
 
     .ui.menu {
         box-shadow: none;
         border: none;
         justify-content: space-between;
-        background: ${backgroundColor};
+        background: inherit;
         @media (max-width: 600px) {
             flex-direction: column;
         }
     }
     .ui.menu .item {
+        /*themed*/
+        background-color: ${backgroundColor};
+        color: ${textColor};
+        /*non-themed*/
         width: 32%;
         line-height: 1.5;
         padding-top: 30px;
@@ -119,12 +115,12 @@ const SDTabsContainer = styled.div`
     }
 
     .ui.menu .item:hover {
-        background: ${themedBackgroundActiveTab};
-        color: ${themedColorActiveTab};
+        background-color: ${backgroundColor};
+        color: ${headingColor};
     }
     .ui.menu .active.item {
-        background: ${themedBackgroundActiveTab};
-        color: ${themedColorActiveTab};
+        background-color: ${backgroundColor};
+        color: ${headingColor};
     }
     .ui.menu .item:before {
         display: none;

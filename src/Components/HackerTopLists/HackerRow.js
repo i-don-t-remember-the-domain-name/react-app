@@ -35,7 +35,7 @@ const backgroundColor = theme('mode', {
     dark: dtDarkBlue
 });
 
-const fontColor = theme('mode', {
+const textColor = theme('mode', {
     light: ltBlackFont,
     dark: dtWhiteFont
 });
@@ -49,7 +49,7 @@ const linkColor = theme('mode', {
 const SDHackerRow = styled.div`
     /*themed*/
     background-color: ${backgroundColor};
-    color: ${fontColor};
+    color: ${textColor};
     /*non-themed*/
     width: 100%;
     min-height: 50px;

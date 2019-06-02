@@ -6,7 +6,7 @@ export const ltBlue = '#4C6CEC';
 export const ltOrange = '#F69E02';
 export const ltBlackFont = 'black';
 export const ltPlaceholder = 'darkgray';
-export const ltHover = 'darkgray';
+export const ltHover = '#4C6CEC';
 
 //dark theme color variables
 export const dtDarkBlue = '#050430';
@@ -25,7 +25,9 @@ export const dtHover = '#1FDA02';
 textColor
 placeholderColor
 h1Color
+headingColor
 errorTextColor
+linkColor
 backgroundColor
 submitBackgroundColor
 borderStyle

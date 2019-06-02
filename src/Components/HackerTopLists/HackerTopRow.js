@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
+//Import colors
+import { dtDarkBlue, dtGreen, ltWhite, ltBlue } from '../../colors.js';
+
 //Export default component
 export default function HackerCardTopRow(props) {
     const style = {
@@ -19,18 +22,26 @@ export default function HackerCardTopRow(props) {
 
 //Theming
 const backgroundColor = theme('mode', {
-    light: 'white',
-    dark: '#0E017A'
+    light: ltWhite,
+    dark: dtDarkBlue
+});
+
+const textColor = theme('mode', {
+    light: ltBlue,
+    dark: dtGreen
 });
 
 //Styled components
 const SDTopRowHackerCard = styled.div`
+    /*themed*/
+    background-color: ${backgroundColor};
+    color: ${textColor};
+    /*non-themed*/
     width: 100%;
     min-height: 50px;
     height: auto;
     margin: 5px 0;
     padding: 10px;
-    background-color: ${backgroundColor};
     display: flex;
     align-items: center;
     justify-content: space-between;
