@@ -28,7 +28,7 @@ export default function App() {
 
     return (
         <Router>
-            <ThemeProvider theme={{ mode: 'light' }}>
+            <ThemeProvider theme={{ mode: 'dark' }}>
                 <StyledAppContainer>
                     <HackerContainer
                         averageSaltiness={averageSaltiness}

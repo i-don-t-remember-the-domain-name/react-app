@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 
 //Import components
 import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
-import Navbar from '../Components/Navbar/Navbar';
-import Searchbar from '../Components/Searchbar/SearchBar';
+// import Navbar from '../Components/Navbar/Navbar';
+// import Searchbar from '../Components/Searchbar/SearchBar';
 
 import HackerPage from '../Components/HackerPage/HackerPage';
 
@@ -17,7 +17,8 @@ export default function HackerProfilePage(props) {
 
     return (
         <div>
-            <Navbar />
+            <NavbarWithSearchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
+            {/* <Navbar /> */}
             {/* <Searchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} /> */}
             <HackerPage
                 searchHacker={props.searchHacker}
