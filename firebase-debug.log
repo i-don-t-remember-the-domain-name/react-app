@@ -1,0 +1,275 @@
+[debug] [2019-06-02T21:23:21.878Z] ----------------------------------------------------------------------
+[debug] [2019-06-02T21:23:21.880Z] Command:       /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/node /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/firebase deploy
+[debug] [2019-06-02T21:23:21.881Z] CLI Version:   6.9.2
+[debug] [2019-06-02T21:23:21.881Z] Platform:      darwin
+[debug] [2019-06-02T21:23:21.881Z] Node Version:  v10.15.0
+[debug] [2019-06-02T21:23:21.881Z] Time:          Sun Jun 02 2019 23:23:21 GMT+0200 (Central European Summer Time)
+[debug] [2019-06-02T21:23:21.881Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-02T21:23:21.889Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-02T21:23:21.890Z] > authorizing via signed-in user
+[debug] [2019-06-02T21:23:21.890Z] [iam] checking project toxic-hackers for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-02T21:23:21.891Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/toxic-hackers:testIamPermissions  
+
+[debug] [2019-06-02T21:23:22.366Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-02T21:23:22.368Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/toxic-hackers  
+ 
+[debug] [2019-06-02T21:23:22.783Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'toxic-hackers'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-06-02T21:23:22.788Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/toxic-hackers:test  
+
+[debug] [2019-06-02T21:23:23.675Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-06-02T21:23:23.677Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions  
+
+[debug] [2019-06-02T21:24:13.313Z] ----------------------------------------------------------------------
+[debug] [2019-06-02T21:24:13.315Z] Command:       /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/node /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/firebase deploy
+[debug] [2019-06-02T21:24:13.315Z] CLI Version:   6.9.2
+[debug] [2019-06-02T21:24:13.315Z] Platform:      darwin
+[debug] [2019-06-02T21:24:13.315Z] Node Version:  v10.15.0
+[debug] [2019-06-02T21:24:13.316Z] Time:          Sun Jun 02 2019 23:24:13 GMT+0200 (Central European Summer Time)
+[debug] [2019-06-02T21:24:13.316Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-02T21:24:13.324Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-02T21:24:13.325Z] > authorizing via signed-in user
+[debug] [2019-06-02T21:24:13.325Z] [iam] checking project toxic-hackers for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-02T21:24:13.326Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/toxic-hackers:testIamPermissions  
+
+[debug] [2019-06-02T21:24:14.572Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-02T21:24:14.574Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/toxic-hackers  
+ 
+[debug] [2019-06-02T21:24:14.883Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'toxic-hackers'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-06-02T21:24:14.889Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/toxic-hackers:test  
+
+[debug] [2019-06-02T21:24:15.726Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-06-02T21:24:15.728Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions  
+
+[debug] [2019-06-02T21:24:26.591Z] <<< HTTP RESPONSE 503
+[debug] [2019-06-02T21:24:26.591Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2019-06-02T21:24:26.768Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Sun, 02 Jun 2019 21:24:26 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/toxic-hackers/versions",
+        "path": "/v1beta1/sites/toxic-hackers/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2019-06-02T21:24:49.425Z] ----------------------------------------------------------------------
+[debug] [2019-06-02T21:24:49.427Z] Command:       /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/node /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/firebase deploy
+[debug] [2019-06-02T21:24:49.428Z] CLI Version:   6.9.2
+[debug] [2019-06-02T21:24:49.428Z] Platform:      darwin
+[debug] [2019-06-02T21:24:49.428Z] Node Version:  v10.15.0
+[debug] [2019-06-02T21:24:49.429Z] Time:          Sun Jun 02 2019 23:24:49 GMT+0200 (Central European Summer Time)
+[debug] [2019-06-02T21:24:49.429Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-02T21:24:49.436Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-02T21:24:49.436Z] > authorizing via signed-in user
+[debug] [2019-06-02T21:24:49.436Z] [iam] checking project toxic-hackers for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-02T21:24:49.438Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/toxic-hackers:testIamPermissions  
+
+[debug] [2019-06-02T21:24:50.360Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-02T21:24:50.362Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/toxic-hackers  
+ 
+[debug] [2019-06-02T21:24:50.689Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'toxic-hackers'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-06-02T21:24:50.693Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/toxic-hackers:test  
+
+[debug] [2019-06-02T21:24:51.628Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-06-02T21:24:51.629Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions  
+
+[debug] [2019-06-02T21:25:02.589Z] <<< HTTP RESPONSE 503
+[debug] [2019-06-02T21:25:02.590Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2019-06-02T21:25:02.807Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Sun, 02 Jun 2019 21:25:02 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/toxic-hackers/versions",
+        "path": "/v1beta1/sites/toxic-hackers/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2019-06-02T21:26:02.880Z] ----------------------------------------------------------------------
+[debug] [2019-06-02T21:26:02.882Z] Command:       /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/node /Users/ivanahuckova/.nvm/versions/node/v10.15.0/bin/firebase deploy
+[debug] [2019-06-02T21:26:02.883Z] CLI Version:   6.9.2
+[debug] [2019-06-02T21:26:02.883Z] Platform:      darwin
+[debug] [2019-06-02T21:26:02.883Z] Node Version:  v10.15.0
+[debug] [2019-06-02T21:26:02.884Z] Time:          Sun Jun 02 2019 23:26:02 GMT+0200 (Central European Summer Time)
+[debug] [2019-06-02T21:26:02.884Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-02T21:26:02.891Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-02T21:26:02.891Z] > authorizing via signed-in user
+[debug] [2019-06-02T21:26:02.892Z] [iam] checking project toxic-hackers for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-02T21:26:02.893Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/toxic-hackers:testIamPermissions  
+
+[debug] [2019-06-02T21:26:03.930Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-02T21:26:03.931Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/toxic-hackers  
+ 
+[debug] [2019-06-02T21:26:04.260Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'toxic-hackers'...
+[info] 
+[info] i  deploying firestore, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-06-02T21:26:04.265Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/toxic-hackers:test  
+
+[debug] [2019-06-02T21:26:05.112Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-06-02T21:26:05.113Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions  
+
+[debug] [2019-06-02T21:26:15.985Z] <<< HTTP RESPONSE 503
+[debug] [2019-06-02T21:26:15.986Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2019-06-02T21:26:16.219Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Sun, 02 Jun 2019 21:26:15 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/toxic-hackers/versions",
+        "path": "/v1beta1/sites/toxic-hackers/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/toxic-hackers/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
