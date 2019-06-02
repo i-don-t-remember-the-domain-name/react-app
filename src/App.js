@@ -25,10 +25,11 @@ export default function App() {
   const [saltiestComments, setSaltiestComments] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [theme, setTheme] = useState('dark');
 
   return (
     <Router>
-      <ThemeProvider theme={{ mode: 'dark' }}>
+      <ThemeProvider theme={{ mode: theme }}>
         <StyledAppContainer>
           <HackerContainer
             averageSaltiness={averageSaltiness}
@@ -55,6 +56,8 @@ export default function App() {
             setSaltiestComments={setSaltiestComments}
             setLoading={setLoading}
             setError={setError}
+            theme={theme}
+            setTheme={setTheme}
           />
         </StyledAppContainer>
       </ThemeProvider>

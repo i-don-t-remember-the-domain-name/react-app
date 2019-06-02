@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
 //Import components
 import NavbarWithSearchbar from '../Components/Navbar/NavbarWithSearchbar';
@@ -18,7 +19,11 @@ export default function HackerProfilePage(props) {
   return (
     <div>
       <Navbar />
-      {/* <Searchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} /> */}
+      <SDSearchbarContainer>
+        <SDSearchbar>
+          <Searchbar searchHacker={props.searchHacker} loading={props.loading} error={props.error} redirectToHackerProfilePage={props.redirectToHackerProfilePage} />
+        </SDSearchbar>
+      </SDSearchbarContainer>
       <HackerPage
         searchHacker={props.searchHacker}
         averageSaltiness={props.averageSaltiness}
@@ -35,3 +40,18 @@ export default function HackerProfilePage(props) {
     </div>
   );
 }
+
+const SDSearchbarContainer = styled.div`
+  margin-top: 100px;
+  width: 100vw;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+`;
+
+const SDSearchbar = styled.div`
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  height: 35px;
+`;

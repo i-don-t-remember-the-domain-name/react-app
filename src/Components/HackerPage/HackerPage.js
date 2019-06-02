@@ -62,7 +62,6 @@ const SDHackerPageEnvContainer = styled.div`
   background-color: ${backgroundColor};
   /*non-themed*/
   width: 100vw;
-  padding-top: 70px;
   height: auto;
   min-height: 90vh;
   display: flex;

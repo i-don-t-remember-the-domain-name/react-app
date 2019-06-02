@@ -109,6 +109,8 @@ function HackerContainer(props) {
         saltiestComments={props.saltiestComments}
         loading={props.loading}
         error={props.error}
+        theme={props.theme}
+        setTheme={props.setTheme}
       />
       <Footer />
     </React.Fragment>
