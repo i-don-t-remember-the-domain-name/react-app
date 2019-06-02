@@ -14,7 +14,7 @@ export default function Navbar(props) {
             <SDLeftNav>
                 <SDNavItem>
                     <div>
-                        <Link to="/">HackerSalt</Link>
+                        <Link to="/">toxic hackers</Link>
                     </div>
                 </SDNavItem>
                 <SDNavItem className="about-section">

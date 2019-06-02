@@ -2,18 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
+//Import colors
+import { ltWhite, ltBlackFont, ltBlue, dtDarkBlue, dtWhiteFont, dtGreen } from '../../colors.js';
+
 //Export default component
 export default function HackerRow(props) {
     const rankKey = Object.keys(props.data).find(key => key.startsWith('rank'));
-    const style = {
-        color: props.color
-    };
 
     return (
         <SDHackerRow>
             <SDRowRank>{props.data[rankKey]}</SDRowRank>
             <SDRowCommentor
-                style={style}
                 onClick={e => {
                     e.preventDefault();
                     props.searchHacker(props.data.commentor);
@@ -32,27 +31,34 @@ export default function HackerRow(props) {
 }
 //Theming
 const backgroundColor = theme('mode', {
-    light: 'white',
-    dark: '#0E017A'
+    light: ltWhite,
+    dark: dtDarkBlue
 });
 
 const fontColor = theme('mode', {
-    light: 'black',
-    dark: 'white'
+    light: ltBlackFont,
+    dark: dtWhiteFont
+});
+
+const linkColor = theme('mode', {
+    light: ltBlue,
+    dark: dtGreen
 });
 
 //Styled components
 const SDHackerRow = styled.div`
+    /*themed*/
+    background-color: ${backgroundColor};
+    color: ${fontColor};
+    /*non-themed*/
     width: 100%;
     min-height: 50px;
     height: auto;
     margin: 5px 0;
     padding: 10px;
-    background-color: ${backgroundColor};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: ${fontColor};
     font-size: 1rem;
     cursor: default;
     @media (max-width: 900px) {
@@ -72,6 +78,9 @@ const SDRowRank = styled.div`
 `;
 
 const SDRowCommentor = styled.div`
+    /*themed*/
+    color: ${linkColor};
+    /*non-themed*/
     min-width: 20%;
     cursor: pointer;
     @media (max-width: 600px) {

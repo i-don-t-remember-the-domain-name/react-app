@@ -2,47 +2,47 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
+//Import colors
+import { ltWhite, ltBlackFont, ltBlue, dtDarkBlue, dtWhiteFont, dtGreen } from '../../colors.js';
+
 //Export default component
 export default function ExplanationSection(props) {
-    const style = {
-        color: props.color
-    };
     return (
-        <SDExplanationCard style={style}>
-            <SDExplanationHeading id="dark-test" style={style}>
-                What does the score mean?
-            </SDExplanationHeading>
-            <div>We scored the sentiment of 15,397,309 Hacker News comments. We then ranked users by their "saltiness" or level of subjective negativity. </div>
+        <SDExplanationCard>
+            <SDExplanationHeading>What does the score mean?</SDExplanationHeading>
+            <SDExplanationContent>We scored the sentiment of 15,397,309 Hacker News comments. We then ranked users by their "saltiness" or level of subjective negativity. </SDExplanationContent>
             <div />
-            <div>{props.explanation}</div>
+            <SDExplanationContent>{props.explanation}</SDExplanationContent>
         </SDExplanationCard>
     );
 }
 
 //Theming
 const backgroundcolor = theme('mode', {
-    light: 'white',
-    dark: '#0E017A'
+    light: ltWhite,
+    dark: dtDarkBlue
 });
 
-const color = theme('mode', {
-    light: 'black',
-    dark: 'white'
+const textColor = theme('mode', {
+    light: ltBlackFont,
+    dark: dtWhiteFont
 });
 
-const heading = theme('mode', {
-    dark: '#FD8A20 !important'
+const headingColor = theme('mode', {
+    light: ltBlue,
+    dark: dtGreen
 });
 
 //Styled components
 const SDExplanationCard = styled.div`
+    /*themed*/
+    background-color: ${backgroundcolor};
+    /*non-themed*/
     width: 100%;
     min-height: 50px;
     height: auto;
     margin: 5px 0 30px 0;
     padding: 10px;
-    color: ${heading};
-    background-color: ${backgroundcolor};
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -51,13 +51,17 @@ const SDExplanationCard = styled.div`
     @media (max-width: 900px) {
         font-size: 0.9rem;
     }
+`;
 
-    div {
-        color: ${color};
-    }
+const SDExplanationContent = styled.div`
+    /*themed*/
+    color: ${textColor};
 `;
 
 const SDExplanationHeading = styled.div`
+    /*themed*/
+    color: ${headingColor};
+    /*non-themed*/
     font-weight: 600;
     font-size: 1rem;
     padding-bottom: 10px;
