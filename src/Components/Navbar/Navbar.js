@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 //Import colors
 import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltOrange, ltBlue } from '../../colors.js';
 
+//Import icons
+import sunIcon from '../../img/icon-sun-green.svg';
+import moonIcon from '../../img/icon-moon-blue.svg';
+
 //Export default component
 export default function Navbar(props) {
   return (
@@ -24,16 +28,15 @@ export default function Navbar(props) {
       </SDNavRight>
       <SDNavItem className="theme-button">
         <div>
-          <button
+          <SDThemeToggle
             onClick={() => {
               if (props.theme === 'dark') {
                 props.setTheme('light');
               } else {
                 props.setTheme('dark');
               }
-            }}>
-            Click
-          </button>
+            }}
+          />
         </div>
       </SDNavItem>
     </SDNavbar>
@@ -44,6 +47,11 @@ export default function Navbar(props) {
 const backgroundColor = theme('mode', {
   light: ltLightGray,
   dark: dtLightBlue
+});
+
+const backgroundImage = theme('mode', {
+  light: moonIcon,
+  dark: sunIcon
 });
 
 const hoverColor = theme('mode', {
@@ -114,4 +122,14 @@ const SDNavItem = styled.div`
   a {
     padding: 0;
   }
+`;
+
+const SDThemeToggle = styled.div`
+  background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  cursor: pointer;
 `;
