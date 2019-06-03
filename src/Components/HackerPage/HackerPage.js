@@ -87,7 +87,7 @@ const SDHackerPageContainer = styled.div`
 `;
 
 const SDHackerPageHeading = styled.div`
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 2rem;
   letter-spacing: 0.05rem;
   margin: 5vh 0 0 0;

@@ -4,7 +4,7 @@ import theme from 'styled-theming';
 import { Link } from 'react-router-dom';
 
 //Import colors
-import { dtLightBlue, dtHover, ltLightGray, ltHover } from '../../colors.js';
+import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltHover, ltOrange, ltBlue } from '../../colors.js';
 
 //Export default component
 export default function Navbar(props) {
@@ -47,14 +47,20 @@ const backgroundColor = theme('mode', {
 });
 
 const hoverColor = theme('mode', {
-  light: ltHover,
+  light: ltOrange,
   dark: dtHover
+});
+
+const textColor = theme('mode', {
+  light: ltBlue,
+  dark: dtWhiteFont
 });
 
 //Styled components
 const SDNavbar = styled.div`
   /*themed*/
   background-color: ${backgroundColor};
+  color: ${textColor};
   /*non-themed*/
   position: fixed;
   z-index: 2;
@@ -68,6 +74,7 @@ const SDNavbar = styled.div`
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
+
   a {
     &:hover {
       /*themed*/
@@ -95,7 +102,7 @@ const SDNavItem = styled.div`
   display: flex;
   align-items: center;
   font-size: 1rem;
-  font-weight: lighter;
+  font-weight: 600;
   :nth-child(2) {
     padding-left: 20px;
   }

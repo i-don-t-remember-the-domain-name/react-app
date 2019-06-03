@@ -12,7 +12,7 @@ import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 
 //Import colors
-import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltPlaceholder } from '../../colors.js';
+import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltPlaceholder, ltLightBlue, ltOrange } from '../../colors.js';
 
 //Data - explanation section
 const overallScore = `For Total Overall Score, we add up all the comment scores for each user. Salty comments cancel out positive comments and the overall score is left behind. We then rank all the "salty" users by their overall score, lowest to highest.`;
@@ -61,6 +61,11 @@ const backgroundColor = theme('mode', {
   dark: dtLightBlue
 });
 
+const backgroundColorActive = theme('mode', {
+  light: ltLightBlue,
+  dark: dtLightBlue
+});
+
 //Styled components
 const SDTabsEnvContainer = styled.div`
   width: 100vw;
@@ -104,7 +109,7 @@ const SDTabsContainer = styled.div`
     line-height: 1.5;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     font-size: 1rem;
     @media (max-width: 600px) {
@@ -115,11 +120,11 @@ const SDTabsContainer = styled.div`
   }
 
   .ui.menu .item:hover {
-    background-color: ${backgroundColor};
+    background-color: ${backgroundColorActive};
     color: ${headingColor};
   }
   .ui.menu .active.item {
-    background-color: ${backgroundColor};
+    background-color: ${backgroundColorActive};
     color: ${headingColor};
   }
   .ui.menu .item:before {
