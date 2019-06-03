@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 
 //Import colors
-import { dtWhiteFont, dtLightBlue, dtGreen, ltBlackFont, ltLightBlue, ltLightGray, ltBlue } from '../../../colors.js';
+import { dtWhiteFont, dtLightBlue, dtGreen, ltBlackFont, ltLightBlue, ltBlue } from '../../../colors.js';
 
 //Export default component
 export default function HackerPageTab(props) {
