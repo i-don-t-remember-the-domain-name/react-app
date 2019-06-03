@@ -12,7 +12,7 @@ import Overall_Saltiest from '../../data/top100_Overall_Saltiest';
 import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 
 //Import colors
-import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltPlaceholder, ltLightBlue } from '../../colors.js';
+import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltPlaceholder, ltLightBlue, ltOrange } from '../../colors.js';
 
 //Data - explanation section
 const overallScore = `For Total Overall Score, we add up all the comment scores for each user. Salty comments cancel out positive comments and the overall score is left behind. We then rank all the "salty" users by their overall score, lowest to highest.`;
@@ -52,7 +52,7 @@ const headingColor = theme('mode', {
 });
 
 const textColor = theme('mode', {
-  light: ltPlaceholder,
+  light: ltOrange,
   dark: dtWhiteFont
 });
 

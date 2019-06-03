@@ -49,11 +49,6 @@ const submitBackgroundColor = theme('mode', {
   dark: dtPurple
 });
 
-const borderStyle = theme('mode', {
-  light: `1.5px solid ${ltLightGray}`,
-  dark: `1.5px solid ${dtPurple}`
-});
-
 const textColor = theme('mode', {
   light: ltBlackFont,
   dark: dtWhiteFont
@@ -67,7 +62,7 @@ const placeholderColor = theme('mode', {
 const SDInputSearchBar = styled.input`
   /*themed */
   background-color: ${backgroundColor};
-  border: ${borderStyle};
+  border: none;
   color: ${textColor};
   /*non-themed*/
   height: 100%;
@@ -93,7 +88,7 @@ const SDFormSearchBar = styled.form`
 
   .submitButton {
     /*themed*/
-    border: ${borderStyle};
+    border: none;
     background-color: ${submitBackgroundColor};
     background-image: ${searchIcon};
     /*non-themed*/
