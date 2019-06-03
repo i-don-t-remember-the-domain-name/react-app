@@ -4,7 +4,7 @@ import theme from 'styled-theming';
 import { Link } from 'react-router-dom';
 
 //Import colors
-import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltHover, ltOrange, ltBlue } from '../../colors.js';
+import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltOrange, ltBlue } from '../../colors.js';
 
 //Export default component
 export default function Navbar(props) {
@@ -13,7 +13,7 @@ export default function Navbar(props) {
       <SDNavRight>
         <SDNavItem>
           <div>
-            <Link to="/">toxic hackers</Link>
+            <Link to="/">TOXIC HACKERS</Link>
           </div>
         </SDNavItem>
         <SDNavItem className="about-section">

@@ -31,8 +31,7 @@ function RoutesContainer(props) {
             saltiestComments={props.saltiestComments}
             loading={props.loading}
             error={props.error}
-            // theme={props.theme}
-            // setTheme={props.setTheme}
+            theme={props.theme}
           />
         )}
       />

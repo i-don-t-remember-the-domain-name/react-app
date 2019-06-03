@@ -90,7 +90,6 @@ const SDFormSearchBar = styled.form`
   min-height: 35px;
   width: 100%;
   display: flex;
-  z-index: 2;
 
   .submitButton {
     /*themed*/
