@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import MainLandingPage from '../screens/MainLandingPage';
 import AboutPage from '../screens/AboutPage';
 import HackerProfilePage from '../screens/HackerProfilePage';
+import HNStatsPage from '../screens/HNStatsPage';
 
 //Default export
 function RoutesContainer(props) {
@@ -12,6 +13,7 @@ function RoutesContainer(props) {
     <Switch>
       <Route exact path="/" render={pr => <MainLandingPage {...pr} redirectToHackerProfilePage={props.redirectToHackerProfilePage} searchHacker={props.searchHacker} loading={props.loading} error={props.error} />} />
       <Route exact path="/about" render={pr => <AboutPage {...pr} />} />
+      <Route exact path="/hnstats" render={pr => <HNStatsPage {...pr} />} />
       <Route
         path="/:hacker"
         render={pr => (

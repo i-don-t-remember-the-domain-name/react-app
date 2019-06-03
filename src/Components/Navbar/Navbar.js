@@ -20,7 +20,12 @@ export default function Navbar(props) {
             <Link to="/">TOXIC HACKERS</Link>
           </div>
         </SDNavItem>
-        <SDNavItem className="about-section">
+        <SDNavItem>
+          <div>
+            <Link to="/hnstats">HN stats</Link>
+          </div>
+        </SDNavItem>
+        <SDNavItem>
           <div>
             <Link to="/about">about</Link>
           </div>
@@ -111,8 +116,9 @@ const SDNavItem = styled.div`
   align-items: center;
   font-size: 1rem;
   font-weight: 600;
-  :nth-child(2) {
-    padding-left: 20px;
+  padding-left: 20px;
+  :nth-child(1) {
+    padding-left: 0px;
   }
   @media (max-width: 600px) {
     padding-left: 0px;

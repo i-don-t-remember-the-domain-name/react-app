@@ -18,7 +18,6 @@ import { dtWhiteFont, dtDarkBlue, ltBlackFont, ltWhite } from '../../colors.js';
 //Default export, exported at the bottom with withRouter
 function HackerPage(props) {
   const { hackerName } = props;
-
   return (
     <SDHackerPageEnvContainer>
       <SDHackerPageContainer>
