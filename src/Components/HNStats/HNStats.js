@@ -7,9 +7,9 @@ import { withRouter } from 'react-router-dom';
 import monthlyPlot from '../../data/HN_stats_yearly_summary';
 
 //Import components
-import LineChartDark from '../Chart/HNStatsLineChartDark';
-import BarChartDark from '../Chart/HNStatsBarChartDark';
-import BarChartDarkPercentage from '../Chart/HNStatsBarChartDarkPercentage';
+import DarkHNStatsLineChartCommentsSentiment from '../Chart/DarkHNStatsLineChartCommentsSentiment';
+import DarkHNStatsBarChartCommentsAmount from '../Chart/DarkHNStatsBarChartCommentsAmount';
+import DarkHNStatsBarChartCommentsPercentage from '../Chart/DarkHNStatsBarChartCommentsPercentage';
 
 //Import colors
 import { dtWhiteFont, dtDarkBlue, ltBlackFont, ltWhite } from '../../colors.js';
@@ -21,11 +21,11 @@ function HackerPage() {
             {console.log(monthlyPlot)}
             <SDHackerPageContainer>
                 <SDHackerPageHeading>HN averge saltiness in time</SDHackerPageHeading>
-                <LineChartDark monthlyPlot={monthlyPlot} />
+                <DarkHNStatsLineChartCommentsSentiment monthlyPlot={monthlyPlot} />
                 <SDHackerPageHeading>HN growth of salty comments</SDHackerPageHeading>
-                <BarChartDark monthlyPlot={monthlyPlot} />
+                <DarkHNStatsBarChartCommentsAmount monthlyPlot={monthlyPlot} />
                 <SDHackerPageHeading>HN percentage of salty comments</SDHackerPageHeading>
-                <BarChartDarkPercentage monthlyPlot={monthlyPlot} />
+                <DarkHNStatsBarChartCommentsPercentage monthlyPlot={monthlyPlot} />
                 <SDHackerPageHeading>HN saltiest commentor in time</SDHackerPageHeading>
             </SDHackerPageContainer>
         </SDHackerPageEnvContainer>
