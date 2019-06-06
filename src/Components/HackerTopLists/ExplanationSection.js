@@ -62,7 +62,7 @@ const SDExplanationHeading = styled.div`
     /*themed*/
     color: ${headingColor};
     /*non-themed*/
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1rem;
     padding-bottom: 10px;
     @media (max-width: 900px) {
