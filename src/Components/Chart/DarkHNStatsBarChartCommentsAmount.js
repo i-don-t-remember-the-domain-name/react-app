@@ -1,21 +1,20 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import monthlyPlot from '../../data/HN_stats_yearly_summary';
 
 export default class Example extends PureComponent {
     static jsfiddleUrl = 'https://jsfiddle.net/alidingling/30763kr7/';
-    average = this.props.monthlyPlot.filter(m => m.period === 'all_time');
-    monthlyPlotWithoutAllTime = this.props.monthlyPlot.filter(m => m.period !== 'all_time');
-    monthlyPlotCommentsEdit = this.monthlyPlotWithoutAllTime.map(m => {
-        m.hn_count_oall = Number(m.hn_count_oall - m.hn_cnt_slt_s);
-        m.hn_prc_of_slt = `${((m.hn_cnt_slt_s / m.hn_count_oall) * 100).toFixed(2)}%`;
-        return m;
-    });
     render() {
-        console.log(this.monthlyPlotCommentsEdit);
+        const monthlyPlotWithoutAllTime = monthlyPlot.filter(m => m.period !== 'all_time');
+        const monthlyPlotCommentsEdit = monthlyPlotWithoutAllTime.map(m => {
+            m.hn_count_oall = m.hn_count_oall - m.hn_cnt_slt_s;
+            m.hn_prc_of_slt = `${((m.hn_cnt_slt_s / m.hn_count_oall) * 100).toFixed(2)}%`;
+            return m;
+        });
         return (
             <ResponsiveContainer height={300} width="100%">
                 <BarChart
-                    data={this.monthlyPlotCommentsEdit}
+                    data={monthlyPlotCommentsEdit}
                     margin={{
                         top: 5,
                         right: 30,

@@ -1,16 +1,18 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
+import monthlyPlot from '../../data/HN_stats_yearly_summary';
 
 export default class Example extends PureComponent {
     static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
-    average = this.props.monthlyPlot.filter(m => m.period === 'all_time');
+    chartMonthlyPlot = monthlyPlot;
+    average = this.chartMonthlyPlot.filter(m => m.period === 'all_time');
     render() {
         return (
             <ResponsiveContainer height={300} width="100%">
                 <LineChart
                     width={1000}
                     height={300}
-                    data={this.props.monthlyPlot}
+                    data={this.chartMonthlyPlot}
                     margin={{
                         top: 5,
                         right: 30,

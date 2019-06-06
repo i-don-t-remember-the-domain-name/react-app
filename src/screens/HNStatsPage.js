@@ -5,9 +5,9 @@ import HNStats from '../Components/HNStats/HNStats';
 
 //Export default component
 export default function HNStatsPage(props) {
-  return (
-    <div>
-      <HNStats />
-    </div>
-  );
+    return (
+        <div>
+            <HNStats theme={props.theme} />
+        </div>
+    );
 }

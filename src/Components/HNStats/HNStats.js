@@ -3,29 +3,35 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 import { withRouter } from 'react-router-dom';
 
-//Import data
-import monthlyPlot from '../../data/HN_stats_yearly_summary';
-
 //Import components
 import DarkHNStatsLineChartCommentsSentiment from '../Chart/DarkHNStatsLineChartCommentsSentiment';
 import DarkHNStatsBarChartCommentsAmount from '../Chart/DarkHNStatsBarChartCommentsAmount';
 import DarkHNStatsBarChartCommentsPercentage from '../Chart/DarkHNStatsBarChartCommentsPercentage';
 
+import LightHNStatsLineChartCommentsSentiment from '../Chart/LightHNStatsLineChartCommentsSentiment';
+import LightHNStatsBarChartCommentsAmount from '../Chart/LightHNStatsBarChartCommentsAmount';
+import LightHNStatsBarChartCommentsPercentage from '../Chart/LightHNStatsBarChartCommentsPercentage';
+
 //Import colors
 import { dtWhiteFont, dtDarkBlue, ltBlackFont, ltWhite } from '../../colors.js';
 
 //Default export, exported at the bottom with withRouter
-function HackerPage() {
+function HNStats(props) {
+    const { theme } = props;
     return (
         <SDHackerPageEnvContainer>
-            {console.log(monthlyPlot)}
+            {console.log(theme)}
             <SDHackerPageContainer>
                 <SDHackerPageHeading>HN averge saltiness in time</SDHackerPageHeading>
-                <DarkHNStatsLineChartCommentsSentiment monthlyPlot={monthlyPlot} />
+                {props.theme === 'dark' && <DarkHNStatsLineChartCommentsSentiment />}
+                {props.theme === 'light' && <LightHNStatsLineChartCommentsSentiment />}
                 <SDHackerPageHeading>HN growth of salty comments</SDHackerPageHeading>
-                <DarkHNStatsBarChartCommentsAmount monthlyPlot={monthlyPlot} />
+                {props.theme === 'dark' && <DarkHNStatsBarChartCommentsAmount />}
+                {props.theme === 'light' && <LightHNStatsBarChartCommentsAmount />}
                 <SDHackerPageHeading>HN percentage of salty comments</SDHackerPageHeading>
-                <DarkHNStatsBarChartCommentsPercentage monthlyPlot={monthlyPlot} />
+                {props.theme === 'dark' && <DarkHNStatsBarChartCommentsPercentage />}
+                {props.theme === 'light' && <LightHNStatsBarChartCommentsPercentage />}
+
                 <SDHackerPageHeading>HN saltiest commentor in time</SDHackerPageHeading>
             </SDHackerPageContainer>
         </SDHackerPageEnvContainer>
@@ -87,4 +93,4 @@ const SDHackerPageHeading = styled.div`
     }
 `;
 
-export default withRouter(HackerPage);
+export default withRouter(HNStats);
