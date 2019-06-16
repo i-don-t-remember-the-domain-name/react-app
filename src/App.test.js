@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as rtl from 'react-testing-library';
+import * as rtl from '@testing-library/react';
 import App from './App';
 
 afterEach(rtl.cleanup);
