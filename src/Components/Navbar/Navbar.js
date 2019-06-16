@@ -8,7 +8,7 @@ import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltOrange, ltBlue } from
 //Import icons
 import sunIcon from '../../img/icon-sun-green.svg';
 import moonIcon from '../../img/icon-moon-blue.svg';
-
+//
 //Export default component
 export default function Navbar(props) {
     return (
