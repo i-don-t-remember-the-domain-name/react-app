@@ -37,7 +37,7 @@ export default function ModalBasicExample(props) {
 }
 
 const SDModal = styled.div`
-    background-color: #040430;
+    background-color: black;
     padding: 50px;
     @media (max-width: 600px) {
         padding: 30px 10px;
@@ -49,7 +49,7 @@ const SDModalContentContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    background-color: #040430;
+    background-color: black;
     @media (max-width: 600px) {
         padding: 0 0 30px 0;
     }
@@ -78,7 +78,7 @@ const SDModalContent = styled.div`
 const SDModalButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
-    background-color: #040430;
+    background-color: black;
     .proceedButton {
         background-color: #1fda02;
         color: white;
