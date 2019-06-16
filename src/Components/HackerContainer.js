@@ -15,7 +15,7 @@ function HackerContainer(props) {
     const searchHacker = hacker => {
         props.setLoading(true);
         db.collection('commentor_stats')
-            .where('commentor', '==', hacker)
+            .where('commentor_search', '==', hacker)
             .get()
             .then(qs => {
                 if (qs.docs.length > 0) {
@@ -98,6 +98,7 @@ function HackerContainer(props) {
 
     return (
         <React.Fragment>
+            {/* Show welcome modal, if the user is wisiting for the first time */}
             {showModal && <WelcomeModal setShowModal={setShowModal} showModal={showModal} />}
             <Navbar setTheme={props.setTheme} theme={props.theme} />
             <RoutesContainer
