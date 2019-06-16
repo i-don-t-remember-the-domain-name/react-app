@@ -12,7 +12,7 @@ import { ltOrange, dtWhiteFont } from '../../colors.js';
 export default function SearchBanner(props) {
   return (
     <SDSearchBanner>
-      <h1>find the most toxic hackers on internet</h1>
+      <h1>find the most TOXIC HACKERS on internet</h1>
       <SDSearchBarFull>
         <SearchBar searchHacker={props.searchHacker} redirectToHackerProfilePage={props.redirectToHackerProfilePage} loading={props.loading} error={props.error} />
       </SDSearchBarFull>
@@ -40,8 +40,7 @@ const SDSearchBanner = styled.div`
     /*themed*/
     color: ${h1Color};
     /*non-themed*/
-    font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 2rem;
     font-weight: 400;
   }

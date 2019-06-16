@@ -33,6 +33,7 @@ export default function HackerProfilePage(props) {
         rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
         dateOfFirstComment={props.dateOfFirstComment}
         saltiestComments={props.saltiestComments}
+        theme={props.theme}
       />
     </div>
   );

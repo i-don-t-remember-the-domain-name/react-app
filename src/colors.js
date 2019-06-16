@@ -3,6 +3,7 @@ export const ltLightGray = '#F4F4F4';
 export const ltWhite = 'white';
 export const ltGreen = '#75B919';
 export const ltBlue = '#4C6CEC';
+export const ltLightBlue = '#4C6CEC1a';
 export const ltOrange = '#F69E02';
 export const ltBlackFont = 'black';
 export const ltPlaceholder = 'darkgray';
@@ -18,8 +19,10 @@ export const dtWhiteFont = 'white';
 export const dtPlaceholder = '#B401B5';
 export const dtHover = '#1FDA02';
 
-/*themed*/
-/*non-themed*/
+//DICTIONARY:
+
+//themed
+//non-themed
 
 /*
 textColor
@@ -32,7 +35,4 @@ backgroundColor
 submitBackgroundColor
 borderStyle
 searchIcon
-
-
-
 */

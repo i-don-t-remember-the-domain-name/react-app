@@ -1,45 +1,36 @@
 {
-  "name": "project",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.18.1",
-    "cors": "^2.8.5",
-    "dotenv": "^7.0.0",
-    "express": "^4.16.4",
-    "firebase": "^5.9.4",
-    "helmet": "^3.16.0",
-    "node-sass": "^4.11.0",
-    "proptypes": "^1.1.0",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
-    "react-share": "^2.4.0",
-    "react-tabs": "^3.0.0",
-    "recharts": "^1.5.0",
-    "semantic-ui-react": "^0.86.0",
-    "styled-components": "^4.2.0",
-    "styled-theming": "^2.2.0"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "run-app": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "react-testing-library": "^6.1.2",
-    "supertest": "^4.0.2"
-  }
+    "name": "project",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "dotenv": "^7.0.0",
+        "firebase": "^5.9.4",
+        "node-sass": "^4.11.0",
+        "proptypes": "^1.1.0",
+        "react": "^16.8.5",
+        "react-dom": "^16.8.5",
+        "react-router-dom": "^5.0.0",
+        "react-scripts": "2.1.8",
+        "react-share": "^2.4.0",
+        "react-tabs": "^3.0.0",
+        "recharts": "^1.5.0",
+        "semantic-ui-react": "^0.86.0",
+        "styled-components": "^4.2.0",
+        "styled-theming": "^2.2.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }

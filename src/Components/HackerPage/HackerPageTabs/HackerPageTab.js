@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 
 //Import colors
-import { dtWhiteFont, dtLightBlue, dtGreen, ltBlackFont, ltLightGray, ltBlue } from '../../../colors.js';
+import { dtWhiteFont, dtLightBlue, dtGreen, ltBlackFont, ltLightBlue, ltBlue } from '../../../colors.js';
 
 //Export default component
 export default function HackerPageTab(props) {
@@ -27,7 +27,7 @@ const headingColor = theme('mode', {
 });
 
 const backgroundColor = theme('mode', {
-    light: ltLightGray,
+    light: ltLightBlue,
     dark: dtLightBlue
 });
 
@@ -53,7 +53,7 @@ const SDHackerPageTabHeading = styled.div`
     /*themed*/
     color: ${headingColor};
     /*non-themed*/
-    font-weight: 600;
+    font-weight: 400;
     padding-bottom: 10px;
     text-align: center;
 `;
