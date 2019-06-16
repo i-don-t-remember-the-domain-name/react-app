@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { Link } from 'react-router-dom';
@@ -8,41 +8,42 @@ import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltOrange, ltBlue } from
 //Import icons
 import sunIcon from '../../img/icon-sun-green.svg';
 import moonIcon from '../../img/icon-moon-blue.svg';
-//
+import menuLight from '../../img/icon-menu-blue.svg';
+import menuDark from '../../img/icon-menu-white.svg';
+
+//Import components
+import MenuMobile from './MenuMobile';
 //Export default component
 export default function Navbar(props) {
+    const [showMenu, setShowMenu] = useState(false);
+
     return (
         <SDNavbar>
+            {showMenu && <MenuMobile showMenu={showMenu} setShowMenu={setShowMenu} setTheme={props.setTheme} theme={props.theme} />}
+            {/*Rigth side of navbar */}
             <SDNavRight>
                 <SDNavItem>
-                    <div>
-                        <Link to="/">TOXIC HACKERS</Link>
-                    </div>
+                    <Link to="/">TOXIC HACKERS</Link>
                 </SDNavItem>
                 <SDNavItem>
-                    <div>
-                        <Link to="/hnstats">HN stats</Link>
-                    </div>
+                    <Link to="/hnstats">HN stats</Link>
                 </SDNavItem>
                 <SDNavItem>
-                    <div>
-                        <Link to="/about">about</Link>
-                    </div>
+                    <Link to="/about">about</Link>
                 </SDNavItem>
+                <SDNavItemMobile>
+                    <Link to="/">TOXIC HACKERS</Link>
+                </SDNavItemMobile>
             </SDNavRight>
-            <SDNavItem className="theme-button">
-                <div>
-                    <SDThemeToggle
-                        onClick={() => {
-                            if (props.theme === 'dark') {
-                                props.setTheme('light');
-                            } else {
-                                props.setTheme('dark');
-                            }
-                        }}
-                    />
-                </div>
-            </SDNavItem>
+            {/*Left side of navbar */}
+            <SDNavLeft>
+                <SDNavItem className="theme-button">
+                    <SDThemeToggle onClick={() => (props.theme === 'dark' ? props.setTheme('light') : props.setTheme('dark'))} />
+                </SDNavItem>
+                <SDNavItemMobile className="theme-button">
+                    <SDThemeMenu onClick={() => setShowMenu(!showMenu)} />
+                </SDNavItemMobile>
+            </SDNavLeft>
         </SDNavbar>
     );
 }
@@ -56,6 +57,11 @@ const backgroundColor = theme('mode', {
 const backgroundImage = theme('mode', {
     light: moonIcon,
     dark: sunIcon
+});
+
+const backgroundImageMenu = theme('mode', {
+    light: menuLight,
+    dark: menuDark
 });
 
 const hoverColor = theme('mode', {
@@ -75,6 +81,9 @@ const SDNavbar = styled.div`
     color: ${textColor};
     /*non-themed*/
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 2;
     box-sizing: border-box;
     top: 0;
@@ -82,50 +91,33 @@ const SDNavbar = styled.div`
     height: 60px;
     width: 100vw;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-weight: 400;
-
-    a {
-        &:hover {
-            /*themed*/
-            color: ${hoverColor};
-            /*non-themed*/
-            cursor: pointer;
-        }
-    }
-    .theme-button {
-        button {
-            justify-self: flex-end;
-        }
-    }
-    @media (max-width: 600px) {
-        justify-content: center;
-    }
 `;
 
 const SDNavRight = styled.div`
     display: flex;
 `;
 
-const SDNavItem = styled.div`
-    height: 100%;
+const SDNavLeft = styled.div`
     display: flex;
-    align-items: center;
+`;
+
+const SDNavItem = styled.div`
     font-size: 1rem;
     font-weight: 400;
     padding-left: 20px;
+    cursor: pointer;
+    a {
+        &:hover {
+            /*themed*/
+            color: ${hoverColor};
+        }
+    }
     :nth-child(1) {
         padding-left: 0px;
     }
     @media (max-width: 600px) {
-        padding-left: 0px;
-        margin-right: 30px;
-    }
-    cursor: pointer;
-    a {
-        padding: 0;
+        display: none;
     }
 `;
 
@@ -136,5 +128,39 @@ const SDThemeToggle = styled.div`
     width: 30px;
     height: 30px;
     background-color: inherit;
+    justify-self: flex-end;
     cursor: pointer;
+    @media (max-width: 600px) {
+        display: none;
+    }
+`;
+
+const SDThemeMenu = styled.div`
+    @media (max-width: 600px) {
+        display: flex;
+        background-image: url(${backgroundImageMenu});
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 30px;
+        height: 30px;
+        background-color: inherit;
+        justify-self: flex-end;
+        cursor: pointer;
+    }
+`;
+
+const SDNavItemMobile = styled.div`
+    display: none;
+    @media (max-width: 600px) {
+        display: flex;
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+        a {
+            &:hover {
+                /*themed*/
+                color: ${hoverColor};
+            }
+        }
+    }
 `;
