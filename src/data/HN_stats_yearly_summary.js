@@ -361,4 +361,10 @@ const HNStatsYearly = [
     }
 ];
 
+export let monthlyPlotComments = HNStatsYearly.filter(m => m.period !== 'all_time').map(m => {
+    m.hn_percent_of_toxic = ((m.hn_cnt_slt_s / m.hn_count_oall) * 100).toFixed(2);
+    m.hn_overall_without_toxic = m.hn_count_oall - m.hn_cnt_slt_s;
+    return m;
+});
+
 export default HNStatsYearly;

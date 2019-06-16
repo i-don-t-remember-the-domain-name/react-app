@@ -1,29 +1,27 @@
-# HackerSalt 🧂
+# Toxic hackers
 
-https://www.hackersalt.com
+https://www.toxichackers.com
 
-HackerSalt is an app that lets you see how "salty" any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across commenters' lifetimes.
+Toxic hackers is an app that lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the "toxic". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across commenters' lifetimes.
 
 Please explore. 🙂 We've prepared visualizations & dashboards of commenters' activity for your curiosity. Just be prepared there's some really nasty trolls out there.
 
 ## Table of Contents
 
-- [Demo](#demo)
-- [Contributors](#contributors)
-- [Technologies used and dependencies](#built-with)
-- [Installation](#installation)
-- [Environment variables](#environment-variables)
-- [API](#api)
-- [Endpoints description](#endpoints-description)
-- [Contribution guidelines](#contribution-guidelines)
+-   [Demo](#demo)
+-   [Contributors](#contributors)
+-   [Technologies used and dependencies](#built-with)
+-   [Installation](#installation)
+-   [Environment variables](#environment-variables)
+-   [API](#api)
+-   [Endpoints description](#endpoints-description)
+-   [Contribution guidelines](#contribution-guidelines)
 
 ## Demo
 
-For more information on app, you can check out our [ProductHunt HackerSalt page](https://www.producthunt.com/posts/hackersalt/).
-
 ## Contributors
 
-HackerSalt was developed by a Ivana and Britton based on idea from Lambda School build week. 🚀
+Toxic hackers was developed by a Ivana and Britton based on idea from Lambda School build week. 🚀
 
 <table>
 	<tr>
@@ -52,40 +50,35 @@ HackerSalt was developed by a Ivana and Britton based on idea from Lambda School
 
 ## Built with
 
-- JavaScript
-- React
-- Semantic UI 🧡
-- Recharts 💙
-- Styled Components 💜
-- Express.js
-- Firebase
-- Jest
-- Supertest
-- React Testing Library 🐐
+-   JavaScript
+-   React
+-   Semantic UI 🧡
+-   Recharts 💙
+-   Styled Components 💜
+-   Firebase
+-   React Testing Library 🐐
 
 ## Dependencies
 
-- axios: ^0.18.0,
-- cors: ^2.8.5,
-- dotenv: ^7.0.0,
-- express: ^4.16.4,
-- firebase: ^5.9.4,
-- helmet: ^3.16.0,
-- node-sass: ^4.11.0,
-- proptypes: ^1.1.0,
-- react: ^16.8.5,
-- react-dom: ^16.8.5,
-- react-router-dom: ^5.0.0,
-- react-scripts: 2.1.8,
-- react-tabs: ^3.0.0,
-- recharts: ^1.5.0,
-- semantic-ui-react: ^0.86.0,
-- styled-components: ^4.2.0
+-   axios: ^0.18.0,
+-   cors: ^2.8.5,
+-   dotenv: ^7.0.0,
+-   firebase: ^5.9.4,
+-   helmet: ^3.16.0,
+-   node-sass: ^4.11.0,
+-   proptypes: ^1.1.0,
+-   react: ^16.8.5,
+-   react-dom: ^16.8.5,
+-   react-router-dom: ^5.0.0,
+-   react-scripts: 2.1.8,
+-   react-tabs: ^3.0.0,
+-   recharts: ^1.5.0,
+-   semantic-ui-react: ^0.86.0,
+-   styled-components: ^4.2.0
 
 ## Dev Dependencies
 
-- react-testing-library: ^6.1.2,
-- supertest: ^4.0.2
+-   react-testing-library: ^6.1.2,
 
 ## Installation
 
@@ -100,24 +93,18 @@ HackerSalt was developed by a Ivana and Britton based on idea from Lambda School
 
 **Database Enviroment Variables**
 
-- APIKEY
-- AUTHDOMAIN
-- ID
-- PROJECTBUCKET
-- PROJECTID
-- TESTURL
+-   APIKEY
+-   AUTHDOMAIN
+-   ID
+-   PROJECTBUCKET
+-   PROJECTID
+-   TESTURL
 
 **For Production**
 
-- NODE_ENV=production
+-   NODE_ENV=production
 
-## API
-
-### GET /api/hacker/:hacker
-
-**Overview**
-
-Used to fetch the data from database about the hacker, where :hacker is replaced with the username of hacker.
+## Firestore Database
 
 **Success Outputs**
 

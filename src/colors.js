@@ -19,8 +19,10 @@ export const dtWhiteFont = 'white';
 export const dtPlaceholder = '#B401B5';
 export const dtHover = '#1FDA02';
 
-/*themed*/
-/*non-themed*/
+//DICTIONARY:
+
+//themed
+//non-themed
 
 /*
 textColor
@@ -33,7 +35,4 @@ backgroundColor
 submitBackgroundColor
 borderStyle
 searchIcon
-
-
-
 */

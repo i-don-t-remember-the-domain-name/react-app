@@ -1,36 +1,25 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import monthlyPlot from '../../data/HN_stats_yearly_summary';
+import { monthlyPlotComments } from '../../data/HN_stats_yearly_summary';
 
-export default class Example extends PureComponent {
-    static jsfiddleUrl = 'https://jsfiddle.net/alidingling/30763kr7/';
-    chartMonthlyPlot = monthlyPlot;
-    average = this.chartMonthlyPlot.filter(m => m.period === 'all_time');
-    monthlyPlotWithoutAllTimeL = this.chartMonthlyPlot.filter(m => m.period !== 'all_time');
-    monthlyPlotCommentsEditL = this.monthlyPlotWithoutAllTimeL.map(m => {
-        m.hn_count_oall = Number(m.hn_count_oall - m.hn_cnt_slt_s);
-        m.hn_prc_of_slt = ((m.hn_cnt_slt_s / m.hn_count_oall) * 100).toFixed(2);
-        return m;
-    });
-    render() {
-        return (
-            <ResponsiveContainer height={300} width="100%">
-                <BarChart
-                    data={this.monthlyPlotCommentsEditL}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                    }}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="period" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar name="% of salty comments" dataKey="hn_prc_of_slt" fill="#F4A000" />
-                </BarChart>
-            </ResponsiveContainer>
-        );
-    }
+export default function Example() {
+    return (
+        <ResponsiveContainer height={300} width="100%">
+            <BarChart
+                data={monthlyPlotComments}
+                margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5
+                }}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="period" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar name="% of salty comments" dataKey="hn_percent_of_toxic" fill="#F4A000" />
+            </BarChart>
+        </ResponsiveContainer>
+    );
 }
