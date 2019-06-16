@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 //Import colors
 import { dtLightBlue, dtHover, dtWhiteFont, ltLightGray, ltOrange, ltBlue } from '../../colors.js';
-
 //Import icons
 import sunIcon from '../../img/icon-sun-green.svg';
 import moonIcon from '../../img/icon-moon-blue.svg';
