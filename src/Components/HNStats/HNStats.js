@@ -32,7 +32,7 @@ function HNStats(props) {
                 {props.theme === 'dark' && <DarkHNStatsBarChartCommentsPercentage />}
                 {props.theme === 'light' && <LightHNStatsBarChartCommentsPercentage />}
 
-                <SDHackerPageHeading>HN saltiest commentor in time</SDHackerPageHeading>
+                {/* <SDHackerPageHeading>HN saltiest commentor in time</SDHackerPageHeading> */}
             </SDHackerPageContainer>
         </SDHackerPageEnvContainer>
     );
