@@ -13,12 +13,15 @@ export default function ModalBasicExample(props) {
         window.location.assign('https://www.google.com/search?q=puppies&source=lnms&tbm=isch&sa=X&ved=0ahUKEwipu-aoru7iAhVQIlAKHeDODxAQ_AUIECgB&biw=1920&bih=946');
     };
     return (
-        <Modal open={props.showModal} basic size="large">
+        <Modal open={props.showModal} dimmer="blurring" basic size="large">
             <SDModal>
                 <Modal.Content>
                     <SDModalContentContainer>
                         <SDModalHeader>You are about to enter TOXIC HACKERS</SDModalHeader>
-                        <SDModalContent>The following website contains strong language which may be offensive to some people and inappropriate for children. You have been warned!</SDModalContent>
+                        <SDModalContent>
+                            Toxic hackers lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". Unfortunatly, following website contains strong language which may be offensive to some people and
+                            inappropriate for children. Proceed only if you areprepared for serious toxicity.
+                        </SDModalContent>
                     </SDModalContentContainer>
                 </Modal.Content>
                 <Modal.Actions>
