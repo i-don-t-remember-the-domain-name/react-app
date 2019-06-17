@@ -17,8 +17,8 @@ export default function ModalBasicExample(props) {
             <SDModal>
                 <Modal.Content>
                     <SDModalContentContainer>
-                        <SDModalHeader>You are about to enter TOXIC HACKERS</SDModalHeader>
-                        <SDModalContent>
+                        <SDModalHeader data-testid="warning-heading">You are about to enter TOXIC HACKERS</SDModalHeader>
+                        <SDModalContent data-testid="warning-content">
                             Toxic hackers lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". Unfortunatly, following website contains strong language which may be offensive to some people and
                             inappropriate for children. Proceed only if you areprepared for serious toxicity.
                         </SDModalContent>
@@ -26,10 +26,10 @@ export default function ModalBasicExample(props) {
                 </Modal.Content>
                 <Modal.Actions>
                     <SDModalButtonsContainer>
-                        <Button className="closeButton" onClick={() => leavePage()}>
+                        <Button data-testid="warning-close-button" className="closeButton" onClick={() => leavePage()}>
                             I would rather see some puppies
                         </Button>
-                        <Button className="proceedButton" onClick={e => onClose(e)}>
+                        <Button data-testid="warning-proceed-button" className="proceedButton" onClick={e => onClose(e)}>
                             Proceed
                         </Button>
                     </SDModalButtonsContainer>

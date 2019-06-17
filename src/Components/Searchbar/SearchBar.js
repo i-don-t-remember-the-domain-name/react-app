@@ -26,7 +26,7 @@ export default function SearchBar(props) {
                     clearInput();
                 }}>
                 <SDInputSearchBar placeholder="Search" ref={hackerNameRef} />
-                <input className="submitButton" type="submit" value="" />
+                <input data-testid="submit-search-bar" className="submitButton" type="submit" value="" />
             </SDFormSearchBar>
             <SearchMessagesAndLoader error={props.error} loading={props.loading} />
         </SDSearchContainer>

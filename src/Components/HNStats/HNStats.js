@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import { withRouter } from 'react-router-dom';
 
 //Import components
 import DarkHNStatsLineChartCommentsSentiment from '../Chart/DarkHNStatsLineChartCommentsSentiment';
@@ -15,24 +14,19 @@ import LightHNStatsBarChartCommentsPercentage from '../Chart/LightHNStatsBarChar
 //Import colors
 import { dtWhiteFont, dtDarkBlue, ltBlackFont, ltWhite } from '../../colors.js';
 
-//Default export, exported at the bottom with withRouter
-function HNStats(props) {
-    const { theme } = props;
+export default function HNStats(props) {
     return (
         <SDHackerPageEnvContainer>
-            {console.log(theme)}
             <SDHackerPageContainer>
                 <SDHackerPageHeading>HN averge saltiness in time</SDHackerPageHeading>
-                {props.theme === 'dark' && <DarkHNStatsLineChartCommentsSentiment />}
-                {props.theme === 'light' && <LightHNStatsLineChartCommentsSentiment />}
+                {props.theme === 'dark' && <DarkHNStatsLineChartCommentsSentiment data-testid="chart-dark-line-sentiment" />}
+                {props.theme === 'light' && <LightHNStatsLineChartCommentsSentiment data-testid="chart-light-line-sentiment" />}
                 <SDHackerPageHeading>HN growth of salty comments</SDHackerPageHeading>
-                {props.theme === 'dark' && <DarkHNStatsBarChartCommentsAmount />}
-                {props.theme === 'light' && <LightHNStatsBarChartCommentsAmount />}
+                {props.theme === 'dark' && <DarkHNStatsBarChartCommentsAmount data-testid="chart-dark-bar-comments-amount" />}
+                {props.theme === 'light' && <LightHNStatsBarChartCommentsAmount data-testid="chart-light-bar-comments-amount" />}
                 <SDHackerPageHeading>HN percentage of salty comments</SDHackerPageHeading>
-                {props.theme === 'dark' && <DarkHNStatsBarChartCommentsPercentage />}
-                {props.theme === 'light' && <LightHNStatsBarChartCommentsPercentage />}
-
-                {/* <SDHackerPageHeading>HN saltiest commentor in time</SDHackerPageHeading> */}
+                {props.theme === 'dark' && <DarkHNStatsBarChartCommentsPercentage data-testid="chart-dark-bar-comments-percentage" />}
+                {props.theme === 'light' && <LightHNStatsBarChartCommentsPercentage data-testid="chart-light-bar-comments-percentage" />}
             </SDHackerPageContainer>
         </SDHackerPageEnvContainer>
     );
@@ -92,5 +86,3 @@ const SDHackerPageHeading = styled.div`
         margin: 5vh 0 0 0;
     }
 `;
-
-export default withRouter(HNStats);
