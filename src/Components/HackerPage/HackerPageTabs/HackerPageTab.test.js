@@ -10,7 +10,7 @@ const mockData = {
     heading: 'heading',
     data: 'data'
 };
-describe('Comment row', () => {
+describe('Hacker page tab', () => {
     it('contains data ', () => {
         const wrap = tlr.render(<HackerPageTab heading={mockData.heading} data={mockData.data} />);
         expect(wrap.getByText(/heading/));

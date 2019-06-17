@@ -14,7 +14,7 @@ const mockData = {
     rankOverallSaltiness: 5,
     averageSaltiness: 6
 };
-describe('Comment row', () => {
+describe('Hacker page tabs', () => {
     it('contains data ', () => {
         const wrap = tlr.render(
             <HackerPageTabs
