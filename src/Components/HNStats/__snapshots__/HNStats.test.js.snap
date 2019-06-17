@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HN stats graphs contains charts in dark theme 1`] = `undefined`;
+
+exports[`HN stats graphs contains charts in light theme 1`] = `undefined`;
