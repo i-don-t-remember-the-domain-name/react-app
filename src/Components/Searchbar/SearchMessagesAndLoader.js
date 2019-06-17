@@ -13,7 +13,7 @@ export default function SearchBanner(props) {
     return (
         <SDSearchContainer>
             {!props.loading && props.error && <SDErrorMessage>User not found. Check spelling and capitalization, and search again.</SDErrorMessage>}
-            {props.loading && <Loader active inline="centered" size="medium" />}
+            {props.loading && <Loader data-testid="loader" active inline="centered" size="medium" />}
         </SDSearchContainer>
     );
 }

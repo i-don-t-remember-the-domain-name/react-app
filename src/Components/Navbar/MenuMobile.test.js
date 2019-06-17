@@ -11,7 +11,7 @@ let menuMobile = (
 );
 afterEach(tlr.cleanup);
 
-describe('Navbar', () => {
+describe('Menu Mobile', () => {
     it('contains hn stats ', () => {
         const wrap = tlr.render(menuMobile);
         expect(wrap.getByText(/HN stats/i));
