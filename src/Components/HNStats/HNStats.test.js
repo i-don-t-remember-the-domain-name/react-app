@@ -8,10 +8,10 @@ afterEach(tlr.cleanup);
 describe('HN stats graphs', () => {
     it('contains charts in dark theme', () => {
         const wrap = tlr.render(<HNStats theme="dark" />);
-        expect(wrap.firstChild).toMatchSnapshot();
+        expect(wrap).toMatchSnapshot();
     });
     it('contains charts in light theme', () => {
         const wrap = tlr.render(<HNStats theme="light" />);
-        expect(wrap.firstChild).toMatchSnapshot();
+        expect(wrap).toMatchSnapshot();
     });
 });
