@@ -38,7 +38,7 @@ export default function Navbar(props) {
             {/*Left side of navbar */}
             <SDNavLeft>
                 <SDNavItem className="theme-button">
-                    <SDThemeToggle onClick={() => (props.theme === 'dark' ? props.setTheme('light') : props.setTheme('dark'))} />
+                    <SDThemeToggle data-testid="theme-button" onClick={() => (props.theme === 'dark' ? props.setTheme('light') : props.setTheme('dark'))} />
                 </SDNavItem>
                 <SDNavItemMobile className="theme-button">
                     <SDThemeMenu onClick={() => setShowMenu(!showMenu)} />
