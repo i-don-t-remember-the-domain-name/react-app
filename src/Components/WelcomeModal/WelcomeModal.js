@@ -19,8 +19,8 @@ export default function ModalBasicExample(props) {
                     <SDModalContentContainer>
                         <SDModalHeader data-testid="warning-heading">You are about to enter TOXIC HACKERS</SDModalHeader>
                         <SDModalContent data-testid="warning-content">
-                            Toxic hackers lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". Unfortunatly, following website contains strong language which may be offensive to some people and
-                            inappropriate for children. Proceed only if you areprepared for serious toxicity.
+                            Toxic hackers lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". Unfortunatly, following website contains strong
+                            language which may be offensive to some people and inappropriate for children. Proceed only if you are prepared for serious toxicity.
                         </SDModalContent>
                     </SDModalContentContainer>
                 </Modal.Content>
