@@ -18,7 +18,7 @@ export default function Example() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar name="# salty comments" stackId="a" dataKey="hn_cnt_slt_s" fill="#F4A000" />
+                <Bar name="# toxic comments" stackId="a" dataKey="hn_cnt_slt_s" fill="#F4A000" />
                 <Bar name="# all comments" stackId="a" dataKey="hn_overall_without_toxic" fill="#4c6cec" />
             </BarChart>
         </ResponsiveContainer>

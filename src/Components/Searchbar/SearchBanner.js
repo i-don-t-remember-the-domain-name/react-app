@@ -12,7 +12,7 @@ import { ltOrange, dtWhiteFont } from '../../colors.js';
 export default function SearchBanner(props) {
     return (
         <SDSearchBanner>
-            <h1 data-testid="heading-main-banner">find the most TOXIC HACKERS on internet</h1>
+            <h1 data-testid="heading-main-banner">Search by HN username or browse the most Toxic commentors.</h1>
             <SDSearchBarFull>
                 <SearchBar searchHacker={props.searchHacker} redirectToHackerProfilePage={props.redirectToHackerProfilePage} loading={props.loading} error={props.error} />
             </SDSearchBarFull>

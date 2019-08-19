@@ -21,8 +21,8 @@ export default class Example extends PureComponent {
                     <YAxis stroke="white" label={{ value: 'sentiment', angle: -90, position: 'left', color: 'white', stroke: 'white' }} />
                     <Tooltip />
                     <Legend />
-                    <Line name="salty comments sentiment" type="monotone" dataKey="t_s" stroke="#FE5E01" />
-                    <Line name="sweet comments sentiment" type="monotone" dataKey="t_h" stroke="#1FDA02" />
+                    <Line name="toxic comments" type="monotone" dataKey="t_s" stroke="#FE5E01" />
+                    <Line name="non-toxic comments" type="monotone" dataKey="t_h" stroke="#1FDA02" />
                 </LineChart>
             </ResponsiveContainer>
         );
