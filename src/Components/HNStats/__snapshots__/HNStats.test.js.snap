@@ -14,7 +14,7 @@ Object {
           <div
             class="sc-htpNat bZjGeO"
           >
-            HN averge saltiness in time
+            HN Average Toxicity over time
           </div>
           <div
             class="recharts-responsive-container"
@@ -27,7 +27,7 @@ Object {
           <div
             class="sc-htpNat bZjGeO"
           >
-            HN growth of salty comments
+            HN growth of toxic comments
           </div>
           <div
             class="recharts-responsive-container"
@@ -40,7 +40,7 @@ Object {
           <div
             class="sc-htpNat bZjGeO"
           >
-            HN percentage of salty comments
+            HN percentage of toxic comments
           </div>
           <div
             class="recharts-responsive-container"
@@ -64,7 +64,7 @@ Object {
         <div
           class="sc-htpNat bZjGeO"
         >
-          HN averge saltiness in time
+          HN Average Toxicity over time
         </div>
         <div
           class="recharts-responsive-container"
@@ -77,7 +77,7 @@ Object {
         <div
           class="sc-htpNat bZjGeO"
         >
-          HN growth of salty comments
+          HN growth of toxic comments
         </div>
         <div
           class="recharts-responsive-container"
@@ -90,7 +90,7 @@ Object {
         <div
           class="sc-htpNat bZjGeO"
         >
-          HN percentage of salty comments
+          HN percentage of toxic comments
         </div>
         <div
           class="recharts-responsive-container"
@@ -171,7 +171,7 @@ Object {
           <div
             class="sc-htpNat bZjGeO"
           >
-            HN averge saltiness in time
+            HN Average Toxicity over time
           </div>
           <div
             class="recharts-responsive-container"
@@ -184,7 +184,7 @@ Object {
           <div
             class="sc-htpNat bZjGeO"
           >
-            HN growth of salty comments
+            HN growth of toxic comments
           </div>
           <div
             class="recharts-responsive-container"
@@ -197,7 +197,7 @@ Object {
           <div
             class="sc-htpNat bZjGeO"
           >
-            HN percentage of salty comments
+            HN percentage of toxic comments
           </div>
           <div
             class="recharts-responsive-container"
@@ -221,7 +221,7 @@ Object {
         <div
           class="sc-htpNat bZjGeO"
         >
-          HN averge saltiness in time
+          HN Average Toxicity over time
         </div>
         <div
           class="recharts-responsive-container"
@@ -234,7 +234,7 @@ Object {
         <div
           class="sc-htpNat bZjGeO"
         >
-          HN growth of salty comments
+          HN growth of toxic comments
         </div>
         <div
           class="recharts-responsive-container"
@@ -247,7 +247,7 @@ Object {
         <div
           class="sc-htpNat bZjGeO"
         >
-          HN percentage of salty comments
+          HN percentage of toxic comments
         </div>
         <div
           class="recharts-responsive-container"

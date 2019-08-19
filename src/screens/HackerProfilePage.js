@@ -10,7 +10,7 @@ import HackerPage from '../Components/HackerPage/HackerPage';
 export default function HackerProfilePage(props) {
   useEffect(() => {
     //Dirty fix, need to make sure to create a list of characters that can be included in search, other delete
-    const currentHacker = props.match.params.hacker.replace(/\u202C/, '');
+    const currentHacker = props.match.params.hacker.replace(/\u202C/, '').toLowerCase();
     props.searchHacker(currentHacker);
   }, [props.match.params.hacker]);
 
