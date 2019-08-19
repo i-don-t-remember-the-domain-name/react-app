@@ -11,12 +11,12 @@ export default function HackerPageTabs(props) {
 
     return (
         <SDHackerTabs>
-            {countOfAllComments && <HackerPageTab color={'#4c6cec'} heading={'# of Comments Overall'} data={countOfAllComments} />}
-            {countOfSaltyComments && <HackerPageTab color={'#4c6cec'} heading={'# Salty Comments'} data={countOfSaltyComments} />}
-            {averageSaltiness && <HackerPageTab color={'#4c6cec'} heading={'Average Salt Score'} data={averageSaltiness} />}
-            {rankOverallSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Total Overall Score'} data={rankOverallSaltiness} />}
-            {rankAmountOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Total Salt Contributed'} data={rankAmountOfSaltiness} />}
-            {rankQuantityOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Number of Salty Comments'} data={rankQuantityOfSaltiness} />}
+            {countOfAllComments && <HackerPageTab color={'#4c6cec'} heading={'# of HN Comments'} data={countOfAllComments} />}
+            {countOfSaltyComments && <HackerPageTab color={'#4c6cec'} heading={'# of Toxic Comments'} data={countOfSaltyComments} />}
+            {averageSaltiness && <HackerPageTab color={'#4c6cec'} heading={'Average Toxicity'} data={averageSaltiness} />}
+            {rankOverallSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Just Toxic'} data={rankOverallSaltiness} />}
+            {rankAmountOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Lifetime Toxicity'} data={rankAmountOfSaltiness} />}
+            {rankQuantityOfSaltiness && <HackerPageTab color={'#f59f00'} heading={'Rank: Quantity of Toxic Comments'} data={rankQuantityOfSaltiness} />}
         </SDHackerTabs>
     );
 }

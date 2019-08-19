@@ -10,10 +10,10 @@ export default function AboutSection() {
   return (
     <div>
       <SDIntroContainer>
-        <SDIntroHeading>about TOXIC HACKERS</SDIntroHeading>
+        <SDIntroHeading>ABOUT TOXIC HACKERS</SDIntroHeading>
         <SDIntroContent>
-          Toxic hackers lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the "Saltiest". We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across
-          commenters' lifetimes.
+          Toxic Hackers lets you see how toxic any HackerNews commenter is. Search by username or browse the ranks of the most toxic. We've taken the open source HackerNews dataset and used sentiment analysis to generate summaries of usage across
+          commenters' lifetimes. We built Toxic Hackers as an auto-moderation proof of concept to showcase abusive conduct on HackerNews.
           <br />
           <br />
           Please explore and share. We've prepared visualizations &amp; dashboards of commenters' activity for your curiosity. Just be prepared there's some really nasty trolls out there.

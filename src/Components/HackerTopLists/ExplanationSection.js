@@ -10,7 +10,7 @@ export default function ExplanationSection(props) {
     return (
         <SDExplanationCard>
             <SDExplanationHeading>What does the score mean?</SDExplanationHeading>
-            <SDExplanationContent>We scored the sentiment of 15,397,309 Hacker News comments. We then ranked users by their "saltiness" or level of subjective negativity. </SDExplanationContent>
+            <SDExplanationContent>We processed 19.3+ million HN comments to score comments with abusive contents according to "Toxicity".<br/>What is Toxicity? We score 6 different attributes: Toxic, Severe Toxic, Obscene, Threat, Insult, and Identity Hate. We then weight and combine these scores into one: Toxicity. This keeps the focus on intentionally harmful speech. Not just spicy rants.<br/>Our scoring model is a a BERT Large classifier. We fine-tuned BERT on the "Jigsaw Toxic Comments" dataset as transfer-learning.</SDExplanationContent>
             <div />
             <SDExplanationContent>{props.explanation}</SDExplanationContent>
         </SDExplanationCard>

@@ -20,8 +20,8 @@ export default class Example extends PureComponent {
           <YAxis stroke="white" label={{ value: 'comments count', angle: -90, position: 'left', stroke: 'white' }} />
           <Tooltip />
           <Legend />
-          <Bar name="# sweet comments" dataKey="c_h" fill="#1FDA02" />
-          <Bar name="# salty comments" dataKey="c_s" fill="#FE5E01" />
+          <Bar name="# good comments" dataKey="c_h" fill="#1FDA02" />
+          <Bar name="# toxic comments" dataKey="c_s" fill="#FE5E01" />
         </BarChart>
       </ResponsiveContainer>
     );

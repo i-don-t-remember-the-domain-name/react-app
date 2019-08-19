@@ -32,13 +32,13 @@ function HackerPage(props) {
                     rankQuantityOfSaltiness={props.rankQuantityOfSaltiness}
                     averageSaltiness={props.averageSaltiness}
                 />
-                {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s salt score over time</SDHackerPageHeading>}
+                {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s toxicity score over time</SDHackerPageHeading>}
                 {props.monthlyPlot && props.theme === 'dark' && <DarkLineIndividualCommentsSentiment monthlyPlot={props.monthlyPlot} />}
                 {props.monthlyPlot && props.theme === 'light' && <LightLineIndividualCommentsSentiment monthlyPlot={props.monthlyPlot} />}
-                {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s count of salty comments over time</SDHackerPageHeading>}
+                {props.monthlyPlot && <SDHackerPageHeading>{hackerName}'s count of toxic comments over time</SDHackerPageHeading>}
                 {props.monthlyPlot && props.theme === 'dark' && <DarkBarIndividualCommentsAmount monthlyPlot={props.monthlyPlot} />}
                 {props.monthlyPlot && props.theme === 'light' && <LightBarIndividualCommentsAmount monthlyPlot={props.monthlyPlot} />}
-                {props.saltiestComments && <SDHackerPageHeading>{hackerName}'s saltiest comments</SDHackerPageHeading>}
+                {props.saltiestComments && <SDHackerPageHeading>{hackerName}'s most toxic comments</SDHackerPageHeading>}
                 {props.saltiestComments && <HackerPageCommentList saltiestComments={props.saltiestComments} />}
             </SDHackerPageContainer>
         </SDHackerPageEnvContainer>

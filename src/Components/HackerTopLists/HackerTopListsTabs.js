@@ -15,24 +15,24 @@ import QTY_Salty_Comments from '../../data/top100_QTY_Salty_Comments';
 import { dtWhiteFont, dtGreen, dtLightBlue, ltLightGray, ltBlue, ltLightBlue, ltOrange } from '../../colors.js';
 
 //Data - explanation section
-const overallScore = `For Total Overall Score, we add up all the comment scores for each user. Salty comments cancel out positive comments and the overall score is left behind. We then rank all the "salty" users by their overall score, lowest to highest.`;
-const saltScore = `For Total Salt Score, we take the total scores across all of a user's "salty" comments and add them up. This gives us the total salt score. We then rank the "salty" users from lowest to highest.`;
-const numberOfSaltyComments = `For Number of Salty Comments, we count the number of comments with a "salty" score and tally them up. This gives us the number of salty comments. We then rank the "salty" users from highest to lowest.`;
+const overallScore = `Just Toxic = User's total "Toxicity" after all comments scores ["Toxicity" < 0 && "Toxicity" >= 0].`;
+const saltScore = `Lifetime Toxicity = Users's lifetime total score of comments where ["Toxicity" < 0]`;
+const numberOfSaltyComments = `Quantity of Toxic Comments = Quantity of comments where ["Toxicity" < 0] `;
 
 //Export default component
 export default function HackerTopListsTabs(props) {
     const panes = [
         {
-            menuItem: 'Top 100: Total Overall Score',
-            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Overall Score'} data={Overall_Saltiest} explanation={overallScore} />
+            menuItem: 'Top 100: Just Toxic',
+            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Just Toxic'} data={Overall_Saltiest} explanation={overallScore} />
         },
         {
-            menuItem: 'Top 100: Total Salt Score',
-            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Total Salt Score'} data={AMT_Salt_Contributed} explanation={saltScore} />
+            menuItem: 'Top 100: Lifetime Toxicity',
+            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Lifetime Toxicity'} data={AMT_Salt_Contributed} explanation={saltScore} />
         },
         {
-            menuItem: 'Top 100: Number of Salty Comments',
-            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Number of Salty Comments'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
+            menuItem: 'Top 100: Quantity of Toxic Comments',
+            render: () => <HackerList searchHacker={props.searchHacker} heading={'Top 100: Quantity of Toxic Comments'} data={QTY_Salty_Comments} explanation={numberOfSaltyComments} />
         }
     ];
 

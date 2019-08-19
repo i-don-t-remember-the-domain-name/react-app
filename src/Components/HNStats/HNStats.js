@@ -18,13 +18,13 @@ export default function HNStats(props) {
     return (
         <SDHackerPageEnvContainer>
             <SDHackerPageContainer>
-                <SDHackerPageHeading>HN averge saltiness in time</SDHackerPageHeading>
+                <SDHackerPageHeading>HN Average Toxicity over time</SDHackerPageHeading>
                 {props.theme === 'dark' && <DarkHNStatsLineChartCommentsSentiment data-testid="chart-dark-line-sentiment" />}
                 {props.theme === 'light' && <LightHNStatsLineChartCommentsSentiment data-testid="chart-light-line-sentiment" />}
-                <SDHackerPageHeading>HN growth of salty comments</SDHackerPageHeading>
+                <SDHackerPageHeading>HN growth of toxic comments</SDHackerPageHeading>
                 {props.theme === 'dark' && <DarkHNStatsBarChartCommentsAmount data-testid="chart-dark-bar-comments-amount" />}
                 {props.theme === 'light' && <LightHNStatsBarChartCommentsAmount data-testid="chart-light-bar-comments-amount" />}
-                <SDHackerPageHeading>HN percentage of salty comments</SDHackerPageHeading>
+                <SDHackerPageHeading>HN percentage of toxic comments</SDHackerPageHeading>
                 {props.theme === 'dark' && <DarkHNStatsBarChartCommentsPercentage data-testid="chart-dark-bar-comments-percentage" />}
                 {props.theme === 'light' && <LightHNStatsBarChartCommentsPercentage data-testid="chart-light-bar-comments-percentage" />}
             </SDHackerPageContainer>

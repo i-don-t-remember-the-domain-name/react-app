@@ -13,9 +13,9 @@ export default function HackerCardTopRow(props) {
     return (
         <SDTopRowHackerCard style={style}>
             <SDTopRowRank>Rank</SDTopRowRank>
-            <SDTopRowCommentor>User</SDTopRowCommentor>
+            <SDTopRowCommentor>HN Username</SDTopRowCommentor>
             <SDTopRowSpecificMetric>Total</SDTopRowSpecificMetric>
-            <SDTopRowSaltiestComment>Saltiest Comment</SDTopRowSaltiestComment>
+            <SDTopRowSaltiestComment>Tamest Toxic Comment</SDTopRowSaltiestComment>
         </SDTopRowHackerCard>
     );
 }
