@@ -77,6 +77,7 @@ const SDInputSearchBar = styled.input`
         color: ${placeholderColor};
         /*non-themed*/
         font-size: 0.9rem;
+        font-weight: bold;
     }
 `;
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 
 //Import colors
-import { ltWhite, ltBlackFont, ltBlue, dtDarkBlue, dtWhiteFont, dtGreen } from '../../colors.js';
+import { ltWhite, ltBlackFont, ltOrange, dtDarkBlue, dtWhiteFont, dtPurple } from '../../colors.js';
 
 //Export default component
 export default function HackerRow(props) {
@@ -41,8 +41,8 @@ const textColor = theme('mode', {
 });
 
 const linkColor = theme('mode', {
-    light: ltBlue,
-    dark: dtGreen
+    light: ltOrange,
+    dark: dtPurple
 });
 
 //Styled components
@@ -81,6 +81,7 @@ const SDRowCommentor = styled.div`
     /*themed*/
     color: ${linkColor};
     /*non-themed*/
+    text-decoration: underline;
     min-width: 20%;
     cursor: pointer;
     @media (max-width: 600px) {

@@ -10,7 +10,14 @@ export default function ExplanationSection(props) {
     return (
         <SDExplanationCard>
             <SDExplanationHeading>What does the score mean?</SDExplanationHeading>
-            <SDExplanationContent>We processed 19.3+ million HN comments to score comments with abusive contents according to "Toxicity".<br/>What is Toxicity? We score 6 different attributes: Toxic, Severe Toxic, Obscene, Threat, Insult, and Identity Hate. We then weight and combine these scores into one: Toxicity. This keeps the focus on intentionally harmful speech. Not just spicy rants.<br/>Our scoring model is a a BERT Large classifier. We fine-tuned BERT on the "Jigsaw Toxic Comments" dataset as transfer-learning.</SDExplanationContent>
+            <SDExplanationContent>
+                We processed 19.3+ million HN comments to score comments with abusive contents according to "Toxicity".
+                <br />
+                What is Toxicity? We score 6 different attributes: Toxic, Severe Toxic, Obscene, Threat, Insult, and Identity Hate. We then weight and combine these scores into one: Toxicity. This
+                keeps the focus on intentionally harmful speech. Not just spicy rants.
+                <br />
+                Our scoring model is a a BERT Large classifier. We fine-tuned BERT on the "Jigsaw Toxic Comments" dataset as transfer-learning.
+            </SDExplanationContent>
             <div />
             <SDExplanationContent>{props.explanation}</SDExplanationContent>
         </SDExplanationCard>
@@ -41,7 +48,7 @@ const SDExplanationCard = styled.div`
     width: 100%;
     min-height: 50px;
     height: auto;
-    margin: 5px 0 30px 0;
+    margin: 5px 0 8px 0;
     padding: 10px;
     display: flex;
     flex-direction: column;

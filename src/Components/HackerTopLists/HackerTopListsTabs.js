@@ -105,6 +105,7 @@ const SDTabsContainer = styled.div`
         background-color: ${backgroundColor};
         color: ${textColor};
         /*non-themed*/
+        text-decoration: underline;
         width: 32%;
         line-height: 1.5;
         padding-top: 30px;
